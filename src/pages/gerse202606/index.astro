@@ -227,8 +227,8 @@
       <div class="field">
         <label for="email">Adresse email professionnelle</label>
         <input type="email" id="email" name="email" autocomplete="email"
-               placeholder="prenom.nom@guyotenvironnement.com" />
-        <span class="hint">Réservé aux collaborateurs @guyotenvironnement.com, @guyotenergies.com et @ycompris.com</span>
+               placeholder="prenom.nom@votreentreprise.com" />
+        <span class="hint">Adresse email professionnelle sur domaine autorisé uniquement</span>
       </div>
 
       <!-- Consentement -->
@@ -242,7 +242,7 @@
         </label>
         <div class="policy-text" id="policyText">
           <strong>Politique de confidentialité – Inscription formation RSE</strong><br/><br/>
-          <strong>Données collectées :</strong> adresse email professionnelle uniquement (domaines @guyotenvironnement.com, @guyotenergies.com et @ycompris.com).<br/>
+          <strong>Données collectées :</strong> adresse email professionnelle uniquement.<br/>
           <strong>Finalité :</strong> organiser les sessions de formation RSE et vous envoyer une invitation calendrier.<br/>
           <strong>Destinataire :</strong> Yves Cavarec (Ycompris) uniquement. Aucune transmission à des tiers.<br/>
           <strong>Durée de conservation :</strong> les données sont supprimées au plus tard le 31 juillet 2026.<br/>
@@ -275,7 +275,7 @@
 </div><!-- /page -->
 
 <footer>
-  <a href="https://ycompris.com">ycompris.com</a> — Page réservée aux collaborateurs Guyo &amp; Ycompris
+  <a href="https://ycompris.com">ycompris.com</a> — Page réservée aux participants de la formation
 </footer>
 
 <script>
@@ -409,7 +409,7 @@
     const domain = email.split('@')[1]?.toLowerCase();
     if (!['guyotenvironnement.com', 'guyotenergies.com', 'ycompris.com'].includes(domain)) {
       document.getElementById('email').classList.add('invalid');
-      showMsg('msgError', '⚠️ Seules les adresses @guyotenvironnement.com, @guyotenergies.com et @ycompris.com sont acceptées.');
+      showMsg('msgError', '⚠️ Votre adresse email ne fait pas partie des domaines autorisés.');
       return;
     }
     document.getElementById('email').classList.remove('invalid');
