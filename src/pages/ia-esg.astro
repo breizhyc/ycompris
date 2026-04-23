@@ -1,193 +1,476 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+// src/pages/ia-esg.astro
+import MainLayout from '../layouts/MainLayout.astro';
 
-const title = "Stratégie IA des PME et ETI";
+const title = "L'IA vue par l'ESG : gouvernance, social, environnement | Ycompris";
+const description = "Comment gouverner l'IA à travers le prisme ESG : dépendances technologiques, impacts sociaux, empreinte environnementale. Par Yves Cavarec, auteur de « Garder la main » (Librinova, 2026) et de l'analyse systématique des DEU du CAC40.";
+
+// Date de déploiement ISO 8601 (à mettre à jour si le push change de jour)
+const deployDate = "2026-04-23T12:00:00+02:00";
+
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "L'IA vue par l'ESG : gouvernance, social, environnement",
+  "description": "Comment gouverner l'IA à travers le prisme ESG.",
+  "author": {
+    "@type": "Person",
+    "name": "Yves Cavarec",
+    "url": "https://ycompris.com/",
+    "sameAs": [
+      "https://glm.ycompris.com/",
+      "https://www.linkedin.com/in/cavarec",
+      "https://www.librinova.com/librairie/yves-cavarec/garder-la-main"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ycompris",
+    "url": "https://ycompris.com/"
+  },
+  "datePublished": deployDate,
+  "dateModified": deployDate,
+  "inLanguage": "fr",
+  "mainEntityOfPage": "https://ycompris.com/ia-esg/"
+};
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://ycompris.com/" },
+    { "@type": "ListItem", "position": 2, "name": "IA & ESG", "item": "https://ycompris.com/ia-esg/" }
+  ]
+};
 ---
-<MainLayout title={title}>
-  <!-- Hero avec filigrane subtil – identique à l'accueil, Méthode et Ressources -->
-  <div class="hero" style="min-height: 450px; position: relative;">
-    <!-- Fond filigrane subtil -->
-<div 
-    class="hero-image" 
-    style="background-image: url('/images/ia-esg-strategie.jpg');"
-  ></div>
-  
-  <!-- Image cachée pour SEO + accessibilité (alt text local) -->
-  <img 
-    src="/images/ia-esg-strategie.jpg" 
-    alt="Stratégie IA des PME et ETI | Ycompris" 
-    style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"
-    aria-hidden="true"
-  />    
-    <!-- Contenu texte au premier plan -->
-    <div class="hero-content container" style="padding-top: 8rem;">
-      <h1>IA et stratégie d'entreprise : au-delà du reporting ESG</h1>
+
+<MainLayout
+  title={title}
+  description={description}
+  ogType="article"
+  ogImage="/images/og-ia-esg-2026.jpg"
+  ogImageAlt="Gouverner l'IA à travers le triptyque ESG — Ycompris"
+  canonical="https://ycompris.com/ia-esg/"
+>
+  <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <meta slot="head-extra" property="article:author" content="Yves Cavarec" />
+  <meta slot="head-extra" property="article:published_time" content={deployDate} />
+
+  <article class="ia-esg">
+
+    <!-- Hero avec image d'entête SVG (fallback JPG) + H1 + sous-titre -->
+    <header class="ia-esg__hero">
+      <img
+        class="ia-esg__banner"
+        src="/images/header-ia-esg-2026.svg"
+        onerror="this.onerror=null;this.src='/images/header-ia-esg-2026.jpg';"
+        alt="Triptyque abstrait évoquant les trois dimensions gouvernance, social et environnement, sous le prisme IA"
+        width="1600"
+        height="600"
+        loading="eager"
+      />
+      <div class="container ia-esg__hero-text">
+        <h1>L'IA est d'abord un enjeu de gouvernance — puis social, puis environnemental.</h1>
+        <p class="lead">
+          Par Yves Cavarec, auteur de <em>Garder la main — Diriger à l'ère de l'IA</em> (Librinova, 2026) et de la première analyse quantifiée des mentions d'IA dans les 38 DEU du CAC40.
+        </p>
+        <p class="ia-esg__hero-link">
+          <a
+            href="https://glm.ycompris.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Découvrir le programme (ouvre glm.ycompris.com dans un nouvel onglet)"
+          >
+            Découvrir le programme →
+            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
+          </a>
+        </p>
+      </div>
+    </header>
+
+    <div class="ia-esg__body content-wrapper">
+
+      <!-- Bloc d'ancrage factuel -->
+      <aside class="ia-esg__anchor">
+        <h2>Ce que dit l'analyse des 38 DEU du CAC40</h2>
+        <p>
+          Nous avons analysé systématiquement les 38 Documents d'Enregistrement Universel publiés au titre de l'exercice 2024 — 38 DEU sur 40 à la date de l'étude.
+        </p>
+        <p>Trois constats se dégagent :</p>
+        <ul>
+          <li><strong>17,8 %</strong> des mentions d'intelligence artificielle relèvent de l'IA-washing — formulations vagues, promesses sans preuve, absence de chiffres vérifiables.</li>
+          <li><strong>71 %</strong> des entreprises du CAC40 ne décrivent pas leur dépendance aux fournisseurs d'IA (hyperscalers, modèles propriétaires, infrastructures critiques).</li>
+          <li>L'écart entre l'entreprise la plus transparente et la moins transparente varie de <strong>1 à 25</strong> en quantité et qualité d'information publiée.</li>
+        </ul>
+        <p>
+          Le reporting IA du CAC40 n'est pas encore à maturité. Cette asymétrie est elle-même un enjeu de gouvernance.
+        </p>
+        <p class="ia-esg__source"><em>Source : Ycompris, analyse des 38 DEU du CAC40, avril 2026.</em></p>
+        <p>
+          <a
+            href="https://glm.ycompris.com/deu-cac40-2025"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Consulter l'étude complète sur glm.ycompris.com (nouvel onglet)"
+            class="ia-esg__cta-link"
+          >
+            Consulter l'étude complète →
+            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
+          </a>
+        </p>
+      </aside>
+
+      <!-- Bloc Gouvernance -->
+      <section>
+        <h2>Gouvernance — l'IA comme sujet de direction</h2>
+        <p>
+          L'intelligence artificielle engage la direction générale avant d'engager la direction des systèmes d'information. Elle déplace des décisions : automatisation de processus, arbitrages appuyés sur des algorithmes fournis par des tiers, dépendance à des fournisseurs dont la juridiction n'est pas européenne. Le règlement européen sur l'intelligence artificielle (Règlement UE 2024/1689) impose aux organisations de cartographier leurs systèmes d'IA, d'identifier les usages à haut risque et de documenter les contrôles humains maintenus sur les décisions automatisées.
+        </p>
+        <p>
+          Cette exigence converge avec celle du reporting extra-financier. L'ESRS G1, dans le cadre de la CSRD, couvre la conduite des affaires et la culture d'éthique — l'IA s'y inscrit naturellement, dès lors que des décisions sensibles sont partiellement déléguées à des systèmes. La norme VSME destinée aux PME suit le même mouvement, sur un format proportionné. Les proxy advisors et les investisseurs alignés ISR intègrent progressivement la gouvernance de l'IA dans leurs grilles de due diligence.
+        </p>
+        <p>
+          Trois questions structurent l'arbitrage : qui décide ? qui peut reprendre la main ? que peut-on tracer pour en rendre compte ? La réponse est documentaire avant d'être technique.
+        </p>
+      </section>
+
+      <!-- Bloc Social -->
+      <section>
+        <h2>Social — transformer sans fracturer</h2>
+        <p>
+          L'IA ne supprime pas mécaniquement des emplois : elle recompose les métiers intellectuels. Des tâches répétitives disparaissent ; d'autres tâches — relecture critique des sorties algorithmiques, conception des prompts, arbitrage sous incertitude — émergent ou gagnent en valeur. La transformation concerne autant la comptabilité et le juridique que le marketing et le support client. Le <em>Future of Jobs Report</em> du Forum économique mondial anticipe une reconfiguration significative des profils demandés à horizon de cinq ans.
+        </p>
+        <p>
+          La difficulté opérationnelle est rarement technique ; elle est humaine et sociale. La productivité d'une équipe qui adopte l'IA peut baisser temporairement avant de remonter, le temps que les usages s'installent et que la confiance dans les résultats se construise. Le dialogue social, l'information-consultation du CSE et les accords de méthode deviennent alors des outils d'accompagnement, non de blocage.
+        </p>
+        <p>
+          Le reporting ESRS S1 exige de documenter cette transformation : effectifs concernés, plans de formation, mesures d'accompagnement, impacts sur la santé au travail et sur les compétences critiques. Les parties prenantes — salariés, investisseurs, donneurs d'ordre — vérifient que la transformation est pilotée, non subie.
+        </p>
+      </section>
+
+      <!-- Bloc Environnement (double face) -->
+      <section>
+        <h2>Environnement — mesurer et exploiter</h2>
+
+        <h3>Mesurer les impacts environnementaux de l'IA</h3>
+        <p>
+          L'IA mobilise une infrastructure matérielle dont la trace environnementale est progressivement documentée. L'Agence internationale de l'énergie (AIE) suit la consommation électrique des data centers, dont les usages IA représentent une part croissante. Les phases d'entraînement des grands modèles et leurs usages en inférence ont des profils énergétiques distincts, qu'il convient de distinguer dans toute mesure sérieuse.
+        </p>
+        <p>
+          Pour une entreprise utilisatrice, l'empreinte s'inscrit au Scope 2 (électricité consommée par ses propres infrastructures) et au Scope 3 amont (achats de services cloud et de calcul externalisé). Les méthodes d'évaluation évoluent : l'ADEME et The Shift Project publient des cadres adaptés au numérique. Le reporting ESRS E1, dans le cadre de la CSRD, intègre ces périmètres dès lors qu'ils sont matériels.
+        </p>
+
+        <h3>Exploiter l'IA comme levier de décarbonation</h3>
+        <p>
+          La même IA contribue à réduire des empreintes : optimisation énergétique des bâtiments et des process industriels, monitoring fin des consommations, détection de fuites dans les réseaux, simulation de scénarios de décarbonation via jumeaux numériques, analyse d'images satellite pour la télédétection environnementale.
+        </p>
+        <p>
+          L'équilibre n'est pas acquis. Il se documente, usage par usage, avec la même discipline que le reste du reporting.
+        </p>
+      </section>
+
+      <!-- Bloc Outils et ressources -->
+      <section class="ia-esg__tools">
+        <h2>Outils et ressources</h2>
+        <div class="ia-esg__tools-grid">
+          <article class="tool-card">
+            <picture class="tool-card__cover">
+              <source
+                type="image/webp"
+                srcset="/images/garder-la-main-360.webp 360w, /images/garder-la-main-720.webp 720w, /images/garder-la-main.webp 1000w"
+                sizes="(max-width: 640px) 40vw, 180px"
+              />
+              <img
+                src="/images/garder-la-main.jpg"
+                srcset="/images/garder-la-main-360.jpg 360w, /images/garder-la-main-720.jpg 720w, /images/garder-la-main.jpg 1000w"
+                sizes="(max-width: 640px) 40vw, 180px"
+                alt="Couverture du livre Garder la main – Diriger à l'ère de l'IA, par Yves Cavarec"
+                width="1000"
+                height="1545"
+                loading="lazy"
+              />
+            </picture>
+            <h3>Garder la main — Diriger à l'ère de l'IA</h3>
+            <p class="tool-card__meta">Librinova, 2026</p>
+            <a
+              href="https://glm.ycompris.com/garder-la-main"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Fiche du livre sur glm.ycompris.com (nouvel onglet)"
+              class="tool-card__link"
+            >
+              Fiche du livre →
+              <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
+            </a>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" width="64" height="64"><rect x="14" y="8" width="36" height="48" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="20" x2="44" y2="20" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="28" x2="44" y2="28" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="36" x2="36" y2="36" stroke="currentColor" stroke-width="2.5"/><circle cx="42" cy="46" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="47" y1="51" x2="52" y2="56" stroke="currentColor" stroke-width="2.5"/></svg>
+            </div>
+            <h3>L'IA dans les DEU du CAC40</h3>
+            <p class="tool-card__meta">Étude quantitative, avril 2026</p>
+            <a
+              href="https://glm.ycompris.com/deu-cac40-2025"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Lire l'étude sur glm.ycompris.com (nouvel onglet)"
+              class="tool-card__link"
+            >
+              Lire l'étude →
+              <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
+            </a>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" width="64" height="64"><path d="M32 6L10 14v18c0 13 9 22 22 26 13-4 22-13 22-26V14L32 6z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M22 32l7 7 14-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>A.RI.ALL</h3>
+            <p class="tool-card__meta">Outil de détection des risques d'allégations (IA-washing, greenwashing)</p>
+            <a
+              href="https://ariall.ycompris.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Découvrir A.RI.ALL sur ariall.ycompris.com (nouvel onglet)"
+              class="tool-card__link"
+            >
+              Découvrir A.RI.ALL →
+              <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bloc Comment Ycompris accompagne -->
+      <section>
+        <h2>Comment Ycompris accompagne</h2>
+        <p>
+          <strong>Cartographier</strong> les usages d'IA et les dépendances qu'ils créent dans l'organisation — fournisseurs critiques, données sensibles, processus concernés, compétences mobilisées. <strong>Arbitrer</strong> les décisions de gouvernance : ce qui reste humain, ce qui peut être délégué, sous quels contrôles, avec quel plan de réversibilité. <strong>Documenter</strong> les choix pour les parties prenantes : conseil, investisseurs, régulateur, salariés. Une méthode qui tient compte du triptyque ESG plutôt que d'isoler un seul angle.
+        </p>
+      </section>
+
+      <!-- Double CTA final -->
+      <section class="ia-esg__cta">
+        <h2>Dialoguer avec Ycompris</h2>
+        <div class="ia-esg__cta-buttons">
+          <a href="/contact" class="btn btn--primary ia-esg__cta-primary">Parlez-nous de votre situation</a>
+          <a
+            href="https://glm.ycompris.com/deu-cac40-2025"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Consulter l'étude CAC40 sur glm.ycompris.com (nouvel onglet)"
+            class="ia-esg__cta-secondary"
+          >
+            Consultez l'étude CAC40 →
+            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
+          </a>
+        </div>
+      </section>
+
     </div>
-  </div>
-
-    <h2>Ycompris ustilise l'IA au quotidien .</h2>
-
-    <p>
-      Depuis 2023, la DGCCRF multiplie ses contrôles antigreen washing, met en demeure, sanctionne et signale au Procureur de la république les infractions à la réglementation sur le greeenwashing, le social washing, etc. Plus de 3000 entreprises sont ainsi contrôlées chaque années.
-    </p>
-    <p>
-      A partir de septembre 2027, la <a href="https://ycompris.com/ressources/">directive 2024/825 (EU)</a> sera applicable dans les pays membres (transposition en cours). Elle renforce le dispositif législatif existant.
-    </p>
-    <p>
-      <a href="https://ariall.ycompris.com/">A.RI.ALL</a> est notre outil d'analyse des risques d'allégation ESG: utilisez-le pour sécuriser vos communications et éviter les condamnations pour greenwashing, entre autres.
-    </p>
-
-
-    <h2>L'IA redéfinit les règles du jeu. Vos investisseurs l'ont compris. Vos concurrents aussi.</h2>
-
-    <p>
-      L'intelligence artificielle n'est pas un sujet informatique. C'est une question de survie stratégique. Les entreprises qui traitent l'IA comme une simple ligne budgétaire IT ou comme un chapitre cosmétique de leur rapport ESG prennent des risques considérables.
-    </p>
-
-    <h3>En 2026, trois réalités s'imposent</h3>
-
-    <p>
-      Vos dépendances technologiques sont des vulnérabilités stratégiques. Votre position concurrentielle se joue sur votre capacité à maîtriser l'IA sans en devenir l'otage. Vos investisseurs scrutent ces risques avant de signer.
-    </p>
-
-    <h2>L'IA est un arbitrage stratégique, pas une case à cocher</h2>
-
-    <h3>Risques et opportunités : deux faces d'une même décision</h3>
-
-    <p>
-      Adopter l'IA crée des opportunités financières mesurables : gains de productivité, nouveaux services, réduction des coûts, accélération des cycles. Ne pas l'adopter crée un risque de décrochage concurrentiel face à des acteurs plus rapides.
-    </p>
-
-    <h3>Mais l'adoption massive crée trois catégories de risques</h3>
-
-    <ul>
-      <li><strong>Dépendance opérationnelle</strong> – Votre entreprise ne peut plus fonctionner sans les outils IA de tiers (cloud américain, algorithmes propriétaires). Que se passe-t-il si les conditions tarifaires changent ? Si l'accès est coupé ? Si les données sont compromises ?</li>
-      <li><strong>Perte de compétences critiques</strong> – Les équipes délèguent des tâches intellectuelles à l'IA. Les savoir-faire s'érodent. La capacité de jugement s'affaiblit. Quand l'outil échoue, personne ne sait reprendre la main.</li>
-      <li><strong>Exposition géopolitique</strong> – 80 % des entreprises françaises dépendent de cloud américain (AWS, Azure, Google Cloud). Ces données sont soumises au Cloud Act. Les semi-conducteurs qui font tourner l'IA viennent de Taïwan. Les terres rares des serveurs viennent de Chine. Votre chaîne de valeur numérique est un château de cartes géopolitique.</li>
-    </ul>
-
-    <h3>L'analyse ne s'arrête pas à votre entreprise</h3>
-
-    <p>
-      Vos concurrents investissent dans l'IA. S'ils gagnent en efficacité pendant que vous analysez les risques, vous perdez des parts de marché. S'ils automatisent pendant que vous hésitez, ils compriment leurs coûts et gagnent en compétitivité-prix.
-    </p>
-
-    <p>
-      Votre chaîne de valeur change. Vos fournisseurs automatisent. Vos clients exigent des délais plus courts. Vos donneurs d'ordre vous demandent d'intégrer leurs plateformes IA. Rester à l'écart n'est pas une option neutre : c'est un choix stratégique avec des conséquences mesurables.
-    </p>
-
-    <p style="font-weight: bold;">
-      <strong>L'arbitrage est binaire</strong> : adopter l'IA avec lucidité sur les dépendances créées, ou refuser et accepter le décrochage concurrentiel.
-    </p>
-
-    <h2>Les impacts de l'IA dépassent largement la gouvernance d'entreprise</h2>
-
-    <h3>Environnement : une empreinte massive et croissante</h3>
-
-    <p>
-      Former un modèle IA de grande taille (type GPT-4) consomme autant d'énergie que 120 foyers français pendant un an. Faire tourner ces modèles en production multiplie cette consommation par 10 ou 100. Les datacenters qui hébergent l'IA consomment 1 % de l'électricité mondiale en 2026. Cette part double tous les deux ans.
-    </p>
-
-    <p style="font-weight: bold;">
-      <strong>Impact direct sur votre reporting environnemental</strong> : si vous utilisez massivement l'IA (GenAI, modèles d'analyse, automatisation), votre empreinte carbone Scope 3 explose. Vos clients soumis à la CSRD vont vous demander de la documenter.
-    </p>
-
-    <h3>Social : transformation des effectifs et résistances prévisibles</h3>
-
-    <p>
-      L'IA ne supprime pas des emplois, elle transforme des métiers. Comptabilité, juridique, support client, marketing, RH : tous les métiers intellectuels sont concernés. Les tâches répétitives disparaissent. Les tâches à valeur ajoutée se recomposent.
-    </p>
-
-    <h3>Trois conséquences sociales immédiates :</h3>
-
-    <ul>
-      <li><strong>Reconfiguration des effectifs</strong> – Certains postes deviennent obsolètes. D'autres nécessitent des compétences inexistantes aujourd'hui. Former ou recruter ? Réduire ou transformer ? Ces décisions ont un coût social et financier.</li>
-      <li><strong>Résistance au changement</strong> – Les équipes perçoivent l'IA comme une menace. La productivité peut chuter avant de remonter. Le dialogue social devient critique. Les conflits latents deviennent explicites.</li>
-      <li><strong>Perte de sens</strong> – Si l'IA prend les décisions, que fait l'humain ? La démotivation guette les équipes dont le rôle se réduit à valider des propositions algorithmiques.</li>
-    </ul>
-
-    <p style="font-weight: bold;">
-      <strong>Impact direct sur votre reporting social (ESRS S1)</strong> : vous devez documenter l'impact de l'IA sur vos effectifs, vos plans de formation, et les mesures d'accompagnement. Les investisseurs vérifient que vous gérez cette transformation, pas que vous la subissez.
-    </p>
-
-    <h2>Ce que vos investisseurs attendent vraiment</h2>
-
-    <p>
-      Les fonds d'investissement, les banques et les grands donneurs d'ordre posent désormais systématiquement six questions :
-    </p>
-
-    <ol>
-      <li>Quelle est votre dépendance aux outils IA critiques ? (Cloud, algorithmes, données)</li>
-      <li>Où sont stockées vos données ? (Localisation géographique, législation applicable)</li>
-      <li>Quel est l'impact de l'IA sur vos effectifs ? (Suppressions, transformations, formations)</li>
-      <li>Quelle est votre stratégie de souveraineté ? (Plan de réversibilité, alternatives européennes)</li>
-      <li>Comment mesurez-vous l'empreinte carbone de vos usages IA ?</li>
-      <li>Avez-vous documenté ces risques dans votre analyse de matérialité ESG ?</li>
-    </ol>
-
-    <p>
-      Ne pas avoir de réponse structurée à ces questions est un signal d'alerte. Cela signifie que vous n'avez pas anticipé. Que vous subissez. Que vous êtes vulnérable.
-    </p>
-
-            <!-- Bouton vers FAQ  -->
-    <div style="text-align: center; margin: 4rem 0;">
-      <a 
-        href="/faq" 
-        class="btn btn--primary" 
-        style="font-size: 1.2rem; padding: 1rem 2rem;"
-      >
-        Plus d'informations dans notre FAQ 
-      </a>
-    </div>
-
-    <h2>L'approche Ycompris : cartographier, arbitrer, documenter</h2>
-
-    <p>
-      Nous ne vendons pas de solutions IA. Nous n'optimisons pas vos algorithmes. Nous ne gérons pas vos datacenters.
-    </p>
-
-    <h3>Nous faisons trois choses que personne d'autre ne fait ensemble :</h3>
-
-    <ul>
-      <li><strong>Cartographier vos dépendances critiques</strong> – Cloud, semi-conducteurs, algorithmes, données, compétences. Identifier ce qui vous rend vulnérable. Mesurer l'exposition financière et opérationnelle.</li>
-      <li><strong>Éclairer vos arbitrages stratégiques</strong> – Adopter ou non. Internaliser ou externaliser. Cloud américain ou souverain. Automatiser ou conserver les compétences. Chaque choix a des conséquences que nous chiffrons et documentons.</li>
-      <li><strong>Intégrer ces enjeux dans votre reporting ESG</strong> – VSME, CSRD, due diligence investisseurs. L'IA et la géopolitique ne sont pas des sujets à part. Ils traversent votre gouvernance (G), votre social (S) et votre environnement (E). Nous les rendons visibles, traçables, auditables.</li>
-    </ul>
-
-    <p style="font-weight: bold;">
-      <strong>Résultat</strong> : vous passez d'une adoption aveugle à une stratégie documentée. Vous répondez aux investisseurs avec des faits, pas des intentions. Vous transformez un risque latent en décision maîtrisée.
-    </p>
-
-        <!-- Bouton vers Méthode  -->
-    <div style="text-align: center; margin: 4rem 0;">
-      <a 
-        href="/methode" 
-        class="btn btn--primary" 
-        style="font-size: 1.2rem; padding: 1rem 2rem;"
-      >
-        En savoir plus sur notre méthode de reporting ESG
-      </a>
-    </div>
-
-
-    <h2>L'IA n'attend pas. Vos concurrents non plus.</h2>
-
-    <p>
-      Les entreprises qui documentent leurs dépendances IA et leurs stratégies de souveraineté aujourd'hui créent un avantage concurrentiel. Elles rassurent leurs investisseurs. Elles anticipent les crises d'approvisionnement. Elles conservent leur capacité de décision.
-    </p>
-
-    <p>
-      Les autres découvriront leurs vulnérabilités pendant la prochaine crise géopolitique. Ou lors d'une due diligence investisseur qui révélera des angles morts critiques. Il sera trop tard.
-    </p>
-
-    <div style="text-align: center; margin: 4rem 0;">
-      <a 
-        href="/contact" 
-        class="btn btn--primary" 
-        style="font-size: 1.3rem; padding: 1.2rem 2.5rem;"
-      >
-        Échangeons 30 minutes sur votre situation
-      </a>
-    </div>
-  </section>
+  </article>
 </MainLayout>
+
+<style>
+  .ia-esg__hero {
+    background: #08153A;
+    color: white;
+    margin-bottom: 3rem;
+  }
+
+  .ia-esg__banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .ia-esg__hero-text {
+    padding: 2.5rem 1.5rem 3rem;
+    max-width: 900px;
+  }
+
+  .ia-esg__hero-text h1 {
+    color: white;
+    font-size: clamp(1.8rem, 4.2vw, 2.8rem);
+    margin: 0 0 1rem;
+    line-height: 1.2;
+  }
+
+  .ia-esg__hero-text .lead {
+    color: rgba(255,255,255,0.88);
+    font-size: 1.15rem;
+    margin: 0 auto 1rem;
+    max-width: 800px;
+  }
+
+  .ia-esg__hero-link a {
+    color: #7DD3E8;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .ia-esg__hero-link a:hover {
+    text-decoration: underline;
+  }
+
+  .ia-esg__body {
+    max-width: 860px;
+  }
+
+  .ia-esg__body h2 {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+  }
+
+  .ia-esg__body h3 {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  .ia-esg__anchor {
+    background: white;
+    border-left: 4px solid var(--primary);
+    padding: 1.8rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-top: 0;
+  }
+
+  .ia-esg__anchor h2 {
+    margin-top: 0;
+  }
+
+  .ia-esg__anchor ul {
+    padding-left: 1.2rem;
+  }
+
+  .ia-esg__anchor li {
+    margin-bottom: 0.5rem;
+  }
+
+  .ia-esg__source {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-top: 1rem;
+  }
+
+  .ia-esg__cta-link,
+  .tool-card__link {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .ia-esg__cta-link:hover,
+  .tool-card__link:hover {
+    text-decoration: underline;
+  }
+
+  .ia-esg__tools {
+    margin-top: 3rem;
+  }
+
+  .ia-esg__tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .tool-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    border-top: 4px solid var(--primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .tool-card h3 {
+    margin: 0.8rem 0 0.3rem;
+    font-size: 1.1rem;
+  }
+
+  .tool-card__meta {
+    margin: 0 0 0.8rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-style: italic;
+  }
+
+  .tool-card__cover {
+    display: block;
+    width: 120px;
+  }
+
+  .tool-card__cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
+
+  .tool-card__icon {
+    color: var(--primary);
+    opacity: 0.85;
+  }
+
+  .tool-card__icon svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .ia-esg__cta {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .ia-esg__cta h2 {
+    color: white;
+    margin-top: 0;
+  }
+
+  .ia-esg__cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .ia-esg__cta-primary {
+    background: white;
+    color: var(--primary);
+  }
+
+  .ia-esg__cta-secondary {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.8rem 0.5rem;
+  }
+
+  .ia-esg__cta-secondary:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .ia-esg__banner {
+      max-height: 220px;
+    }
+    .ia-esg__hero-text {
+      padding: 1.8rem 1rem 2.2rem;
+    }
+  }
+</style>
