@@ -2,11 +2,11 @@
 // src/pages/ia-esg.astro
 import MainLayout from '../layouts/MainLayout.astro';
 
-const title = "L'IA vue par l'ESG : gouvernance, social, environnement | Ycompris";
-const description = "Comment gouverner l'IA à travers le prisme ESG : dépendances technologiques, impacts sociaux, empreinte environnementale. Par Yves Cavarec, auteur de « Garder la main » (Librinova, 2026) et de l'analyse systématique des DEU du CAC40.";
+const title = "IA × ESG — Services CAC 40, gouvernance IA et reporting | Ycompris";
+const description = "Services CAC 40 forfaitisés, gouvernance IA, reporting du DEU 2026 et stratégie IA pour entreprises cotées.";
 
-// Date de déploiement ISO 8601 (à mettre à jour si le push change de jour)
-const deployDate = "2026-04-23T12:00:00+02:00";
+// Date de déploiement ISO 8601 (mise à jour à chaque refonte de la page)
+const deployDate = "2026-05-03T12:00:00+02:00";
 
 const articleLd = {
   "@context": "https://schema.org",
@@ -73,7 +73,7 @@ const breadcrumbLd = {
       <div class="container ia-esg__hero-text">
         <h1>L'IA est d'abord un enjeu de gouvernance — puis social, puis environnemental.</h1>
         <p class="lead">
-          Par Yves Cavarec, auteur de <em>Garder la main — Diriger à l'ère de l'IA</em> (Librinova, 2026) et de la première analyse quantifiée des mentions d'IA dans les 38 DEU du CAC40.
+          Par Yves Cavarec, auteur de <em>Garder la main — Diriger à l'ère de l'IA</em> (Librinova, 2026). Services pour entreprises du CAC 40 et accompagnement sur le triptyque Gouvernance / Social / Environnement sous prisme IA.
         </p>
         <p class="ia-esg__hero-link">
           <a
@@ -91,23 +91,12 @@ const breadcrumbLd = {
 
     <div class="ia-esg__body content-wrapper">
 
-      <!-- Bloc d'ancrage factuel -->
-      <aside class="ia-esg__anchor">
-        <h2>Ce que dit l'analyse des 38 DEU du CAC40</h2>
+      <!-- Services pour entreprises du CAC 40 -->
+      <section class="ia-esg__cac40">
+        <h2>Services pour entreprises du CAC 40</h2>
+        <h3 class="ia-esg__cac40-question">Comment se situe votre reporting IA par rapport au panel ?</h3>
         <p>
-          Nous avons analysé systématiquement les 38 Documents d'Enregistrement Universel publiés au titre de l'exercice 2024 — 38 DEU sur 40 à la date de l'étude.
-        </p>
-        <p>Trois constats se dégagent :</p>
-        <ul>
-          <li><strong>17,8 %</strong> des mentions d'intelligence artificielle relèvent de l'IA-washing — formulations vagues, promesses sans preuve, absence de chiffres vérifiables.</li>
-          <li><strong>71 %</strong> des entreprises du CAC40 ne décrivent pas leur dépendance aux fournisseurs d'IA (hyperscalers, modèles propriétaires, infrastructures critiques).</li>
-          <li>L'écart entre l'entreprise la plus transparente et la moins transparente varie de <strong>1 à 25</strong> en quantité et qualité d'information publiée.</li>
-        </ul>
-        <p>
-          Le reporting IA du CAC40 n'est pas encore à maturité. Cette asymétrie est elle-même un enjeu de gouvernance.
-        </p>
-        <p class="ia-esg__source"><em>Source : Ycompris, analyse des 38 DEU du CAC40, avril 2026.</em></p>
-        <p>
+          Ycompris a analysé l'intégralité des Documents d'Enregistrement Universel 2025 du CAC 40 selon une grille à trois dimensions (angle, ton, profondeur + complétude IRO). À partir de cette base, nous proposons <strong>quatre services forfaitisés</strong>, qui peuvent être commandés indépendamment ou combinés en un programme intégré.
           <a
             href="https://glm.ycompris.com/deu-cac40-2025"
             target="_blank"
@@ -119,7 +108,55 @@ const breadcrumbLd = {
             <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
           </a>
         </p>
-      </aside>
+
+        <div class="ia-esg__service-grid">
+          <article class="service-card">
+            <p class="service-card__num">01</p>
+            <h4>Benchmark individuel CAC 40</h4>
+            <p>Diagnostic confidentiel et personnalisé : positionnement par rapport au panel et au secteur sur les 4 dimensions clés (volume, profondeur, complétude IRO, IA-washing), identification des angles morts spécifiques, recommandations pour le DEU 2026.</p>
+            <p class="service-card__meta">Livrable : rapport ~25-40 pages + restitution orale 1h30. Délai : 3 semaines après commande.</p>
+          </article>
+
+          <article class="service-card">
+            <p class="service-card__num">02</p>
+            <h4>Mission DEU 2026</h4>
+            <p>Accompagnement à la rédaction des sections IA du DEU 2026 : bibliothèque de paragraphes-types personnalisés (gouvernance IA, dépendance fournisseurs, empreinte environnementale, équilibre opportunité/risque, complétude IRO), trois itérations de relecture sur le draft, restitution comité de direction.</p>
+            <p class="service-card__meta">Forfait 10-12 semaines, livré avant fin novembre 2026 pour intégration dans le DEU 2026. Sur mesure possible pour scope étendu.</p>
+          </article>
+
+          <article class="service-card">
+            <p class="service-card__num">03</p>
+            <h4>Présentation au comité d'audit ou au conseil</h4>
+            <p>Intervention en séance (60-90 minutes) avec mémo administrateurs préparé en amont (4-6 pages). L'intervention s'appuie sur le benchmark individuel de l'entreprise.</p>
+            <p class="service-card__meta">Option proposée en complément du benchmark individuel.</p>
+          </article>
+
+          <article class="service-card">
+            <p class="service-card__num">04</p>
+            <h4>Atelier gouvernance IA</h4>
+            <p>Atelier de 4 heures pour 4 à 8 participants, en intra entreprise ou en interentreprise : application de la grille d'analyse à un DEU réel, identification des chantiers prioritaires, plan d'action 90 jours.</p>
+            <p class="service-card__meta">Mini-diagnostic de l'entreprise remis 1 semaine après.</p>
+          </article>
+        </div>
+
+        <div class="ia-esg__cac40-program">
+          <h3>Programme intégré</h3>
+          <p>
+            Les quatre services peuvent être combinés dans un <strong>programme d'amélioration du reporting IA</strong> structuré en 2 à 3 modules selon vos besoins. Configuration recommandée : benchmark + mission DEU 2026 + atelier de transfert aux équipes opérationnelles, avec en option la présentation au comité d'audit ou au conseil.
+          </p>
+
+          <h3>À qui s'adressent ces services</h3>
+          <p>
+            Aux <strong>directions financières, secrétariats généraux, directions de la communication financière et directions RSE</strong> des entreprises du CAC 40. Le périmètre étendu (SBF 120, ETI cotées) est traité en service sur mesure (voir en bas de page).
+          </p>
+
+          <p class="ia-esg__cac40-cta">
+            <a href="/contact?subject=CAC%2040%20%E2%80%94%20demande%20de%20pr%C3%A9sentation%20de%20l%27offre" class="btn btn--primary">
+              Demander une présentation de l'offre
+            </a>
+          </p>
+        </div>
+      </section>
 
       <!-- Bloc Gouvernance -->
       <section>
@@ -251,6 +288,29 @@ const breadcrumbLd = {
         </p>
       </section>
 
+      <!-- Services sur mesure -->
+      <section class="ia-esg__custom">
+        <h2>Services sur mesure</h2>
+        <p>
+          Au-delà des services forfaitisés présentés ci-dessus, Ycompris répond également à des demandes spécifiques sur la base d'un cahier des charges client. Quelques exemples de demandes traitées sur mesure :
+        </p>
+        <ul class="ia-esg__custom-list">
+          <li><strong>Études sectorielles</strong> sur l'IA dans les rapports annuels d'un secteur donné (banque, luxe, industrie automobile, énergie, etc.) — extension du périmètre à 12-20 entreprises CAC 40 + SBF 120 du même secteur.</li>
+          <li><strong>Missions de conseil étendues</strong> sur la transformation du reporting extra-financier d'un émetteur coté hors CAC 40.</li>
+          <li><strong>Co-publications et livres blancs</strong> avec une fédération professionnelle, un cabinet d'avocats ou un acteur tech.</li>
+          <li><strong>Conférences, keynotes et formations académiques</strong> sur la gouvernance de l'IA en environnement régulé.</li>
+          <li><strong>Présentations internes ou ateliers dédiés</strong> pour équipes de gestion d'actifs, équipes ESG ou comités d'investissement.</li>
+        </ul>
+        <p>
+          Pour toute demande non couverte par les services forfaitisés, contactez-nous avec une expression de besoin synthétique. Ycompris vous répond avec une proposition d'approche et un devis adapté.
+        </p>
+        <p class="ia-esg__custom-cta">
+          <a href="/contact?subject=Sur%20mesure%20%E2%80%94%20expression%20de%20besoin" class="btn btn--primary">
+            Décrire votre besoin
+          </a>
+        </p>
+      </section>
+
       <!-- Double CTA final -->
       <section class="ia-esg__cta">
         <h2>Dialoguer avec Ycompris</h2>
@@ -331,31 +391,105 @@ const breadcrumbLd = {
     font-size: 1.25rem;
   }
 
-  .ia-esg__anchor {
+  /* Section Services pour entreprises du CAC 40 */
+  .ia-esg__cac40 {
     background: white;
-    border-left: 4px solid var(--primary);
-    padding: 1.8rem 2rem;
     border-radius: var(--radius);
+    padding: 2rem 2.2rem 2.4rem;
+    margin-top: 0;
+    border-top: 4px solid var(--primary);
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .ia-esg__cac40 h2 {
     margin-top: 0;
   }
 
-  .ia-esg__anchor h2 {
+  .ia-esg__cac40-question {
+    color: var(--text);
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 500;
+    margin: 0.6rem 0 1rem;
+  }
+
+  .ia-esg__service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+    margin: 2rem 0 0;
+  }
+
+  .service-card {
+    background: var(--light);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.5rem;
+    border-left: 3px solid var(--primary);
+  }
+
+  .service-card__num {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0.08em;
+  }
+
+  .service-card h4 {
+    margin: 0.3rem 0 0.7rem;
+    color: var(--primary);
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .service-card p {
+    margin: 0 0 0.6rem;
+    font-size: 0.97rem;
+  }
+
+  .service-card__meta {
+    color: var(--gray);
+    font-size: 0.9rem !important;
+    font-style: italic;
+    margin-bottom: 0 !important;
+  }
+
+  .ia-esg__cac40-program {
+    margin-top: 2.2rem;
+  }
+
+  .ia-esg__cac40-program h3 {
+    margin: 1.6rem 0 0.6rem;
+    font-size: 1.2rem;
+  }
+
+  .ia-esg__cac40-cta {
+    margin-top: 1.5rem;
+  }
+
+  /* Section Services sur mesure */
+  .ia-esg__custom {
+    background: var(--light);
+    border-radius: var(--radius);
+    padding: 1.8rem 2.2rem 2rem;
+    margin-top: 3rem;
+    border-left: 4px solid var(--primary);
+  }
+
+  .ia-esg__custom h2 {
     margin-top: 0;
   }
 
-  .ia-esg__anchor ul {
+  .ia-esg__custom-list {
     padding-left: 1.2rem;
   }
 
-  .ia-esg__anchor li {
-    margin-bottom: 0.5rem;
+  .ia-esg__custom-list li {
+    margin-bottom: 0.7rem;
   }
 
-  .ia-esg__source {
-    font-size: 0.9rem;
-    color: var(--gray);
-    margin-top: 1rem;
+  .ia-esg__custom-cta {
+    margin-top: 1.5rem;
   }
 
   .ia-esg__cta-link,
