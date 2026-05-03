@@ -1,8 +1,11 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro'; // Assurez-vous que ce chemin est correct pour votre MainLayout
+import MainLayout from '../layouts/MainLayout.astro';
+
+const title = "Contact — Ycompris";
+const description = "Contactez Ycompris pour vos projets de gouvernance IA, reporting extra-financier ou conformité ESG.";
 ---
 
-<MainLayout title="contact">
+<MainLayout title={title} description={description}>
   <div class="content-wrapper">
     <h1>Contact</h1>
     <p>ETI: demandez un diagnostic "greenwashing" ou "loi Sapin II" gratuit ou discutons de vos projets. Nous répondons rapidement (sous 48h ouvrées normalement).</p>

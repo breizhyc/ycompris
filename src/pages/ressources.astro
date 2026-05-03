@@ -1,9 +1,12 @@
 ---
 // src/pages/ressources.astro
 import MainLayout from '../layouts/MainLayout.astro';
+
+const title = "Ressources juridiques ESG & CSRD | Ycompris";
+const description = "Textes officiels et ressources pour la conformité ESG : ESRS, VSME, Sapin II, anti-greenwashing 2024/825/UE.";
 ---
 
-<MainLayout title="Ressources juridiques ESG & CSRD – Conseils Bretagne & France | Ycompris">
+<MainLayout title={title} description={description}>
 <section class="hero">
   <div class="hero-image" style="background-image: url('/images/ressources-RSE-Bretagne-ESG.jpg');"></div>
   <div class="hero-content container">
