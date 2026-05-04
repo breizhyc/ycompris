@@ -109,6 +109,15 @@ const breadcrumbLd = {
           </a>
         </p>
 
+        <details class="ia-esg__legal">
+          <summary>Mentions légales — Étude IA dans les DEU 2025 du CAC 40</summary>
+          <div class="ia-esg__legal-content">
+            <p>Cette analyse porte exclusivement sur la qualité du reporting de l'IA dans les documents publics (DEU 2025). Elle ne constitue ni une recommandation d'investissement, ni un conseil en investissement, ni une évaluation de la maturité opérationnelle des entreprises.</p>
+            <p>Ycompris décline toute responsabilité quant à l'utilisation de ces informations.</p>
+            <p>Absence totale de conflit d'intérêts : Ycompris n'a conseillé aucune entreprise du CAC 40 dans la production de son DEU 2025 et n'a aucun intérêt financier direct ou indirect avec ces entreprises.</p>
+          </div>
+        </details>
+
         <div class="ia-esg__service-grid">
           <article class="service-card">
             <p class="service-card__num">01</p>
@@ -465,6 +474,63 @@ const breadcrumbLd = {
 
   .ia-esg__cac40-cta {
     margin-top: 1.5rem;
+  }
+
+  /* Mentions légales repliables (étude CAC 40) */
+  .ia-esg__legal {
+    margin: 1.2rem 0 0;
+    font-size: 0.85rem;
+    color: var(--gray);
+  }
+
+  .ia-esg__legal summary {
+    cursor: pointer;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0;
+    user-select: none;
+    color: var(--gray);
+    transition: color 0.15s;
+  }
+
+  .ia-esg__legal summary:hover {
+    color: var(--primary);
+  }
+
+  .ia-esg__legal summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .ia-esg__legal summary::before {
+    content: "▸";
+    font-size: 0.75rem;
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  .ia-esg__legal[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .ia-esg__legal-content {
+    margin-top: 0.7rem;
+    padding: 0.9rem 1.1rem;
+    background: var(--light);
+    border-left: 2px solid var(--gray);
+    border-radius: 4px;
+  }
+
+  .ia-esg__legal-content p {
+    margin: 0 0 0.6rem;
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.55;
+  }
+
+  .ia-esg__legal-content p:last-child {
+    margin-bottom: 0;
   }
 
   /* Section Services sur mesure */
