@@ -116,7 +116,7 @@ const breadcrumbLd = {
             <p><strong>Garantie aux émetteurs.</strong> Ycompris ne publie aucun résultat nominatif ni aucun extrait littéral attribuable concernant un émetteur sans l'accord explicite de cet émetteur. Cette garantie est offerte à tout émetteur du panel, qu'il soit ou non client d'Ycompris.</p>
             <p>Cette analyse porte exclusivement sur la qualité du reporting de l'IA dans les documents publics (DEU 2025). Elle ne constitue ni une recommandation d'investissement, ni un conseil en investissement, ni une évaluation de la maturité opérationnelle des entreprises.</p>
             <p>Ycompris décline toute responsabilité quant à l'utilisation de ces informations.</p>
-            <p>Absence totale de conflit d'intérêts (à la date de publication de l'étude, 4 mai 2026) : Ycompris n'a conseillé aucune entreprise du CAC 40 dans la production de son DEU 2025 et n'a aucun intérêt financier direct ou indirect avec ces entreprises à cette date.</p>
+            <p>Absence totale de conflit d'intérêts (à la date de publication de l'étude) : Ycompris n'a conseillé aucune entreprise du CAC 40 dans la production de son DEU 2025 et l'auteur n'a aucun intérêt financier direct ou indirect avec ces entreprises.</p>
           </div>
         </details>
 
@@ -167,6 +167,35 @@ const breadcrumbLd = {
             </a>
           </p>
         </div>
+      </section>
+
+      <!-- Services pour investisseurs et analystes -->
+      <section class="ia-esg__investors">
+        <h2>Services pour investisseurs et analystes</h2>
+
+        <h3>Public concerné</h3>
+        <ul class="ia-esg__investors-list">
+          <li><strong>Gérants ESG</strong> qui intègrent les critères de gouvernance et de risque IA dans leur sélection d'émetteurs.</li>
+          <li><strong>Analystes fondamentaux equity</strong> qui modélisent la matérialité IA dans le P&amp;L et le capex des grandes capitalisations.</li>
+          <li><strong>Family offices et fonds privés</strong> qui cherchent un signal exclusif et défendable sur la maturité IA des émetteurs.</li>
+          <li><strong>Agences de notation extra-financière</strong> qui ont besoin d'une grille d'analyse tierce et indépendante sur le reporting IA.</li>
+        </ul>
+
+        <h3>Services</h3>
+        <ul class="ia-esg__investors-list">
+          <li>
+            <a
+              href="https://glm.ycompris.com/investisseurs"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Analyse du traitement de l'IA dans la communication des émetteurs — page investisseurs sur glm.ycompris.com (nouvel onglet)"
+            >
+              Analyse du traitement de l'IA dans la communication des émetteurs (DEU, rapports de gestion)
+              <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
+            </a>
+          </li>
+          <li>Autres services d'analyse des déclarations de performance extra-financière (rapports de durabilité, VSME, rapports RSE, etc.).</li>
+        </ul>
       </section>
 
       <!-- Bloc Gouvernance -->
@@ -533,6 +562,43 @@ const breadcrumbLd = {
 
   .ia-esg__legal-content p:last-child {
     margin-bottom: 0;
+  }
+
+  /* Section Services pour investisseurs et analystes */
+  .ia-esg__investors {
+    background: var(--light);
+    border-radius: var(--radius);
+    padding: 1.8rem 2.2rem 2rem;
+    margin-top: 3rem;
+    border-left: 4px solid var(--primary);
+  }
+
+  .ia-esg__investors h2 {
+    margin-top: 0;
+  }
+
+  .ia-esg__investors h3 {
+    margin: 1.4rem 0 0.6rem;
+    font-size: 1.1rem;
+  }
+
+  .ia-esg__investors-list {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  .ia-esg__investors-list li {
+    margin-bottom: 0.7rem;
+  }
+
+  .ia-esg__investors-list a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .ia-esg__investors-list a:hover {
+    text-decoration: underline;
   }
 
   /* Section Services sur mesure */
