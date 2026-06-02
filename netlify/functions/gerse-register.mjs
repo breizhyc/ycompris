@@ -11,29 +11,32 @@ const SESSIONS = {
     dtstart: '20260616T080000Z',
     dtend:   '20260616T100000Z',
     dateKey: '20260616',
+    maxPlaces: 9,
   },
   s2: {
     label: 'Mardi 23 juin – 14h00-16h00',
     dtstart: '20260623T120000Z',
     dtend:   '20260623T140000Z',
     dateKey: '20260623',
+    maxPlaces: 8,
   },
   s3: {
     label: 'Vendredi 26 juin – 10h00-12h00',
     dtstart: '20260626T080000Z',
     dtend:   '20260626T100000Z',
     dateKey: '20260626',
+    maxPlaces: 8,
   },
   s4: {
     label: 'Mardi 30 juin – 10h00-12h00',
     dtstart: '20260630T080000Z',
     dtend:   '20260630T100000Z',
     dateKey: '20260630',
+    maxPlaces: 8,
   },
 };
 
 const ALLOWED_DOMAINS = ['guyotenvironnement.com', 'guyotenergies.com', 'ycompris.com'];
-const MAX_PLACES      = 8;
 const ORGANIZER_EMAIL = 'yves.cavarec@ycompris.com';
 const FROM_EMAIL      = 'Formation RSE <formation@ycompris.com>';
 const TABLE           = 'formation_gerse_2606';
@@ -96,9 +99,9 @@ export default async (req) => {
       const taken = count ?? 0;
       result[id] = {
         label:     session.label,
-        available: Math.max(0, MAX_PLACES - taken),
-        total:     MAX_PLACES,
-        full:      taken >= MAX_PLACES,
+        available: Math.max(0, session.maxPlaces - taken),
+        total:     session.maxPlaces,
+        full:      taken >= session.maxPlaces,
       };
     }
     return jsonResponse(result);
@@ -161,10 +164,11 @@ export default async (req) => {
     .select('*', { count: 'exact', head: true })
     .eq('session_id', session_id);
 
-  if ((count ?? 0) >= MAX_PLACES) {
+  const sessionMax = SESSIONS[session_id].maxPlaces;
+  if ((count ?? 0) >= sessionMax) {
     return jsonResponse({
       status:  'full',
-      message: `Ce créneau est complet (${MAX_PLACES} places). Veuillez choisir un autre créneau.`,
+      message: `Ce créneau est complet (${sessionMax} places). Veuillez choisir un autre créneau.`,
     });
   }
 
