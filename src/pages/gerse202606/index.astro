@@ -257,7 +257,10 @@
         </div>
       </div>
 
-      <button type="submit" class="btn-submit" id="submitBtn">S'inscrire → recevoir l'invitation calendrier</button>
+      <div class="msg info show" style="margin-top:0;text-align:center;font-weight:700;font-size:1.05rem;">
+  🔒 Inscriptions closes — les sessions sont organisées.<br/>
+  <span style="font-weight:400;font-size:0.92rem;">Si vous êtes inscrit et n'avez pas reçu l'invitation calendrier, écrivez à <a href="mailto:contact@ycompris.com">contact@ycompris.com</a>.</span>
+</div>
     </form>
 
     <!-- Message : conflit de créneau -->
@@ -394,37 +397,10 @@
     }
   }
 
-  document.getElementById('regForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    hideAll();
-
-    const session_id = document.querySelector('input[name="session"]:checked')?.value;
-    const email      = document.getElementById('email').value.trim();
-    const consent    = document.getElementById('consent').checked;
-
-    // Validations côté client
-    if (!session_id) {
-      showMsg('msgError', '⚠️ Veuillez choisir un créneau.');
-      return;
-    }
-    if (!email) {
-      showMsg('msgError', '⚠️ Veuillez saisir votre adresse email.');
-      return;
-    }
-    const domain = email.split('@')[1]?.toLowerCase();
-    if (!['guyotenvironnement.com', 'guyotenergies.com', 'ycompris.com'].includes(domain)) {
-      document.getElementById('email').classList.add('invalid');
-      showMsg('msgError', '⚠️ Votre adresse email ne fait pas partie des domaines autorisés.');
-      return;
-    }
-    document.getElementById('email').classList.remove('invalid');
-    if (!consent) {
-      showMsg('msgError', '⚠️ Veuillez accepter la politique de confidentialité.');
-      return;
-    }
-
-    await sendRegistration(session_id, email, false);
-  });
+  document.getElementById('regForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  // Inscriptions closes — aucune soumission n'est traitée.
+});
 
   // ── Boutons Oui / Non (modification de créneau) ───────────────────────────
   document.getElementById('btnOui').addEventListener('click', async () => {
