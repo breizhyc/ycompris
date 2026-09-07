@@ -1,68 +1,78 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 
-const title = "À propos d'Ycompris — Yves Cavarec";
-const description = "Ycompris, fondé par Yves Cavarec — gouvernance IA, reporting extra-financier et conformité pour les ETI bretonnes.";
+const title = "À propos — Yves Cavarec | Ycompris";
+const description =
+  "Ycompris, fondé par Yves Cavarec — auteur de Garder la main. Redémarrage en Bretagne autour de la gouvernance de l'IA.";
+const canonical = 'https://ycompris.com/about/';
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout title={title} description={description} canonical={canonical}>
   <section class="section container">
-    <h1>À propos de Ycompris</h1>
+    <h1>À propos</h1>
 
     <p style="font-size: 1.25rem; line-height: 1.7; max-width: 800px; margin: 0 auto 3rem;">
-      Ycompris accompagne les entreprises de taille intermédiaire (ETI), les groupes et leurs partenaires (CAC, OTI, investisseurs, institutions) dans la <strong>structuration</strong>, la <strong>fiabilisation</strong> et la <strong>valorisation</strong> de leurs informations extra-financières.
+      Ycompris, c'est Yves Cavarec : après un parcours en transformation et excellence opérationnelle, un passage par la
+      CSRD, puis un pivot net vers l'IA avec <em>Garder la main</em>. Redémarrage assumé, ancré en Bretagne.
     </p>
 
     <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin: 4rem 0;">
       <div style="flex: 1 1 300px; min-width: 300px;">
-        <h2>Notre mission</h2>
+        <h2>Mission aujourd'hui</h2>
         <p>
-          Transformer la complexité réglementaire (CSRD, ESRS, VSME, taxonomie, loi Sapin II, directive anti-greenwashing 2024/825) en <strong>levier stratégique</strong> : données fiables, allégations sécurisées, reporting audit-ready, communication crédible et coûts maîtrisés.
+          Aider les dirigeants à <strong>garder la main</strong> sur les décisions à l'ère de l'IA : comprendre,
+          cadrer, piloter — avec des analyses utiles et, idéalement bientôt, un outil ou service clé en main.
         </p>
         <p>
-          Nous intervenons à toutes les étapes : double matérialité, traçabilité des données, structuration des processus, sécurisation des communications, préparation aux audits CAC/OTI, formation des équipes.
+          Le conseil pur n'est pas l'objectif final. L'expertise réglementaire (reporting, conformité) reste un
+          arrière-plan, pas la vitrine.
         </p>
       </div>
 
       <div style="flex: 1 1 300px; min-width: 300px;">
-        <h2>Notre différence</h2>
+        <h2>Ce qui me distingue</h2>
         <ul style="padding-left: 0; list-style: none;">
-          <li style="margin-bottom: 1rem;">✓ Expertise opérationnelle (conseil, audit, formation, accréditation Cofrac)</li>
-          <li style="margin-bottom: 1rem;">✓ Approche pragmatique, sans lourdeur inutile</li>
-          <li style="margin-bottom: 1rem;">✓ Focus sur la traçabilité et l’auditabilité des données</li>
-          <li style="margin-bottom: 1rem;">✓ Intégration de l’IA pour accélérer et sécuriser</li>
-          <li style="margin-bottom: 1rem;">✓ Ancrage breton (Finistère) et rayonnement national</li>
+          <li style="margin-bottom: 1rem;">✓ Culture grand compte + pragmatisme terrain</li>
+          <li style="margin-bottom: 1rem;">✓ Écrits publics : livre, étude CAC40, presse</li>
+          <li style="margin-bottom: 1rem;">✓ Pas de clients fictifs — redémarrage transparent</li>
+          <li style="margin-bottom: 1rem;">✓ Ancrage Bretagne, regard national / européen</li>
         </ul>
       </div>
     </div>
 
-    <h2>Parcours de Yves Cavarec, fondateur</h2>
+    <h2>Parcours</h2>
 
     <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
       <div style="flex: 0 0 280px;">
-        <img 
-          src="/images/Yves-Cavarec.png" 
-          alt="Yves Cavarec, fondateur Ycompris" 
+        <img
+          src="/images/Yves-Cavarec-CSRD-VSME-Bretagne.png"
+          alt="Yves Cavarec, fondateur Ycompris, auteur de Garder la main"
           style="width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);"
         />
       </div>
 
       <div style="flex: 1; min-width: 300px;">
         <p>
-          Au sein d’un Big4 en France, j’ai accompagné de nombreuses grandes entreprises dans leur transformation et leur conformité. J’ai ensuite cofondé Sustain Audit, organisme tiers indépendant dédié à l’audit des rapports de durabilité.
+          <strong>Transformation</strong> — 15&nbsp;ans en gestion de projet, programme et portefeuille (PMI) auprès de
+          grandes entreprises.
         </p>
         <p>
-          Formateur et concepteur de formations AFNOR sur CSRD/ESRS/taxonomie, évaluateur technique Cofrac pour l’accréditation des OTI, je mets aujourd’hui cette triple expertise (conseil, audit, formation/accréditation) au service des ETI.
+          <strong>Deloitte</strong> — 5&nbsp;ans en excellence opérationnelle et externalisation de fonctions support.
         </p>
         <p>
-          Basé en Finistère, j’interviens en Bretagne et dans toute la France avec une approche de proximité, pragmatique et rigoureuse.
+          <strong>Ycompris &amp; CSRD</strong> — fondation en 2023 autour des normes de durabilité ; Sustain Audit fondé
+          puis fermé ; plan cassé par la simplification UE / omnibus.
+        </p>
+        <p>
+          <strong>Pivot IA</strong> — <em>Garder la main</em>, tribune / série JDN, étude CAC40 (Investir / Les Echos).
+          Retour en Bretagne en 2024. Aujourd'hui : repartir de zéro, sur ce qui compte.
         </p>
       </div>
     </div>
 
     <div style="text-align: center; margin-top: 4rem;">
       <a href="/contact" class="btn btn--primary" style="font-size: 1.3rem; padding: 1.2rem 2.5rem;">
-        Discutons de votre projet ESG
+        Discutons de votre sujet IA
       </a>
     </div>
   </section>

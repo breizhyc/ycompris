@@ -2,187 +2,113 @@
 // src/pages/methode.astro
 import MainLayout from '../layouts/MainLayout.astro';
 
-const pageTitle = "Méthode Ycompris — reporting ESG en 3 étapes";
-const pageDescription = "Méthode en 3 étapes — Maîtriser, Fiabiliser, Communiquer — pour un reporting ESG audit-ready par CAC et OTI.";
-const canonical = "https://ycompris.com/methode";
+const pageTitle = 'Méthode — Garder la main | Ycompris';
+const pageDescription =
+  "Méthode en 4 étapes pour cadrer l'IA en entreprise : anticiper, clarifier, fiabiliser, décider — dans la lignée de Garder la main.";
+const canonical = 'https://ycompris.com/methode/';
 ---
 
 <MainLayout title={pageTitle} description={pageDescription} canonical={canonical}>
   <header class="hero">
-    <!-- Fond visible (inchangé) -->
-    <div class="hero-image" style="background-image: url('/images/methode-rapport-RSE-Bretagne.jpg');"></div>
-
-    <!-- Image cachée pour SEO + accessibilité + alt text local -->
+    <div class="hero-image" style="background-image: url('/images/header-ia-esg-2026.jpg');"></div>
     <img
-      src="/images/methode-rapport-RSE-Bretagne.jpg"
-      alt="Ressources méthodologie rapport RSE et conformité ESG pour ETI en Bretagne et Finistère – Ycompris"
+      src="/images/header-ia-esg-2026.jpg"
+      alt="Méthode Ycompris — gouvernance IA et décisions"
       style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); opacity: 0;"
       aria-hidden="true"
     />
     <div class="hero-content container">
-      <h1>Méthode Ycompris</h1>
+      <h1>Méthode</h1>
       <p class="lead" style="color: black;">
-        Une approche pragmatique, structurée et <strong>audit-ready</strong> pour transformer les obligations ESG en levier stratégique :<br />
-        <strong>Maîtriser</strong> les enjeux et obligations,<br />
-        <strong>Fiabiliser</strong> les données et processus,<br />
-        <strong>Communiquer</strong> avec clarté, preuves et conformité aux standards.
+        Une approche simple pour <strong>garder la main</strong> : anticiper les dépendances,
+        clarifier les enjeux, fiabiliser ce qu'on affirme, décider ce qui reste humain.
       </p>
     </div>
-
   </header>
+
   <main>
-    <!-- INTRO -->
     <section class="section container">
       <div style="text-align: center; margin: 2rem 0 3rem;">
         <a href="/expertise" class="btn btn--primary" style="font-size: 1.2rem; padding: 1rem 2rem;">
-          Découvrir notre expertise ici
+          Parcours &amp; expertise
         </a>
       </div>
-      <h2>Objectif de la méthode</h2>
+      <h2>Objectif</h2>
       <p>
-        Produire une information ESG <strong>traçable</strong>, <strong>vérifiable</strong>, <strong>comparable</strong> et <strong>compréhensible</strong> par vos parties prenantes (investisseurs, clients, auditeurs, régulateurs), tout en intégrant les nouveaux risques stratégiques — <strong>IA</strong> et <strong>géopolitique</strong> — dans votre analyse et votre gouvernance. 
-        Nous alignons prioritairement sur les référentiels européens — <abbr title="Corporate Sustainability Reporting Directive">CSRD</abbr>, <abbr title="European Sustainability Reporting Standards">ESRS</abbr>, <abbr title="Voluntary Standards for SMEs">VSME</abbr> — tout en intégrant ISSB/GRI et EcoVadis selon votre contexte.
+        Permettre à un dirigeant de savoir <strong>où l'IA intervient</strong>, <strong>quels risques il assume</strong>,
+        et <strong>quelles décisions restent humaines</strong> — avec des preuves et un langage clair.
       </p>
       <p>
-        En 2026-2028, avec les simplifications Omnibus (seuil relevé à 1000 salariés pour les grandes non cotées, VSME volontaire renforcé), la méthode permet d’anticiper sans surinvestir.
-      </p>
-      <p>
-        <strong>Notre approche s'articule en 4 étapes complémentaires :</strong>.
-      </p>
-      <p>
-        <strong>1. Anticiper</strong> Cartographier vos vulnérabilités IA et géopolitiques
-      </p>
-      <p>
-        <strong>2. Maîtriser</strong> Identifier vos enjeux ESG prioritaires et obligations applicables
-      </p>
-      <p>
-        <strong>3. Fiabiliser</strong> Professionnaliser la collecte et la traçabilité de vos données
-      </p>
-      <p>
-        <strong>4. Communiquer</strong> Produire un reporting clair, comparable et sans risque juridique
-      </p>
-      <p>
-        Cette méthode transforme vos obligations ESG en avantage concurrentiel : crédibilité renforcée, risques maîtrisés, décisions stratégiques éclairées.
+        Quatre étapes complémentaires. Le reporting réglementaire (CSRD, VSME…) n'est plus le centre : s'il revient,
+        c'est comme contexte, pas comme produit.
       </p>
     </section>
 
-    <!-- 1) ANTICIPER -->
-    <section class="section section--alt container" id="communiquer">
-      <h2>1. Anticiper — Intégrer IA et géopolitique dans votre stratégie ESG</h2>
+    <section class="section section--alt container" id="anticiper">
+      <h2>1. Anticiper — dépendances et angles morts</h2>
       <p>
-        L'IA et la géopolitique transforment la gouvernance, le social et la chaîne de valeur. Ces angles morts du reporting ESG classique deviennent des risques stratégiques majeurs que vos investisseurs scrutent.
+        Cloud, modèles frontier, données, chaîne de valeur, compétences : cartographier ce dont vous dépendez avant que
+        la question ne vienne de l'extérieur (investisseurs, clients, équipes).
       </p>
-      <h3>Ce que nous faisons</h3>
       <ul>
-        <li>Cartographier vos dépendances critiques.</li>
-        <li>Analyser l'impact IA sur votre gouvernance (souveraineté des données, décisions algorithmiques, cybersécurité) et votre modèle social (transformation des effectifs, compétences, résistances au changement).</li>
-        <li>Évaluer les risques géopolitiques sur votre chaîne de valeur (sanctions, relocalisations, approvisionnements critiques).</li>
-        <li>Intégrer IA et géopolitique dans votre analyse de double matérialité et votre reporting VSME/CSRD (ESRS G1, S1, E1).</li>
-        <li>Élaborer une stratégie de souveraineté progressive : réduire les dépendances critiques sans perdre en compétitivité.</li>
-      </ul>
-      <h3>Résultats attendus</h3>
-      <ul>
-        <li>Vision claire de vos vulnérabilités technologiques et géopolitiques — avant que vos investisseurs ne posent la question.</li>
-        <li>Feuille de route stratégique : arbitrages documentés, scénarios de résilience, plan d'action hiérarchisé.</li>
-        <li>Différenciation compétitive : vous anticipez là où vos concurrents subissent.</li>
-      </ul>
-        <!-- Bouton vers IA & ESG – placé à la fin de la page ou après le CTA principal -->
-    <div style="text-align: center; margin: 4rem 0;">
-      <a 
-        href="/ia-esg" 
-        class="btn btn--primary" 
-        style="font-size: 1.2rem; padding: 1rem 2rem;"
-      >
-        En savoir plus sur la relation entre IA et ESG
-      </a>
-    </div>
-    </section>
-
-    <!-- 2) MAÎTRISER -->
-    <section class="section section--alt container" id="maitriser">
-      <h2>2. Maîtriser — Identifier, hiérarchiser, documenter</h2>
-      <p>
-        Nous partons des <strong>fondamentaux économiques</strong> : dépendances (ressources, fournisseurs, énergie, talents) et impacts (environnementaux, sociaux, gouvernance) de l’entreprise.
-      </p>
-      <h3>Ce que nous faisons</h3>
-      <ul>
-        <li>Cartographier la chaîne de valeur et ses dépendances/impacts.</li>
-        <li>Identifier les obligations applicables (CSRD/ESRS, VSME volontaire, taxonomie UE, Sapin II, exigences sectorielles ou clients).</li>
-        <li>Réaliser une <strong>analyse de matérialité</strong> pragmatique (double matérialité si CSRD applicable).</li>
-        <li>Documenter hypothèses, sources et arbitrages — base indispensable pour tout audit.</li>
-      </ul>
-      <h3>Résultats attendus</h3>
-      <ul>
-        <li>Enjeux prioritaires listés, calendrier réaliste, preuves des choix méthodologiques.</li>
-        <li>Réduction du risque réglementaire et concentration des efforts sur ce qui compte vraiment.</li>
+        <li>Cartographie des dépendances technologiques et organisationnelles</li>
+        <li>Impact sur gouvernance, social et continuité d'activité</li>
+        <li>Priorisation : ce qui est critique vs. bruyant</li>
       </ul>
     </section>
 
-    <!-- 3) FIABILISER -->
-    <section class="section container" id="fiabiliser">
-      <h2>3. Fiabiliser — Qualifier données et processus</h2>
+    <section class="section container" id="clarifier">
+      <h2>2. Clarifier — décisions humaines vs. automatisées</h2>
       <p>
-        Des données fiables = rapport crédible. Nous professionnalisons la collecte, la traçabilité et les contrôles, en nous appuyant sur des sources terrain et des outils intelligents.
+        Nommer explicitement ce que l'IA peut faire, ce qu'elle ne doit pas faire, et qui tranche en cas de doute.
       </p>
-      <h3>Ce que nous faisons</h3>
       <ul>
-        <li>Définir métriques alignées ESRS/VSME, ISSB/GRI, taxonomie, EcoVadis.</li>
-        <li>Documenter le processus complet (rôles, contrôles, journal des preuves, versions).</li>
-        <li>Constituer un <strong>evidence pack</strong> traçable jusqu’à la source.</li>
-        <li>Automatiser via IA : rapprochements, détection d’incohérences/outliers, alertes allégations à risque.</li>
-      </ul>
-      <h3>Résultats attendus</h3>
-      <ul>
-        <li>Données fiables, traçables, comparables — prêtes pour vérification CAC/OTI.</li>
-        <li>Réduction des coûts et du temps de reporting itératif (souvent -40 à -70 % avec l’automatisation).</li>
+        <li>Cadre de décision (qui décide, sur quoi, avec quelles preuves)</li>
+        <li>Risques : biais, dépendance, souveraineté des données, cybersécurité</li>
+        <li>Alignement avec la stratégie réelle — pas avec un slide « transformation IA »</li>
       </ul>
     </section>
 
-    <!-- 4) COMMUNIQUER -->
-    <section class="section section--alt container" id="communiquer">
-      <h2>4. Communiquer — Être compris sans ambiguïté</h2>
+    <section class="section section--alt container" id="fiabiliser">
+      <h2>3. Fiabiliser — ce que vous affirmez</h2>
       <p>
-        La communication ESG se professionnalise : clarté, comparabilité et zéro risque d’allégation trompeuse (directive 2024/825).
+        Toute affirmation sur l'IA (dans un rapport, une com', un board pack) doit être traçable. Sinon ce n'est pas de
+        la gouvernance — c'est du storytelling.
       </p>
-      <h3>Standards et cadres appliqués</h3>
       <ul>
-        <li><strong>VSME</strong> — reporting volontaire simplifié, de plus en plus demandé par donneurs d’ordre et banques.</li>
-        <li><strong>ESRS</strong> — structure, double matérialité, points de données obligatoires.</li>
-        <li><strong>ISSB/GRI</strong> — articulation internationale.</li>
-        <li><strong>EcoVadis</strong> — notation fournisseurs/clients.</li>
-      </ul>
-      <h3>Ce que nous faisons</h3>
-      <ul>
-        <li>Rédiger contenus conformes, lisibles, avec preuves explicites et notes méthodologiques.</li>
-        <li>Structurer le rapport (tableaux, glossaire, FAQ, annexes) pour faciliter la revue auditeur.</li>
-        <li>Mettre en place une <strong>politique d’allégations</strong> (processus, critères, validation) pour sécuriser communications.</li>
-      </ul>
-      <h3>Résultats attendus</h3>
-      <ul>
-        <li>Rapport clair, vérifiable, comparable — confiance renforcée auprès de toutes les parties prenantes.</li>
-        <li>Valorisation de votre démarche ESG comme avantage concurrentiel.</li>
+        <li>Sources, hypothèses, limites documentées</li>
+        <li>Analyses actionnables (ex. étude DEU CAC40)</li>
+        <li>Réduction des allégations floues (y compris IA-washing)</li>
       </ul>
     </section>
 
-    <!-- CTA -->
+    <section class="section container" id="decider">
+      <h2>4. Décider — et garder la main</h2>
+      <p>
+        Sortir avec un plan court : arbitrages, scénarios, prochaines étapes. Idealement packagé ensuite en outil ou
+        service clé en main — en conception.
+      </p>
+      <ul>
+        <li>Feuille de route réaliste</li>
+        <li>Indicateurs de pilotage simples</li>
+        <li>Capacité à expliquer la posture IA en une page</li>
+      </ul>
+      <div style="text-align: center; margin: 3rem 0 0;">
+        <a href="/ia-esg" class="btn btn--primary" style="font-size: 1.2rem; padding: 1rem 2rem;">
+          Lire aussi : IA &amp; environnement régulé
+        </a>
+      </div>
+    </section>
+
     <section class="section cta container">
-      <h2>Prêt à appliquer la méthode Ycompris ?</h2>
-      <p>
-        Partagez-nous votre taille, secteur, obligations actuelles et échéances. Nous construisons un parcours sur mesure : enjeux prioritaires, livrables, preuves, calendrier et niveau d’automatisation IA adapté.
-      </p>
-      <p><a href="/contact" class="btn btn--primary">Décrivez votre contexte →</a></p>
+      <h2>Appliquer la méthode sur votre contexte ?</h2>
+      <p>Taille, secteur, maturité IA, urgences. On construit un parcours court et utile.</p>
+      <p><a href="/contact" class="btn btn--primary">Décrire mon contexte →</a></p>
     </section>
   </main>
 </MainLayout>
 
 <style>
-  /* Styles spécifiques à la page */
-  .page-hero {
-    background: linear-gradient(135deg, #e6f4f4 0%, #d9f0f0 100%);
-    padding: 0 0 4rem; /* colle au header */
-    text-align: center;
-  }
-
   .lead {
     font-size: 1.3rem;
     max-width: 800px;
@@ -205,7 +131,7 @@ const canonical = "https://ycompris.com/methode";
   }
 
   ul li::before {
-    content: "→";
+    content: '→';
     position: absolute;
     left: 0;
     color: var(--primary);

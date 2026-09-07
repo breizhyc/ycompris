@@ -1,104 +1,79 @@
 ---
 // src/pages/expertise.astro
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from '../layouts/MainLayout.astro';
 
-const pageTitle = "Expertise Ycompris — CSRD, audit de durabilité";
+const pageTitle = 'Expertise — Yves Cavarec | Ycompris';
 const pageDescription =
-  "Expertise CSRD, ESRS, taxonomie verte et audit de durabilité pour les ETI bretonnes et françaises.";
-const canonical = "https://ycompris.com/expertise";
-
-
+  "Parcours et expertise d'Yves Cavarec : transformation d'entreprises, excellence opérationnelle, pivot vers la gouvernance de l'IA (Garder la main).";
+const canonical = 'https://ycompris.com/expertise/';
 ---
 
 <MainLayout title={pageTitle} description={pageDescription} canonical={canonical}>
-  <Fragment slot="head">
-    <meta name="robots" content="index,follow" />
-    <script type="application/ld+json">
-      {JSON.stringify(jsonLd)}
-    </script>
-  </Fragment>
-
   <header class="page-hero container">
-    <h1>Expertise Ycompris</h1>
+    <h1>Expertise</h1>
     <p class="lead" style="color: black;">
-      Une expertise pointue et opérationnelle en conformité ESG, CSRD, ESRS, taxonomie verte et audit de durabilité,<br />
-      au service des ETI bretonnes et françaises — avec une approche pragmatique, pédagogique et ancrée localement.
+      Une trajectoire de transformation et d'excellence opérationnelle — aujourd'hui au service d'une gouvernance IA
+      lucide, dans la lignée de <em>Garder la main</em>.
     </p>
   </header>
 
   <main>
-    <!-- INTRO -->
     <section class="section container">
-      <h2>Renforcez votre stratégie de durabilité avec une expertise reconnue</h2>
+      <h2>Ce que j'apporte</h2>
       <p>
-        Ycompris aide les entreprises de taille intermédiaire (ETI) à structurer, fiabiliser et valoriser leurs données ESG pour répondre aux exigences des investisseurs, des régulateurs et des partenaires.
-      </p>
-      <p>
-        La performance extra-financière n’est plus réservée aux grands groupes : c’est un levier stratégique accessible à toutes les organisations. Nous traduisons les obligations complexes (CSRD, ESRS, VSME, taxonomie UE) en actions concrètes, réalistes et rentables.
-      </p>
-    </section>
-
-    <!-- NOTRE APPROCHE -->
-    <section class="section section--alt container">
-      <h2>Notre approche : clarté, fiabilité, utilité</h2>
-      <p>
-        Les ETI ne disposent pas toujours d’équipes RSE ou conformité dédiées. C’est pourquoi nous proposons un accompagnement adapté, opérationnel et sans lourdeur administrative.
-      </p>
-      <p>
-        Notre méthode repose sur trois piliers essentiels :
+        Clarifier les décisions humaines face à l'IA, cartographier dépendances et risques, produire des analyses
+        actionnables — et, à terme, un outil ou service clé en main. Pas un catalogue réglementaire en vitrine.
       </p>
       <ul>
-        <li><strong>Clarté</strong> — Traduire les normes européennes en langage et actions compréhensibles pour les dirigeants et équipes.</li>
-        <li><strong>Fiabilité</strong> — Garantir des données traçables, vérifiables et audit-ready (limited assurance CAC/OTI).</li>
-        <li><strong>Utilité</strong> — Transformer la conformité en avantage concurrentiel : attractivité investisseurs, réduction des risques, optimisation coûts.</li>
+        <li><strong>Lucidité</strong> — nommer ce que l'IA change dans la gouvernance, les compétences, la dépendance aux
+          modèles et aux cloud.</li>
+        <li><strong>Méthode</strong> — structurer, prioriser, documenter sans lourdeur de grand cabinet.</li>
+        <li><strong>Preuves</strong> — études et écrits publics (livre, CAC40, presse), pas une liste de clients inventés.</li>
       </ul>
     </section>
 
-    <!-- FONDATEUR avec protection -->
-    <section class="section container" id="fondateur">
-      <h2>Yves Cavarec, fondateur d’Ycompris</h2>
+    <section class="section section--alt container" id="fondateur">
+      <h2>Yves Cavarec, fondateur d'Ycompris</h2>
       <div class="founder-bio">
         <div class="protected-portrait">
-          <!-- Fond original visible -->
           <div class="photo-bg"></div>
-          
-          <!-- Image cachée pour SEO + accessibilité + alt text local -->
           <img
             src="/images/Yves-Cavarec-CSRD-VSME-Bretagne.png"
-            alt="Yves Cavarec – Expert CSRD, ESRS, VSME et audit de durabilité en Bretagne (Finistère) – Fondateur Ycompris"
+            alt="Yves Cavarec — fondateur Ycompris, auteur de Garder la main"
             style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); opacity: 0;"
             aria-hidden="true"
           />
-          
           <div class="photo-overlay"></div>
         </div>
-        
+
         <div class="founder-text">
           <p>
-            « Lors de mon parcours dans le conseil, notamment au sein d’un Big4 en France, j’ai accompagné de nombreuses grandes entreprises dans leur structuration, leur mise en conformité et leur transformation. Ce que j’y ai appris : la rigueur ne doit pas être synonyme de lourdeur, et l’efficacité passe par la clarté. »
+            Quinze ans dans la transformation de grandes entreprises — gestion de projet, programme et portefeuille
+            (référentiel PMI) — puis cinq ans chez Deloitte en excellence opérationnelle et externalisation de fonctions
+            support (finance, compta, paie, administratif…).
           </p>
           <p>
-            Ycompris a vocation à accompagner les ETI en Bretagne et en France avec une offre de proximité. Depuis le Finistère, où j’ai grandi et commencé mes études, je développe une expertise adaptée aux réalités des entreprises intermédiaires : structurer l’essentiel, fiabiliser l’information et avancer avec confiance dans un environnement réglementaire dense.
+            En 2023, j'ai fondé Ycompris autour de la CSRD : normes, audit, formation d'auditeurs. J'avais aussi fondé
+            Sustain Audit, que nous avons fermé. La simplification européenne (omnibus) a cassé ce plan d'affaires.
           </p>
           <p>
-            Je garde un pied à Paris, où j’ai cofondé <a href="https://sustainaudit.fr" target="_blank" rel="noopener">Sustain Audit</a>, organisme tiers indépendant dédié à l’audit des rapports de durabilité. Cette double implantation me permet d’intervenir au plus près des territoires tout en restant connecté aux évolutions nationales et européennes.
+            Je me suis alors tourné vers l'IA : livre <em>Garder la main</em> (Librinova, 2026), série dans le JDN,
+            étude sur le traitement de l'IA dans les DEU du CAC&nbsp;40 (Investir / Les Echos).
           </p>
           <p>
-            Formateur et concepteur de formations pour l’AFNOR sur la directive CSRD, les normes ESRS et la taxonomie verte européenne, je suis également évaluateur technique auprès du Cofrac, où j’examine les organismes candidats à l’accréditation en tant qu’OTI. Cette expérience triple (conseil, audit, formation/accréditation) garantit un regard rigoureux, opérationnel et toujours à jour sur les attentes des régulateurs.
+            Installé en Bretagne depuis 2024, je redémarre. L'expertise réglementaire reste un arrière-plan crédible — ce
+            n'est plus l'offre principale.
           </p>
-          <p><em>Yves Cavarec – Fondateur Ycompris</em></p>
+          <p><em>Yves Cavarec — Fondateur Ycompris</em></p>
         </div>
-      </div>      
+      </div>
     </section>
 
-    <!-- CTA -->
     <section class="section cta container">
-      <h2>Bénéficiez de notre expertise en données ESG</h2>
+      <h2>Un sujet IA à cadrer ?</h2>
+      <p>Expliquez votre contexte : décisions, risques, dépendances. On regarde ce qui est utile — sans slide deck.</p>
       <p>
-        Contactez-nous pour discuter de votre contexte : taille, secteur, obligations CSRD/VSME, besoins en audit ou en automatisation IA.
-      </p>
-      <p>
-        <a href="/contact" class="btn btn--primary">Parlez-nous de votre projet →</a>
+        <a href="/contact" class="btn btn--primary">Me contacter →</a>
       </p>
     </section>
   </main>
@@ -134,7 +109,7 @@ const canonical = "https://ycompris.com/expertise";
   }
 
   ul li::before {
-    content: "✓";
+    content: '✓';
     position: absolute;
     left: 0;
     color: var(--primary);
@@ -153,14 +128,13 @@ const canonical = "https://ycompris.com/expertise";
     min-width: 300px;
   }
 
-  /* Protection de la photo – fond original conservé */
   .protected-portrait {
     position: relative;
     width: 300px;
     height: 400px;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
     flex-shrink: 0;
   }
 
@@ -168,7 +142,6 @@ const canonical = "https://ycompris.com/expertise";
     position: absolute;
     inset: 0;
     background: url('/images/Yves-Cavarec-CSRD-VSME-Bretagne.png') center/cover no-repeat;
-    /* Pas de background-color forcé → fond original du PNG */
   }
 
   .photo-overlay {
@@ -218,15 +191,13 @@ const canonical = "https://ycompris.com/expertise";
 </style>
 
 <script is:inline>
-  // Protection anti-copie sur la zone de la photo
   document.addEventListener('DOMContentLoaded', () => {
     const protectedZone = document.querySelector('.protected-portrait');
     if (protectedZone) {
-      protectedZone.addEventListener('contextmenu', e => e.preventDefault());
-      protectedZone.addEventListener('dragstart', e => e.preventDefault());
-      protectedZone.addEventListener('selectstart', e => e.preventDefault());
-      
-      protectedZone.querySelector('.photo-overlay')?.addEventListener('contextmenu', e => e.preventDefault());
+      protectedZone.addEventListener('contextmenu', (e) => e.preventDefault());
+      protectedZone.addEventListener('dragstart', (e) => e.preventDefault());
+      protectedZone.addEventListener('selectstart', (e) => e.preventDefault());
+      protectedZone.querySelector('.photo-overlay')?.addEventListener('contextmenu', (e) => e.preventDefault());
     }
   });
 </script>
