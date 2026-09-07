@@ -2,45 +2,46 @@
 // src/pages/ia-esg.astro
 import MainLayout from '../layouts/MainLayout.astro';
 
-const title = "Services CAC 40 — IA × ESG | Ycompris";
-const description = "Services CAC 40 forfaitisés, gouvernance IA, reporting du DEU 2026 et stratégie IA pour entreprises cotées.";
+const title = 'Gouvernance IA — Garder la main | Ycompris';
+const description =
+  "Gouverner l'IA : décisions humaines, risques, reporting. Yves Cavarec, auteur de Garder la main — étude CAC40 et cadre lucidité.";
 
-// Date de déploiement ISO 8601 (mise à jour à chaque refonte de la page)
-const deployDate = "2026-05-03T12:00:00+02:00";
+const deployDate = '2026-09-07T12:00:00+02:00';
 
 const articleLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "L'IA vue par l'ESG : gouvernance, social, environnement",
-  "description": "Comment gouverner l'IA à travers le prisme ESG.",
-  "author": {
-    "@type": "Person",
-    "name": "Yves Cavarec",
-    "url": "https://ycompris.com/",
-    "sameAs": [
-      "https://glm.ycompris.com/",
-      "https://www.linkedin.com/in/cavarec",
-      "https://www.librinova.com/librairie/yves-cavarec/garder-la-main"
-    ]
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: "Gouvernance de l'IA — garder la main",
+  description:
+    "Cadre pour diriger à l'ère de l'IA : gouvernance, social, environnement — dans la lignée de Garder la main.",
+  author: {
+    '@type': 'Person',
+    name: 'Yves Cavarec',
+    url: 'https://ycompris.com/',
+    sameAs: [
+      'https://glm.ycompris.com/',
+      'https://www.linkedin.com/in/cavarec',
+      'https://www.librinova.com/librairie/yves-cavarec/garder-la-main',
+    ],
   },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Ycompris",
-    "url": "https://ycompris.com/"
+  publisher: {
+    '@type': 'Organization',
+    name: 'Ycompris',
+    url: 'https://ycompris.com/',
   },
-  "datePublished": deployDate,
-  "dateModified": deployDate,
-  "inLanguage": "fr",
-  "mainEntityOfPage": "https://ycompris.com/ia-esg/"
+  datePublished: '2026-05-03T12:00:00+02:00',
+  dateModified: deployDate,
+  inLanguage: 'fr',
+  mainEntityOfPage: 'https://ycompris.com/ia-esg/',
 };
 
 const breadcrumbLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://ycompris.com/" },
-    { "@type": "ListItem", "position": 2, "name": "IA & ESG", "item": "https://ycompris.com/ia-esg/" }
-  ]
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://ycompris.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Gouvernance IA', item: 'https://ycompris.com/ia-esg/' },
+  ],
 };
 ---
 
@@ -49,23 +50,22 @@ const breadcrumbLd = {
   description={description}
   ogType="article"
   ogImage="/images/og-ia-esg-2026.jpg"
-  ogImageAlt="Gouverner l'IA à travers le triptyque ESG — Ycompris"
+  ogImageAlt="Gouvernance de l'IA — Garder la main | Ycompris"
   canonical="https://ycompris.com/ia-esg/"
 >
   <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(articleLd)} />
   <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
   <meta slot="head-extra" property="article:author" content="Yves Cavarec" />
-  <meta slot="head-extra" property="article:published_time" content={deployDate} />
+  <meta slot="head-extra" property="article:published_time" content="2026-05-03T12:00:00+02:00" />
+  <meta slot="head-extra" property="article:modified_time" content={deployDate} />
 
   <article class="ia-esg">
-
-    <!-- Hero avec image d'entête SVG (fallback JPG) + H1 + sous-titre -->
     <header class="ia-esg__hero">
       <img
         class="ia-esg__banner"
         src="/images/header-ia-esg-2026.svg"
         onerror="this.onerror=null;this.src='/images/header-ia-esg-2026.jpg';"
-        alt="Triptyque abstrait évoquant les trois dimensions gouvernance, social et environnement, sous le prisme IA"
+        alt="Cadre abstrait pour la gouvernance de l'IA"
         width="1600"
         height="600"
         loading="eager"
@@ -73,181 +73,135 @@ const breadcrumbLd = {
       <div class="container ia-esg__hero-text">
         <h1>L'IA est d'abord un enjeu de gouvernance — puis social, puis environnemental.</h1>
         <p class="lead">
-          Par Yves Cavarec, auteur de <em>Garder la main — Diriger à l'ère de l'IA</em> (Librinova, 2026). Services pour entreprises du CAC 40 et accompagnement sur le triptyque Gouvernance / Social / Environnement sous prisme IA.
+          Par Yves Cavarec, auteur de <em>Garder la main — Diriger à l'ère de l'IA</em> (Librinova, 2026). Un cadre pour
+          comprendre, cadrer et piloter l'IA sans perdre le contrôle des décisions.
         </p>
         <p class="ia-esg__hero-link">
           <a
-            href="https://glm.ycompris.com/"
+            href="https://glm.ycompris.com/garder-la-main"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Découvrir le programme (ouvre glm.ycompris.com dans un nouvel onglet)"
+            aria-label="Découvrir le livre (ouvre glm.ycompris.com)"
           >
-            Découvrir le programme →
-            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
+            Lire Garder la main →
+            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"
+              ><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"></path></svg
+            >
           </a>
         </p>
       </div>
     </header>
 
     <div class="ia-esg__body content-wrapper">
-
-      <!-- Services pour entreprises du CAC 40 -->
       <section class="ia-esg__cac40">
-        <h2>Services pour entreprises du CAC 40</h2>
-        <h3 class="ia-esg__cac40-question">Comment se situe votre reporting IA par rapport au panel ?</h3>
+        <h2>Preuve publique : l'IA dans les DEU du CAC&nbsp;40</h2>
         <p>
-          Ycompris a analysé l'intégralité des Documents d'Enregistrement Universel 2025 du CAC 40 selon une grille à trois dimensions (angle, ton, profondeur + complétude IRO). À partir de cette base, nous proposons <strong>quatre services forfaitisés</strong>, qui peuvent être commandés indépendamment ou combinés en un programme intégré.
+          J'ai analysé les Documents d'Enregistrement Universel 2025 du CAC&nbsp;40 (1&nbsp;692 occurrences d'IA
+          catégorisées). C'est une base de travail — pas une promesse de cabinet « forfait CAC40 » en pleine activité.
           <a
             href="https://glm.ycompris.com/deu-cac40-2025"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Consulter l'étude complète sur glm.ycompris.com (nouvel onglet)"
             class="ia-esg__cta-link"
+            aria-label="Consulter l'étude sur glm.ycompris.com"
           >
-            Consulter l'étude complète →
-            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
+            Consulter l'étude →
+            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"
+              ><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"></path></svg
+            >
           </a>
         </p>
 
         <details class="ia-esg__legal">
-          <summary>Mentions légales — Étude IA dans les DEU 2025 du CAC 40</summary>
+          <summary>Mentions — étude DEU 2025</summary>
           <div class="ia-esg__legal-content">
-            <p>Cette analyse repose sur l'étude <em>L'IA dans les DEU 2025 du CAC 40</em> (Ycompris, 4 mai 2026), publication exceptionnelle de lancement. Les éditions ultérieures (DEU 2026, DEU 2027) ne feront pas l'objet d'une publication équivalente : elles serviront de base aux prestations contractuelles.</p>
-            <p><strong>Garantie aux émetteurs.</strong> Ycompris ne publie aucun résultat nominatif ni aucun extrait littéral attribuable concernant un émetteur sans l'accord explicite de cet émetteur. Cette garantie est offerte à tout émetteur du panel, qu'il soit ou non client d'Ycompris.</p>
-            <p>Cette analyse porte exclusivement sur la qualité du reporting de l'IA dans les documents publics (DEU 2025). Elle ne constitue ni une recommandation d'investissement, ni un conseil en investissement, ni une évaluation de la maturité opérationnelle des entreprises.</p>
-            <p>Ycompris décline toute responsabilité quant à l'utilisation de ces informations.</p>
-            <p>Absence totale de conflit d'intérêts (à la date de publication de l'étude) : Ycompris n'a conseillé aucune entreprise du CAC 40 dans la production de son DEU 2025 et l'auteur n'a aucun intérêt financier direct ou indirect avec ces entreprises.</p>
+            <p>
+              Analyse publiée par Ycompris (2026). Aucun résultat nominatif sans accord de l'émetteur. Ce n'est ni un
+              conseil en investissement, ni une évaluation de maturité opérationnelle.
+            </p>
+            <p>
+              À la date de publication de l'étude : absence de conflit d'intérêts déclaré sur le panel CAC&nbsp;40 pour la
+              production des DEU 2025.
+            </p>
           </div>
         </details>
+
+        <h3 style="margin-top: 2rem;">Ce que je peux faire à partir de cette base</h3>
+        <p style="color: var(--gray);">
+          Redémarrage : pas de catalogue commercial figé. Des formats possibles, à discuter selon votre contexte.
+        </p>
 
         <div class="ia-esg__service-grid">
           <article class="service-card">
             <p class="service-card__num">01</p>
-            <h4>Benchmark individuel CAC 40</h4>
-            <p>Diagnostic confidentiel et personnalisé : positionnement par rapport au panel sur les 4 dimensions clés (volume, profondeur, complétude IRO, taux de mentions IA superficielles), identification des angles les moins développés spécifiques, recommandations pour le DEU 2026.</p>
-            <p class="service-card__meta">Livrables : un rapport écrit et une restitution orale. Délai et modalités précisés au devis, en fonction du périmètre demandé.</p>
+            <h4>Lecture / benchmark reporting IA</h4>
+            <p>
+              Positionner un reporting (DEU ou équivalent) face à une grille claire : volume, profondeur, angles
+              manquants, recommandations.
+            </p>
           </article>
-
           <article class="service-card">
             <p class="service-card__num">02</p>
-            <h4>Mission DEU 2026</h4>
-            <p>Accompagnement à la rédaction des sections IA du DEU 2026 : gouvernance IA, dépendance fournisseurs, empreinte environnementale, équilibre opportunité/risque, complétude IRO.</p>
-            <p class="service-card__meta">Modalités : itérations de relecture du draft et restitution en comité de direction. Calendrier ajusté à la fenêtre d'arbitrage du DEU 2026 (cycle qui se ferme à l'automne 2026). Périmètre, itérations et calendrier précisés au devis.</p>
+            <h4>Cadrage gouvernance IA</h4>
+            <p>
+              Qui décide, qui reprend la main, que trace-t-on — atelier court, livrable une page + plan 90&nbsp;jours.
+            </p>
           </article>
-
           <article class="service-card">
             <p class="service-card__num">03</p>
-            <h4>Présentation au comité d'audit ou au conseil</h4>
-            <p>Intervention en séance avec mémo administrateurs préparé en amont. Durée et format du mémo précisés au devis, en fonction du contexte de gouvernance de l'entreprise. L'intervention s'appuie sur le benchmark individuel de l'entreprise.</p>
-            <p class="service-card__meta">Option proposée en complément du benchmark individuel.</p>
+            <h4>Analyses pour investisseurs / analystes</h4>
+            <p>
+              Traitement de l'IA dans la communication des émetteurs — voir aussi
+              <a href="https://glm.ycompris.com/investisseurs" target="_blank" rel="noopener noreferrer"
+                >glm.ycompris.com/investisseurs</a
+              >.
+            </p>
           </article>
-
           <article class="service-card">
             <p class="service-card__num">04</p>
-            <h4>Atelier gouvernance IA</h4>
-            <p>Atelier en intra entreprise ou en interentreprise, taille du groupe et durée définies avec le client. Application de la grille d'analyse à un DEU réel, identification des chantiers prioritaires, plan d'action 90 jours.</p>
-            <p class="service-card__meta">Diagnostic complémentaire remis après l'atelier — modalités précisées au devis.</p>
+            <h4>Vers un outil clé en main</h4>
+            <p>
+              Direction assumée : packager ensuite un service ou produit. Pas encore commercialisé — en conception.
+            </p>
           </article>
         </div>
 
-        <div class="ia-esg__cac40-program">
-          <h3>Programme intégré</h3>
-          <p>
-            Les quatre services peuvent être combinés dans un <strong>programme d'amélioration du reporting IA</strong> structuré en 2 à 3 modules selon vos besoins. Configuration recommandée : benchmark + mission DEU 2026 + atelier de transfert aux équipes opérationnelles, avec en option la présentation au comité d'audit ou au conseil.
-          </p>
-
-          <h3>À qui s'adressent ces services</h3>
-          <p>
-            Aux <strong>directions financières, secrétariats généraux, directions de la communication financière et directions RSE</strong> des entreprises du CAC 40. Le périmètre étendu (SBF 120, ETI cotées) est traité en service sur mesure (voir en bas de page).
-          </p>
-
-          <p class="ia-esg__cac40-cta">
-            <a href="/contact?subject=CAC%2040%20%E2%80%94%20demande%20de%20pr%C3%A9sentation%20de%20l%27offre" class="btn btn--primary">
-              Demander une présentation de l'offre
-            </a>
-          </p>
-        </div>
+        <p class="ia-esg__cac40-cta">
+          <a href="/contact?subject=Gouvernance%20IA" class="btn btn--primary">En parler</a>
+        </p>
       </section>
 
-      <!-- Services pour investisseurs et analystes -->
-      <section class="ia-esg__investors">
-        <h2>Services pour investisseurs et analystes</h2>
-
-        <h3>Public concerné</h3>
-        <ul class="ia-esg__investors-list">
-          <li><strong>Gérants ESG</strong> qui intègrent les critères de gouvernance et de risque IA dans leur sélection d'émetteurs.</li>
-          <li><strong>Analystes fondamentaux equity</strong> qui modélisent la matérialité IA dans le P&amp;L et le capex des grandes capitalisations.</li>
-          <li><strong>Family offices et fonds privés</strong> qui cherchent un signal exclusif et défendable sur la maturité IA des émetteurs.</li>
-          <li><strong>Agences de notation extra-financière</strong> qui ont besoin d'une grille d'analyse tierce et indépendante sur le reporting IA.</li>
-        </ul>
-
-        <h3>Services</h3>
-        <ul class="ia-esg__investors-list">
-          <li>
-            <a
-              href="https://glm.ycompris.com/investisseurs"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Analyse du traitement de l'IA dans la communication des émetteurs — page investisseurs sur glm.ycompris.com (nouvel onglet)"
-            >
-              Analyse du traitement de l'IA dans la communication des émetteurs (DEU, rapports de gestion)
-              <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
-            </a>
-          </li>
-          <li>Autres services d'analyse des déclarations de performance extra-financière (rapports de durabilité, VSME, rapports RSE, etc.).</li>
-        </ul>
-      </section>
-
-      <!-- Bloc Gouvernance -->
       <section>
         <h2>Gouvernance — l'IA comme sujet de direction</h2>
         <p>
-          L'intelligence artificielle engage la direction générale avant d'engager la direction des systèmes d'information. Elle déplace des décisions : automatisation de processus, arbitrages appuyés sur des algorithmes fournis par des tiers, dépendance à des fournisseurs dont la juridiction n'est pas européenne. Le règlement européen sur l'intelligence artificielle (Règlement UE 2024/1689) impose aux organisations de cartographier leurs systèmes d'IA, d'identifier les usages à haut risque et de documenter les contrôles humains maintenus sur les décisions automatisées.
+          L'IA engage la direction avant la DSI. Elle déplace des décisions : automatisation, dépendance à des
+          fournisseurs et à des juridictions, contrôles humains sur ce qui est automatisé. Le règlement européen sur
+          l'IA (UE 2024/1689) pousse à cartographier les systèmes et les usages à haut risque.
         </p>
         <p>
-          Cette exigence converge avec celle du reporting extra-financier. L'ESRS G1, dans le cadre de la CSRD, couvre la conduite des affaires et la culture d'éthique — l'IA s'y inscrit naturellement, dès lors que des décisions sensibles sont partiellement déléguées à des systèmes. La norme VSME destinée aux PME suit le même mouvement, sur un format proportionné. Les proxy advisors et les investisseurs alignés ISR intègrent progressivement la gouvernance de l'IA dans leurs grilles de due diligence.
-        </p>
-        <p>
-          Trois questions structurent l'arbitrage : qui décide ? qui peut reprendre la main ? que peut-on tracer pour en rendre compte ? La réponse est documentaire avant d'être technique.
+          Trois questions : qui décide ? qui peut reprendre la main ? que peut-on tracer pour en rendre compte ? La
+          réponse est documentaire avant d'être technique — c'est le cœur de <em>Garder la main</em>.
         </p>
       </section>
 
-      <!-- Bloc Social -->
       <section>
         <h2>Social — transformer sans fracturer</h2>
         <p>
-          L'IA ne supprime pas mécaniquement des emplois : elle recompose les métiers intellectuels. Des tâches répétitives disparaissent ; d'autres tâches — relecture critique des sorties algorithmiques, conception des prompts, arbitrage sous incertitude — émergent ou gagnent en valeur. La transformation concerne autant la comptabilité et le juridique que le marketing et le support client. Le <em>Future of Jobs Report</em> du Forum économique mondial anticipe une reconfiguration significative des profils demandés à horizon de cinq ans.
-        </p>
-        <p>
-          La difficulté opérationnelle est rarement technique ; elle est humaine et sociale. La productivité d'une équipe qui adopte l'IA peut baisser temporairement avant de remonter, le temps que les usages s'installent et que la confiance dans les résultats se construise. Le dialogue social, l'information-consultation du CSE et les accords de méthode deviennent alors des outils d'accompagnement, non de blocage.
-        </p>
-        <p>
-          Le reporting ESRS S1 exige de documenter cette transformation : effectifs concernés, plans de formation, mesures d'accompagnement, impacts sur la santé au travail et sur les compétences critiques. Les parties prenantes — salariés, investisseurs, donneurs d'ordre — vérifient que la transformation est pilotée, non subie.
+          L'IA recompose les métiers intellectuels plus qu'elle ne « remplace » en bloc. La difficulté est humaine :
+          confiance dans les résultats, compétences, dialogue social. Documenter la transformation (formation,
+          accompagnement, impacts) reste un sujet de gouvernance, pas seulement RH.
         </p>
       </section>
 
-      <!-- Bloc Environnement (double face) -->
       <section>
         <h2>Environnement — mesurer et exploiter</h2>
-
-        <h3>Mesurer les impacts environnementaux de l'IA</h3>
         <p>
-          L'IA mobilise une infrastructure matérielle dont la trace environnementale est progressivement documentée. L'Agence internationale de l'énergie (AIE) suit la consommation électrique des data centers, dont les usages IA représentent une part croissante. Les phases d'entraînement des grands modèles et leurs usages en inférence ont des profils énergétiques distincts, qu'il convient de distinguer dans toute mesure sérieuse.
-        </p>
-        <p>
-          Pour une entreprise utilisatrice, l'empreinte s'inscrit au Scope 2 (électricité consommée par ses propres infrastructures) et au Scope 3 amont (achats de services cloud et de calcul externalisé). Les méthodes d'évaluation évoluent : l'ADEME et The Shift Project publient des cadres adaptés au numérique. Le reporting ESRS E1, dans le cadre de la CSRD, intègre ces périmètres dès lors qu'ils sont matériels.
-        </p>
-
-        <h3>Exploiter l'IA comme levier de décarbonation</h3>
-        <p>
-          La même IA contribue à réduire des empreintes : optimisation énergétique des bâtiments et des process industriels, monitoring fin des consommations, détection de fuites dans les réseaux, simulation de scénarios de décarbonation via jumeaux numériques, analyse d'images satellite pour la télédétection environnementale.
-        </p>
-        <p>
-          L'équilibre n'est pas acquis. Il se documente, usage par usage, avec la même discipline que le reste du reporting.
+          Empreinte (data centers, cloud, entraînement vs inférence) et levier (optimisation énergétique, monitoring) :
+          l'équilibre se documente usage par usage. Utile pour le reporting quand c'est matériel — sans faire de la
+          CSRD le produit.
         </p>
       </section>
 
-      <!-- Bloc Outils et ressources -->
       <section class="ia-esg__tools">
         <h2>Outils et ressources</h2>
         <div class="ia-esg__tools-grid">
@@ -262,124 +216,93 @@ const breadcrumbLd = {
                 src="/images/garder-la-main.jpg"
                 srcset="/images/garder-la-main-360.jpg 360w, /images/garder-la-main-720.jpg 720w, /images/garder-la-main.jpg 1000w"
                 sizes="(max-width: 640px) 40vw, 180px"
-                alt="Couverture du livre Garder la main – Diriger à l'ère de l'IA, par Yves Cavarec"
+                alt="Couverture du livre Garder la main"
                 width="1000"
                 height="1545"
                 loading="lazy"
               />
             </picture>
-            <h3>Garder la main — Diriger à l'ère de l'IA</h3>
+            <h3>Garder la main</h3>
             <p class="tool-card__meta">Librinova, 2026</p>
             <a
               href="https://glm.ycompris.com/garder-la-main"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Fiche du livre sur glm.ycompris.com (nouvel onglet)"
               class="tool-card__link"
+              >Fiche du livre →</a
             >
-              Fiche du livre →
-              <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
-            </a>
           </article>
 
           <article class="tool-card">
             <div class="tool-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64" width="64" height="64"><rect x="14" y="8" width="36" height="48" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="20" x2="44" y2="20" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="28" x2="44" y2="28" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="36" x2="36" y2="36" stroke="currentColor" stroke-width="2.5"/><circle cx="42" cy="46" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="47" y1="51" x2="52" y2="56" stroke="currentColor" stroke-width="2.5"/></svg>
+              <svg viewBox="0 0 64 64" width="64" height="64"
+                ><rect x="14" y="8" width="36" height="48" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"
+                ></rect><line x1="20" y1="20" x2="44" y2="20" stroke="currentColor" stroke-width="2.5"></line></svg
+              >
             </div>
             <h3>L'IA dans les DEU du CAC40</h3>
-            <p class="tool-card__meta">Étude quantitative, mai 2026</p>
+            <p class="tool-card__meta">Étude quantitative, 2026</p>
             <a
               href="https://glm.ycompris.com/deu-cac40-2025"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Lire l'étude sur glm.ycompris.com (nouvel onglet)"
               class="tool-card__link"
+              >Lire l'étude →</a
             >
-              Lire l'étude →
-              <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
-            </a>
           </article>
 
           <article class="tool-card">
             <div class="tool-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64" width="64" height="64"><path d="M32 6L10 14v18c0 13 9 22 22 26 13-4 22-13 22-26V14L32 6z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M22 32l7 7 14-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg viewBox="0 0 64 64" width="64" height="64"
+                ><path
+                  d="M32 6L10 14v18c0 13 9 22 22 26 13-4 22-13 22-26V14L32 6z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"></path></svg
+              >
             </div>
             <h3>A.RI.ALL</h3>
-            <p class="tool-card__meta">Outil de détection des risques d'allégations (IA-washing, greenwashing)</p>
-            <a
-              href="https://ariall.ycompris.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Découvrir A.RI.ALL sur ariall.ycompris.com (nouvel onglet)"
-              class="tool-card__link"
+            <p class="tool-card__meta">Détection de risques d'allégations (sous-domaine)</p>
+            <a href="https://ariall.ycompris.com" target="_blank" rel="noopener noreferrer" class="tool-card__link"
+              >Découvrir →</a
             >
-              Découvrir A.RI.ALL →
-              <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
-            </a>
           </article>
         </div>
       </section>
 
-      <!-- Bloc Comment Ycompris accompagne -->
       <section>
-        <h2>Comment Ycompris accompagne</h2>
+        <h2>Méthode</h2>
         <p>
-          <strong>Cartographier</strong> les usages d'IA et les dépendances qu'ils créent dans l'organisation — fournisseurs critiques, données sensibles, processus concernés, compétences mobilisées. <strong>Arbitrer</strong> les décisions de gouvernance : ce qui reste humain, ce qui peut être délégué, sous quels contrôles, avec quel plan de réversibilité. <strong>Documenter</strong> les choix pour les parties prenantes : conseil, investisseurs, régulateur, salariés. Une méthode qui tient compte du triptyque ESG plutôt que d'isoler un seul angle.
+          <strong>Cartographier</strong> usages et dépendances. <strong>Arbitrer</strong> ce qui reste humain.
+          <strong>Documenter</strong> pour pouvoir l'expliquer. Détail :
+          <a href="/methode">la méthode Ycompris</a>.
         </p>
       </section>
 
-      <!-- Services sur mesure -->
-      <section class="ia-esg__custom">
-        <h2>Services sur mesure</h2>
-        <p>
-          Au-delà des services forfaitisés présentés ci-dessus, Ycompris répond également à des demandes spécifiques sur la base d'un cahier des charges client. Quelques exemples de demandes traitées sur mesure :
-        </p>
-        <ul class="ia-esg__custom-list">
-          <li><strong>Études sectorielles</strong> sur l'IA dans les rapports annuels d'un secteur donné (banque, luxe, industrie automobile, énergie, etc.) — extension du périmètre à un échantillon sectoriel CAC 40 + SBF 120, calibré au cahier des charges client.</li>
-          <li><strong>Missions de conseil étendues</strong> sur la transformation du reporting extra-financier d'un émetteur coté hors CAC 40.</li>
-          <li><strong>Co-publications et livres blancs</strong> avec une fédération professionnelle, un cabinet d'avocats ou un acteur tech.</li>
-          <li><strong>Conférences, keynotes et formations académiques</strong> sur la gouvernance de l'IA en environnement régulé.</li>
-          <li><strong>Présentations internes ou ateliers dédiés</strong> pour équipes de gestion d'actifs, équipes ESG ou comités d'investissement.</li>
-        </ul>
-        <p>
-          Pour toute demande non couverte par les services forfaitisés, contactez-nous avec une expression de besoin synthétique. Ycompris vous répond avec une proposition d'approche et un devis adapté.
-        </p>
-        <p class="ia-esg__custom-cta">
-          <a href="/contact?subject=Sur%20mesure%20%E2%80%94%20expression%20de%20besoin" class="btn btn--primary">
-            Décrire votre besoin
-          </a>
-        </p>
-      </section>
-
-      <!-- Double CTA final -->
       <section class="ia-esg__cta">
-        <h2>Dialoguer avec Ycompris</h2>
+        <h2>Un sujet IA à cadrer ?</h2>
         <div class="ia-esg__cta-buttons">
-          <a href="/contact" class="btn btn--primary ia-esg__cta-primary">Parlez-nous de votre situation</a>
+          <a href="/contact" class="btn btn--primary ia-esg__cta-primary">Me contacter</a>
           <a
             href="https://glm.ycompris.com/deu-cac40-2025"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Consulter l'étude CAC40 sur glm.ycompris.com (nouvel onglet)"
             class="ia-esg__cta-secondary"
           >
-            Consultez l'étude CAC40 →
-            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg>
+            Étude CAC40 →
           </a>
         </div>
       </section>
-
     </div>
   </article>
 </MainLayout>
 
 <style>
   .ia-esg__hero {
-    background: #08153A;
+    background: #08153a;
     color: white;
     margin-bottom: 3rem;
   }
-
   .ia-esg__banner {
     display: block;
     width: 100%;
@@ -387,86 +310,59 @@ const breadcrumbLd = {
     max-height: 420px;
     object-fit: cover;
   }
-
   .ia-esg__hero-text {
     padding: 2.5rem 1.5rem 3rem;
     max-width: 900px;
   }
-
   .ia-esg__hero-text h1 {
     color: white;
     font-size: clamp(1.8rem, 4.2vw, 2.8rem);
     margin: 0 0 1rem;
     line-height: 1.2;
   }
-
   .ia-esg__hero-text .lead {
-    color: rgba(255,255,255,0.88);
+    color: rgba(255, 255, 255, 0.88);
     font-size: 1.15rem;
     margin: 0 auto 1rem;
     max-width: 800px;
   }
-
   .ia-esg__hero-link a {
-    color: #7DD3E8;
+    color: #7dd3e8;
     font-weight: 600;
     text-decoration: none;
   }
-
   .ia-esg__hero-link a:hover {
     text-decoration: underline;
   }
-
   .ia-esg__body {
     max-width: 860px;
   }
-
   .ia-esg__body h2 {
     margin-top: 3rem;
     font-size: 1.7rem;
   }
-
-  .ia-esg__body h3 {
-    margin-top: 2rem;
-    font-size: 1.25rem;
-  }
-
-  /* Section Services pour entreprises du CAC 40 */
   .ia-esg__cac40 {
     background: white;
     border-radius: var(--radius);
     padding: 2rem 2.2rem 2.4rem;
-    margin-top: 0;
     border-top: 4px solid var(--primary);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   }
-
   .ia-esg__cac40 h2 {
     margin-top: 0;
   }
-
-  .ia-esg__cac40-question {
-    color: var(--text);
-    font-size: 1.15rem;
-    font-style: italic;
-    font-weight: 500;
-    margin: 0.6rem 0 1rem;
-  }
-
   .ia-esg__service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.4rem;
-    margin: 2rem 0 0;
+    margin: 1.5rem 0 0;
   }
-
   .service-card {
     background: var(--light);
     border-radius: var(--radius);
     padding: 1.4rem 1.5rem;
     border-left: 3px solid var(--primary);
   }
-
   .service-card__num {
     margin: 0;
     font-size: 0.85rem;
@@ -474,77 +370,22 @@ const breadcrumbLd = {
     color: var(--primary);
     letter-spacing: 0.08em;
   }
-
   .service-card h4 {
     margin: 0.3rem 0 0.7rem;
     color: var(--primary);
     font-size: 1.1rem;
-    line-height: 1.3;
   }
-
-  .service-card p {
-    margin: 0 0 0.6rem;
-    font-size: 0.97rem;
-  }
-
-  .service-card__meta {
-    color: var(--gray);
-    font-size: 0.9rem !important;
-    font-style: italic;
-    margin-bottom: 0 !important;
-  }
-
-  .ia-esg__cac40-program {
-    margin-top: 2.2rem;
-  }
-
-  .ia-esg__cac40-program h3 {
-    margin: 1.6rem 0 0.6rem;
-    font-size: 1.2rem;
-  }
-
   .ia-esg__cac40-cta {
     margin-top: 1.5rem;
   }
-
-  /* Mentions légales repliables (étude CAC 40) */
   .ia-esg__legal {
     margin: 1.2rem 0 0;
     font-size: 0.85rem;
     color: var(--gray);
   }
-
   .ia-esg__legal summary {
     cursor: pointer;
-    list-style: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.3rem 0;
-    user-select: none;
-    color: var(--gray);
-    transition: color 0.15s;
   }
-
-  .ia-esg__legal summary:hover {
-    color: var(--primary);
-  }
-
-  .ia-esg__legal summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .ia-esg__legal summary::before {
-    content: "▸";
-    font-size: 0.75rem;
-    display: inline-block;
-    transition: transform 0.2s ease;
-  }
-
-  .ia-esg__legal[open] summary::before {
-    transform: rotate(90deg);
-  }
-
   .ia-esg__legal-content {
     margin-top: 0.7rem;
     padding: 0.9rem 1.1rem;
@@ -552,149 +393,43 @@ const breadcrumbLd = {
     border-left: 2px solid var(--gray);
     border-radius: 4px;
   }
-
-  .ia-esg__legal-content p {
-    margin: 0 0 0.6rem;
-    font-size: 0.85rem;
-    color: var(--gray);
-    line-height: 1.55;
-  }
-
-  .ia-esg__legal-content p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Section Services pour investisseurs et analystes */
-  .ia-esg__investors {
-    background: var(--light);
-    border-radius: var(--radius);
-    padding: 1.8rem 2.2rem 2rem;
-    margin-top: 3rem;
-    border-left: 4px solid var(--primary);
-  }
-
-  .ia-esg__investors h2 {
-    margin-top: 0;
-  }
-
-  .ia-esg__investors h3 {
-    margin: 1.4rem 0 0.6rem;
-    font-size: 1.1rem;
-  }
-
-  .ia-esg__investors-list {
-    padding-left: 1.2rem;
-    margin: 0;
-  }
-
-  .ia-esg__investors-list li {
-    margin-bottom: 0.7rem;
-  }
-
-  .ia-esg__investors-list a {
-    color: var(--primary);
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .ia-esg__investors-list a:hover {
-    text-decoration: underline;
-  }
-
-  /* Section Services sur mesure */
-  .ia-esg__custom {
-    background: var(--light);
-    border-radius: var(--radius);
-    padding: 1.8rem 2.2rem 2rem;
-    margin-top: 3rem;
-    border-left: 4px solid var(--primary);
-  }
-
-  .ia-esg__custom h2 {
-    margin-top: 0;
-  }
-
-  .ia-esg__custom-list {
-    padding-left: 1.2rem;
-  }
-
-  .ia-esg__custom-list li {
-    margin-bottom: 0.7rem;
-  }
-
-  .ia-esg__custom-cta {
-    margin-top: 1.5rem;
-  }
-
   .ia-esg__cta-link,
   .tool-card__link {
     color: var(--primary);
     font-weight: 600;
     text-decoration: none;
   }
-
-  .ia-esg__cta-link:hover,
-  .tool-card__link:hover {
-    text-decoration: underline;
-  }
-
-  .ia-esg__tools {
-    margin-top: 3rem;
-  }
-
   .ia-esg__tools-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.6rem;
     margin-top: 1.5rem;
   }
-
   .tool-card {
     background: white;
     border-radius: var(--radius);
     padding: 1.8rem;
     border-top: 4px solid var(--primary);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   }
-
-  .tool-card h3 {
-    margin: 0.8rem 0 0.3rem;
-    font-size: 1.1rem;
-  }
-
   .tool-card__meta {
     margin: 0 0 0.8rem;
     font-size: 0.9rem;
     color: var(--gray);
     font-style: italic;
   }
-
   .tool-card__cover {
     display: block;
     width: 120px;
   }
-
   .tool-card__cover img {
     width: 100%;
     height: auto;
     border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   }
-
   .tool-card__icon {
     color: var(--primary);
-    opacity: 0.85;
   }
-
-  .tool-card__icon svg {
-    width: 56px;
-    height: 56px;
-  }
-
   .ia-esg__cta {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: white;
@@ -703,12 +438,10 @@ const breadcrumbLd = {
     text-align: center;
     margin-top: 4rem;
   }
-
   .ia-esg__cta h2 {
     color: white;
     margin-top: 0;
   }
-
   .ia-esg__cta-buttons {
     display: flex;
     gap: 1.5rem;
@@ -716,29 +449,19 @@ const breadcrumbLd = {
     flex-wrap: wrap;
     margin-top: 1.5rem;
   }
-
   .ia-esg__cta-primary {
     background: white;
     color: var(--primary);
   }
-
   .ia-esg__cta-secondary {
     color: white;
     font-weight: 600;
     text-decoration: none;
     padding: 0.8rem 0.5rem;
   }
-
-  .ia-esg__cta-secondary:hover {
-    text-decoration: underline;
-  }
-
   @media (max-width: 640px) {
     .ia-esg__banner {
       max-height: 220px;
-    }
-    .ia-esg__hero-text {
-      padding: 1.8rem 1rem 2.2rem;
     }
   }
 </style>
