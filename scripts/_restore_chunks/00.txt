@@ -1,0 +1,114 @@
+---
+// src/pages/index.astro
+import MainLayout from '../layouts/MainLayout.astro';
+
+const title = 'IA en entreprise : garder la main | Ycompris';
+const description =
+  "Gouvernance IA, cadre éthique et méthodologie concrète pour diriger sans perdre le contrôle. Livre Garder la main — Yves Cavarec.";
+
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Yves Cavarec',
+  jobTitle: "Fondateur d'Ycompris, auteur",
+  url: 'https://ycompris.com/',
+  sameAs: [
+    'https://glm.ycompris.com/',
+    'https://www.librinova.com/librairie/yves-cavarec/garder-la-main',
+    'https://www.linkedin.com/in/cavarec',
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Ycompris SAS',
+  },
+};
+
+const bookLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name: "Garder la main — Diriger à l'ère de l'IA",
+  author: {
+    '@type': 'Person',
+    name: 'Yves Cavarec',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Librinova',
+  },
+  datePublished: '2026',
+  inLanguage: 'fr',
+  url: 'https://glm.ycompris.com/garder-la-main',
+  image: 'https://ycompris.com/images/garder-la-main.jpg',
+};
+
+const howToLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: "Garder la main sur l'intelligence artificielle en entreprise",
+  description:
+    "Cadre humain, maîtrise des risques et méthodologie concrète pour piloter la transformation IA sans perdre le contrôle.",
+  step: [
+    {
+      '@type': 'HowToStep',
+      name: 'Redéfinir le sens et le cadre humain',
+      text: "Fixer le cadre éthique et opérationnel pour que l'IA reste une extension de la volonté de l'entreprise, l'humain restant le décideur final.",
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Maîtriser les risques et les coûts',
+      text: "Anticiper dépendances, sécurité des données et hausse des coûts en décidant d'une stratégie à petite échelle avant que les mauvaises habitudes ne s'ancrent.",
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Passer à la mise en œuvre concrète',
+      text: "Partir d'un processus visible (ex. support), poser qui décide, quelles données peuvent sortir, comment mesurer le gain — avec la méthode du livre Garder la main et l'accompagnement Ycompris.",
+    },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: "Que veut dire « garder la main » sur l'IA en entreprise\u00a0?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Savoir quelles décisions restent humaines, où l'IA intervient, quels risques (dépendance, données, compétences) vous assumez — et pouvoir l'expliquer clairement.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Par où commencer concrètement\u00a0?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Par un processus tangible et visible, comme le service support. Poser d'emblée trois piliers\u00a0: qui décide\u00a0? quelles données sont autorisées à sortir\u00a0? comment mesure-t-on le gain réel\u00a0?",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Proposez-vous un outil clé en main\u00a0?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "C'est la direction. Aujourd'hui\u00a0: analyses, cadre et accompagnement ciblé. Un produit ou service packagé est en conception.",
+      },
+    },
+  ],
+};
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  ogType="website"
+  ogImage="/images/og-home-2026.jpg"
+  ogImageAlt="Garder la main — Diriger à l'ère de l'IA, par Yves Cavarec"
+  canonical="https://ycompris.com/"
+>
+  <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(personLd)} />
+  <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(bookLd)} />
+  <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(howToLd)} />
+  <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+
+  <!-- Hero é
