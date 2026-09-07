@@ -1,1 +1,180 @@
-PLACEHOLDER
+---
+// src/pages/livre.astro
+import MainLayout from '../layouts/MainLayout.astro';
+
+const title = 'Garder la main — Le livre | Ycompris';
+const description =
+  "Ne subissez pas l'IA, décidez de son usage. Le livre Garder la main (Yves Cavarec, Librinova) : méthode Cœur, Tête, Main pour diriger à l'ère de l'IA.";
+const canonical = 'https://ycompris.com/livre/';
+
+const bookLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name: "Garder la main — Diriger à l'ère de l'IA",
+  alternateName: 'Garder la main',
+  author: {
+    '@type': 'Person',
+    name: 'Yves Cavarec',
+    url: 'https://ycompris.com/about/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Librinova',
+  },
+  datePublished: '2026',
+  inLanguage: 'fr',
+  url: 'https://ycompris.com/livre/',
+  image: 'https://ycompris.com/images/garder-la-main.jpg',
+  description:
+    "Un livre-outil pour les dirigeants qui veulent garder la main sur les décisions à l'ère de l'IA.",
+  offers: {
+    '@type': 'Offer',
+    url: 'https://www.librinova.com/librairie/yves-cavarec/garder-la-main',
+    availability: 'https://schema.org/InStock',
+  },
+};
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/images/garder-la-main.jpg"
+  ogImageAlt="Couverture du livre Garder la main — Diriger à l'ère de l'IA, Yves Cavarec"
+>
+  <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(bookLd)} />
+
+  <section class="hero livre-hero">
+    <div class="hero-content container">
+      <h1>Le livre «&nbsp;Garder la main&nbsp;»</h1>
+      <p class="lead">Ne subissez pas l'IA, décidez de son usage.</p>
+    </div>
+  </section>
+
+  <section class="section container livre-layout">
+    <div class="livre-cover">
+      <img
+        src="/images/garder-la-main.jpg"
+        alt="Couverture du livre Garder la main – Diriger à l'ère de l'IA, par Yves Cavarec"
+        width="280"
+        height="432"
+        loading="eager"
+      />
+    </div>
+
+    <div class="livre-body">
+      <h2>Pourquoi ce livre maintenant&nbsp;?</h2>
+      <p>
+        L'intelligence artificielle s'invite dans le support, le SAV, les mails, parfois sans que personne n'ait
+        tranché. Ce livre s'adresse aux dirigeants et managers qui sentent que le terrain bouge, mais qui ne veulent
+        pas confier les clés de leur entreprise aux algorithmes sans carte routière.
+      </p>
+
+      <h2>Les 3 piliers de la méthode</h2>
+      <p>Découvrez une approche structurée pour reprendre le contrôle&nbsp;:</p>
+      <ul class="pillars">
+        <li><strong>Le Cœur</strong>&nbsp;: Fixer le cadre humain et éthique.</li>
+        <li><strong>La Tête</strong>&nbsp;: Comprendre les coûts réels et les risques de dépendance.</li>
+        <li><strong>La Main</strong>&nbsp;: Mettre en place une gouvernance opérationnelle immédiate.</li>
+      </ul>
+
+      <h2>Ce que vous y trouverez</h2>
+      <ul>
+        <li>Une méthode pas-à-pas pour auditer vos usages actuels.</li>
+        <li>Des clés pour décider quelles données peuvent sortir de l'entreprise.</li>
+        <li>Une grille de lecture pour mesurer le gain réel vs le coût caché.</li>
+      </ul>
+
+      <h2>Commander l'ouvrage</h2>
+      <p>Disponible chez l'éditeur Librinova et dans toutes les bonnes librairies.</p>
+      <div class="livre-ctas">
+        <a
+          href="https://www.librinova.com/librairie/yves-cavarec/garder-la-main"
+          class="btn btn--primary"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Commander sur Librinova (nouvel onglet)"
+        >
+          Commander sur Librinova
+        </a>
+        <a href="/contact" class="btn btn--secondary">Commander un exemplaire dédicacé</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .livre-hero {
+    background: linear-gradient(135deg, var(--light) 0%, #e8f0f5 100%);
+    text-align: center;
+    padding: 0 0 3rem;
+  }
+  .livre-hero .lead {
+    font-size: 1.35rem;
+    max-width: 700px;
+    margin: 1.25rem auto 0;
+    color: var(--gray);
+  }
+  .livre-layout {
+    display: grid;
+    grid-template-columns: minmax(180px, 280px) 1fr;
+    gap: 3rem;
+    align-items: start;
+    max-width: 960px;
+    padding-bottom: 4rem;
+  }
+  .livre-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+    display: block;
+  }
+  .livre-body h2 {
+    margin-top: 2.25rem;
+  }
+  .livre-body h2:first-child {
+    margin-top: 0;
+  }
+  .pillars,
+  .livre-body ul {
+    padding-left: 1.25rem;
+  }
+  .pillars li,
+  .livre-body ul li {
+    margin-bottom: 0.65rem;
+    font-size: 1.08rem;
+  }
+  .livre-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .btn--secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+  }
+  .btn--secondary:hover {
+    background: var(--primary);
+    color: white;
+  }
+  @media (max-width: 768px) {
+    .livre-layout {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .livre-cover {
+      max-width: 220px;
+      margin: 0 auto;
+    }
+    .livre-body ul,
+    .pillars {
+      text-align: left;
+    }
+    .livre-ctas {
+      justify-content: center;
+    }
+  }
+</style>
