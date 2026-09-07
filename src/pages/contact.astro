@@ -1,20 +1,25 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 
-const title = "Contact — Ycompris";
-const description = "Contactez Ycompris pour vos projets de gouvernance IA, reporting extra-financier ou conformité ESG.";
+const title = 'Contact — Échanger avec Ycompris';
+const description =
+  'Contactez Yves Cavarec / Ycompris pour cadrer votre gouvernance IA, un chantier ciblé ou un échange au FEB. Réponse sous 48 h ouvrées.';
+const canonical = 'https://ycompris.com/contact/';
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout title={title} description={description} canonical={canonical}>
   <div class="content-wrapper">
     <h1>Contact</h1>
-    <p>ETI: demandez un diagnostic "greenwashing" ou "loi Sapin II" gratuit ou discutons de vos projets. Nous répondons rapidement (sous 48h ouvrées normalement).</p>
+    <p>
+      Un sujet IA à cadrer, un chantier à débloquer, ou un échange au FEB&nbsp;? Décrivez votre contexte — je réponds
+      rapidement (sous 48&nbsp;h ouvrées en principe).
+    </p>
 
-<form 
-  name="contact" 
-  method="POST" 
-  data-netlify="true" 
-  action="/merci/" 
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  action="/merci/"
   class="contact-form"
 >
   <input type="hidden" name="form-name" value="contact" />
@@ -47,14 +52,14 @@ const description = "Contactez Ycompris pour vos projets de gouvernance IA, repo
   <div class="form-group checkbox">
     <label>
       <input type="checkbox" name="acceptation" required />
-      J’accepte que mes données soient traitées conformément à la 
-      <a href="/politique-confidentialite/" target="_blank">Politique de confidentialité</a>
+      J’accepte que mes données soient traitées conformément à la
+      <a href="/politique-confidentialite/">Politique de confidentialité</a>
     </label>
   </div>
 
   <!-- div pour reCAPTCHA (Netlify y injecte la checkbox "I'm not a robot") -->
   <div data-netlify-recaptcha="true" style="margin: 1.5rem 0;"></div>
-  
+
   <button type="submit" class="submit-btn">Envoyer le message</button>
 </form>
 
@@ -92,8 +97,8 @@ const description = "Contactez Ycompris pour vos projets de gouvernance IA, repo
   input:focus,
   textarea:focus {
     outline: none;
-    border-color: #4a90e2;
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    border-color: #0B3D5C;
+    box-shadow: 0 0 0 3px rgba(11, 61, 92, 0.2);
   }
 
   .required {
@@ -106,21 +111,21 @@ const description = "Contactez Ycompris pour vos projets de gouvernance IA, repo
   }
 
 .submit-btn {
-  background: white;                /* fond blanc */
-  color: #2E7D32;                   /* texte vert foncé */
-  border: 2px solid #2E7D32;        /* bordure verte pour le faire ressortir */
+  background: white;
+  color: #0B3D5C;
+  border: 2px solid #0B3D5C;
   padding: 0.9rem 1.8rem;
   font-size: 1.1rem;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;                /* pour plus d'impact */
+  font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
-  background: #2E7D32;              /* au survol : fond vert */
-  color: white;                     /* texte blanc */
-  border-color: #2E7D32;
+  background: #0B3D5C;
+  color: white;
+  border-color: #0B3D5C;
 }
 
   @media (max-width: 600px) {
