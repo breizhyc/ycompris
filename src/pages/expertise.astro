@@ -2,33 +2,60 @@
 // src/pages/expertise.astro
 import MainLayout from '../layouts/MainLayout.astro';
 
-const pageTitle = 'Expertise — Yves Cavarec | Ycompris';
+const pageTitle = 'Cabinet — Excellence opérationnelle & gouvernance | Ycompris';
 const pageDescription =
-  "Parcours et expertise d'Yves Cavarec : transformation d'entreprises, excellence opérationnelle, pivot vers la gouvernance de l'IA (Garder la main).";
+  "Ycompris : gouvernance des données et IA, communication extra-financière, excellence opérationnelle. Transformer l'incertitude en avantage compétitif.";
 const canonical = 'https://ycompris.com/expertise/';
 ---
 
 <MainLayout title={pageTitle} description={pageDescription} canonical={canonical}>
   <header class="page-hero container">
-    <h1>Expertise</h1>
-    <p class="lead" style="color: black;">
-      Une trajectoire de transformation et d'excellence opérationnelle — aujourd'hui au service d'une gouvernance IA
-      lucide, dans la lignée de <em>Garder la main</em>.
-    </p>
+    <h1>Ycompris – Excellence Opérationnelle et Gouvernance</h1>
+    <p class="lead">Transformer l'incertitude en avantage compétitif.</p>
   </header>
 
   <main>
-    <section class="section container">
-      <h2>Ce que j'apporte</h2>
+    <section class="section container" id="domaines">
+      <h2>Mes domaines d'intervention</h2>
+
+      <h3>Gouvernance des données et IA</h3>
       <p>
-        Clarifier les décisions humaines face à l'IA, cartographier dépendances et risques, produire des analyses
-        actionnables — et, à terme, un outil ou service clé en main. Pas un catalogue réglementaire en vitrine.
+        L'IA ne doit pas être une «&nbsp;boîte noire&nbsp;» dans l'entreprise. J'accompagne les comités de direction
+        pour&nbsp;:
       </p>
       <ul>
-        <li><strong>Lucidité</strong> — nommer ce que l'IA change dans la gouvernance, les compétences, la dépendance aux
-          modèles et aux cloud.</li>
-        <li><strong>Méthode</strong> — structurer, prioriser, documenter sans lourdeur de grand cabinet.</li>
-        <li><strong>Preuves</strong> — études et écrits publics (livre, CAC40, presse), pas une liste de clients inventés.</li>
+        <li>Définir une charte d'usage des outils génératifs.</li>
+        <li>Auditer les processus à risque (support, juridique, communication).</li>
+        <li>Poser un cadre décisionnel clair&nbsp;: qui valide quoi&nbsp;?</li>
+      </ul>
+
+      <h3>Stratégie &amp; Communication Extra-financière</h3>
+      <p>
+        Rendre compte de la complexité aux parties prenantes (actionnaires, salariés) est un défi majeur. Je vous aide à
+        structurer vos rapports annuels et vos communications pour donner du sens à vos transformations, en alignant
+        technique et humanisme.
+      </p>
+
+      <h3>Excellence Opérationnelle</h3>
+      <p>
+        Retrouver de la marge de manœuvre. J'interviens sur des chantiers ciblés pour débloquer des situations
+        complexes, optimiser des processus et réduire les frictions organisationnelles.
+      </p>
+    </section>
+
+    <section class="section section--alt container" id="pourquoi">
+      <h2>Pourquoi travailler avec Ycompris&nbsp;?</h2>
+      <ul class="why-list">
+        <li>
+          <strong>Pragmatisme</strong>&nbsp;: Pas de théorie sans application. Je teste et je valide.
+        </li>
+        <li>
+          <strong>Indépendance</strong>&nbsp;: Aucun lien d'intérêt avec les éditeurs de logiciels. Mon conseil est
+          neutre.
+        </li>
+        <li>
+          <strong>Expérience</strong>&nbsp;: Des années d'analyse des grands groupes pour votre bénéfice.
+        </li>
       </ul>
     </section>
 
@@ -45,24 +72,11 @@ const canonical = 'https://ycompris.com/expertise/';
           />
           <div class="photo-overlay"></div>
         </div>
-
         <div class="founder-text">
           <p>
-            Quinze ans dans la transformation de grandes entreprises — gestion de projet, programme et portefeuille
-            (référentiel PMI) — puis cinq ans chez Deloitte en excellence opérationnelle et externalisation de fonctions
-            support (finance, compta, paie, administratif…).
-          </p>
-          <p>
-            En 2023, j'ai fondé Ycompris autour de la CSRD : normes, audit, formation d'auditeurs. J'avais aussi fondé
-            Sustain Audit, que nous avons fermé. La simplification européenne (omnibus) a cassé ce plan d'affaires.
-          </p>
-          <p>
-            Je me suis alors tourné vers l'IA : livre <em>Garder la main</em> (Librinova, 2026), série dans le JDN,
-            étude sur le traitement de l'IA dans les DEU du CAC&nbsp;40 (Investir / Les Echos).
-          </p>
-          <p>
-            Installé en Bretagne depuis 2024, je redémarre. L'expertise réglementaire reste un arrière-plan crédible — ce
-            n'est plus l'offre principale.
+            Spécialiste de la gouvernance et de la communication financière, j'ai fondé Ycompris pour aider les
+            dirigeants à garder la main — sur l'IA comme sur le reste. Analyses publiques (livre, étude CAC&nbsp;40,
+            presse) et accompagnement ciblé, sans catalogue de clients inventés.
           </p>
           <p><em>Yves Cavarec — Fondateur Ycompris</em></p>
         </div>
@@ -70,10 +84,10 @@ const canonical = 'https://ycompris.com/expertise/';
     </section>
 
     <section class="section cta container">
-      <h2>Un sujet IA à cadrer ?</h2>
-      <p>Expliquez votre contexte : décisions, risques, dépendances. On regarde ce qui est utile — sans slide deck.</p>
+      <h2>Un audit stratégique&nbsp;?</h2>
+      <p>Expliquez votre contexte&nbsp;: décisions, risques, dépendances. On regarde ce qui est utile.</p>
       <p>
-        <a href="/contact" class="btn btn--primary">Me contacter →</a>
+        <a href="/contact" class="btn btn--primary">Prendre rendez-vous pour un audit stratégique</a>
       </p>
     </section>
   </main>
@@ -81,7 +95,7 @@ const canonical = 'https://ycompris.com/expertise/';
 
 <style>
   .page-hero {
-    background: linear-gradient(135deg, #e6f4f4 0%, #d9f0f0 100%);
+    background: linear-gradient(135deg, var(--light) 0%, #e8f0f5 55%, #dce8f0 100%);
     padding: 6rem 0 4rem;
     text-align: center;
   }
@@ -90,6 +104,7 @@ const canonical = 'https://ycompris.com/expertise/';
     font-size: 1.3rem;
     max-width: 800px;
     margin: 1.5rem auto 0;
+    color: var(--text);
   }
 
   .section--alt {
@@ -114,6 +129,14 @@ const canonical = 'https://ycompris.com/expertise/';
     left: 0;
     color: var(--primary);
     font-weight: bold;
+  }
+
+  .why-list {
+    max-width: 720px;
+  }
+
+  h3 {
+    margin-top: 2rem;
   }
 
   .founder-bio {
@@ -166,7 +189,7 @@ const canonical = 'https://ycompris.com/expertise/';
   .cta .btn {
     background: white;
     color: var(--primary);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     padding: 1rem 2rem;
   }
 
