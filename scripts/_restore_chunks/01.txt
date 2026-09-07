@@ -1,0 +1,65 @@
+ditorial -->
+  <section class="hero">
+    <div class="hero-image" style="background-image: url('/images/hero-filigrane-reseau.jpg');" aria-hidden="true"></div>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title" style="font-size: clamp(1.85rem, 4.5vw, 2.75rem); margin-bottom: 1.5rem; max-width: 920px; margin-left: auto; margin-right: auto;">
+        Intelligence Artificielle en entreprise&nbsp;: comment garder la main sur votre transformation&nbsp;?
+      </h1>
+      <p class="home-intro" style="font-size: 1.15rem; max-width: 820px; margin: 0 auto 2.5rem; text-align: left;">
+        L'intelligence artificielle ne relève plus de la simple veille technologique&nbsp;: elle est déjà entrée dans vos
+        services, du support client à la gestion des e-mails, souvent de manière informelle. Au-delà de l'outil technique,
+        l'enjeu crucial est de garder la main sur votre organisation. Il ne s'agit pas de subir cette mutation, mais de
+        définir un cadre humain et stratégique solide. Sans une gouvernance proactive, vous risquez de voir vos processus
+        échapper à votre contrôle et vos données s'évaporer. Reprendre le lead aujourd'hui, c'est éviter de devoir corriger
+        demain des habitudes de travail coûteuses et risquées.
+      </p>
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/contact" class="btn btn--primary" style="font-size: 1.15rem;">Me contacter</a>
+        <a
+          href="https://glm.ycompris.com/garder-la-main"
+          class="btn btn--primary"
+          style="font-size: 1.15rem;"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Lire Garder la main (ouvre glm.ycompris.com dans un nouvel onglet)"
+        >
+          Le livre Garder la main
+          <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"
+            ><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"></path></svg
+          >
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trois piliers -->
+  <section class="section home-pillars" style="background: white; padding: 4.5rem 0;">
+    <div class="container" style="max-width: 900px;">
+      <article class="home-pillar">
+        <h2>Redéfinir le sens et le cadre humain</h2>
+        <h3>L'IA au service de l'humain, pas l'inverse.</h3>
+        <p>
+          Ce qui vous préoccupe aujourd'hui, ce n'est pas la complexité technique des algorithmes, mais la pérennité de
+          votre organisation. L'intelligence artificielle s'invite dans le quotidien de vos équipes (SAV, support) et
+          modifie la nature du travail. Pour conserver le sens de votre action, vous devez rester celui qui fixe le cadre
+          éthique et opérationnel. L'objectif est de garantir que l'outil reste une extension de la volonté de
+          l'entreprise, et non un pilote automatique invisible. Garder la main, c'est affirmer que l'humain reste le
+          décideur final face à la machine.
+        </p>
+      </article>
+
+      <article class="home-pillar">
+        <h2>La logique de la maîtrise des risques et des coûts</h2>
+        <h3>Anticiper les dépendances pour sécuriser l'avenir.</h3>
+        <p>
+          Raisonner froidement, c'est comprendre que les prix actuels de l'IA sont des prix de lancement, voués à
+          augmenter. Plus dangereux encore, les dépendances se nouent souvent plus vite que les contrats ne sont signés.
+          Une entreprise qui laisse l'IA se déployer sans méthode se réveille un matin avec des processus qu'elle ne
+          maîtrise plus, des données qui ont quitté le périmètre sécurisé, et une facture qu'elle n'a pas choisie. Il est
+          économiquement et stratégiquement plus rationnel de décider d'une stratégie à petite échelle maintenant, plutôt
+          que de devoir casser et reconstruire des usages devenus des mauvaises habitudes.
+        </p>
+      </article>
+
+      <a

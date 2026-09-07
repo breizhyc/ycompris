@@ -92,12 +92,13 @@ const ogImageURL = new URL(ogImage, SITE_BASE).href;
 
   <style is:global>
     :root {
-      --primary: #007A7A;
-      --primary-dark: #005F5F;
-      --accent: #3A8E5A;
+      --primary: #0B3D5C;
+      --primary-dark: #072A40;
+      --accent: #2E6B8A;
       --text: #1A1A1A;
-      --light: #F8FAFC;
-      --gray: #64748B;
+      --light: #F5F8FB;
+      --gray: #5B6B7A;
+      --navy: #0A1628;
       --radius: 8px;
     }
 
@@ -207,7 +208,7 @@ const ogImageURL = new URL(ogImage, SITE_BASE).href;
     /* Hero global avec filigrane subtil */
     .hero {
       position: relative;
-      background: linear-gradient(135deg, #e6f4f4 0%, #d9f0f0 100%);
+      background: linear-gradient(135deg, #E8F0F5 0%, #DCE8F0 100%);
       padding: 0 0 4rem; /* colle au header */
       text-align: center;
       min-height: 300px;
@@ -350,18 +351,11 @@ const ogImageURL = new URL(ogImage, SITE_BASE).href;
 
       <nav aria-label="Navigation principale">
         <a href="/">Accueil</a>
-        <a
-          href="https://glm.ycompris.com/garder-la-main"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Livre Garder la main (ouvre glm.ycompris.com dans un nouvel onglet)"
-        >Livre<svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"/></svg></a>
-        <a href="/ia-esg">IA</a>
-        <a href="/faq">FAQ</a>
-        <a href="/methode">Méthode</a>
-        <a href="/ressources">Ressources</a>
-        <a href="/expertise">Expertise</a>
-        <a href="/contact" class="btn btn--primary">Contact</a>
+        <a href="/livre/">Livre</a>
+        <a href="/ressources/">Analyses</a>
+        <a href="/expertise/">Cabinet</a>
+        <a href="/about/">À propos</a>
+        <a href="/contact/" class="btn btn--primary">Contact</a>
       </nav>
     </div>
   </header>
@@ -381,7 +375,7 @@ const ogImageURL = new URL(ogImage, SITE_BASE).href;
       <p style="margin-top: 1rem;">
         <a href="/mentions-legales" style="color: white; margin: 0 1rem; text-decoration: none;">Mentions légales</a> |
         <a href="/politique-confidentialite" style="color: white; margin: 0 1rem; text-decoration: none;">Politique de confidentialité</a> |
-        <a href="/contact" style="color: white; margin: 0 1rem; text-decoration: none;">Contact</a>
+        <a href="/contact/" style="color: white; margin: 0 1rem; text-decoration: none;">Contact</a>
       </p>
       <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">
         <a href="https://hoodspot.fr/conseil-affaires-et-gestion/ycompris-98428010700025/"

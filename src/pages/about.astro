@@ -1,85 +1,120 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 
-const title = "À propos — Yves Cavarec | Ycompris";
+const title = 'Yves Cavarec : Expert Gouvernance & Auteur';
 const description =
-  "Ycompris, fondé par Yves Cavarec — auteur de Garder la main. Redémarrage en Bretagne autour de la gouvernance de l'IA.";
+  "Yves Cavarec, fondateur d'Ycompris : l'architecte de cadre. Gouvernance, communication financière, méthode Cœur Tête Main pour garder la main sur l'IA.";
 const canonical = 'https://ycompris.com/about/';
 ---
 
 <MainLayout title={title} description={description} canonical={canonical}>
-  <section class="section container">
-    <h1>À propos</h1>
+  <section class="section container about-page">
+    <header class="about-hero">
+      <h1>Yves Cavarec</h1>
+      <p class="subtitle">L'architecte de cadre.</p>
+    </header>
 
-    <p style="font-size: 1.25rem; line-height: 1.7; max-width: 800px; margin: 0 auto 3rem;">
-      Ycompris, c'est Yves Cavarec : après un parcours en transformation et excellence opérationnelle, un passage par la
-      CSRD, puis un pivot net vers l'IA avec <em>Garder la main</em>. Redémarrage assumé, ancré en Bretagne.
-    </p>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin: 4rem 0;">
-      <div style="flex: 1 1 300px; min-width: 300px;">
-        <h2>Mission aujourd'hui</h2>
-        <p>
-          Aider les dirigeants à <strong>garder la main</strong> sur les décisions à l'ère de l'IA : comprendre,
-          cadrer, piloter — avec des analyses utiles et, idéalement bientôt, un outil ou service clé en main.
-        </p>
-        <p>
-          Le conseil pur n'est pas l'objectif final. L'expertise réglementaire (reporting, conformité) reste un
-          arrière-plan, pas la vitrine.
-        </p>
-      </div>
-
-      <div style="flex: 1 1 300px; min-width: 300px;">
-        <h2>Ce qui me distingue</h2>
-        <ul style="padding-left: 0; list-style: none;">
-          <li style="margin-bottom: 1rem;">✓ Culture grand compte + pragmatisme terrain</li>
-          <li style="margin-bottom: 1rem;">✓ Écrits publics : livre, étude CAC40, presse</li>
-          <li style="margin-bottom: 1rem;">✓ Pas de clients fictifs — redémarrage transparent</li>
-          <li style="margin-bottom: 1rem;">✓ Ancrage Bretagne, regard national / européen</li>
-        </ul>
-      </div>
-    </div>
-
-    <h2>Parcours</h2>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
-      <div style="flex: 0 0 280px;">
+    <div class="about-grid">
+      <div class="about-photo">
         <img
           src="/images/Yves-Cavarec-CSRD-VSME-Bretagne.png"
           alt="Yves Cavarec, fondateur Ycompris, auteur de Garder la main"
-          style="width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);"
+          width="320"
+          height="427"
+          loading="eager"
         />
       </div>
 
-      <div style="flex: 1; min-width: 300px;">
+      <div class="about-copy">
+        <h2>Le parcours</h2>
         <p>
-          <strong>Transformation</strong> — 15&nbsp;ans en gestion de projet, programme et portefeuille (PMI) auprès de
-          grandes entreprises.
+          Je ne suis pas un développeur. Je ne suis pas un guru technologique vendant de la promesse. Je suis un
+          spécialiste de la gouvernance et de la communication financière. Mon parcours, c'est celui de l'analyse&nbsp;:
+          décortiquer les rapports annuels du CAC40, comprendre comment les grandes entreprises racontent (ou cachent)
+          leurs transformations, et aider les dirigeants à y voir clair.
         </p>
+
+        <h2>La vision</h2>
         <p>
-          <strong>Deloitte</strong> — 5&nbsp;ans en excellence opérationnelle et externalisation de fonctions support.
+          Quand l'intelligence artificielle a débarqué, j'ai vu le même scénario se répéter&nbsp;: l'outil prend le pas
+          sur le sens. Les entreprises s'équipent avant de réfléchir. J'ai écrit <em>Garder la main</em> et publié mes
+          analyses dans Les Échos ou le JDN pour une raison simple&nbsp;: remettre l'humain au centre de l'équation.
         </p>
+
+        <h2>La méthode</h2>
         <p>
-          <strong>Ycompris &amp; CSRD</strong> — fondation en 2023 autour des normes de durabilité ; Sustain Audit fondé
-          puis fermé ; plan cassé par la simplification UE / omnibus.
+          Chez Ycompris, je n'apporte pas de «&nbsp;baguette magique&nbsp;». J'apporte une boussole. Que ce soit pour
+          structurer votre communication extra-financière ou pour définir une gouvernance de l'IA qui ne coûtera pas ses
+          yeux à votre entreprise, mon approche est identique&nbsp;: Cœur (le sens), Tête (la logique), Main (l'action).
         </p>
+
+        <h2>En ce moment</h2>
         <p>
-          <strong>Pivot IA</strong> — <em>Garder la main</em>, tribune / série JDN, étude CAC40 (Investir / Les Echos).
-          Retour en Bretagne en 2024. Aujourd'hui : repartir de zéro, sur ce qui compte.
+          Je prépare l'avenir de l'entreprise en testant, en écrivant et en échangeant avec les dirigeants pour
+          co-construire les outils de demain. Car la meilleure technologie reste celle que l'on maîtrise de bout en
+          bout.
         </p>
       </div>
     </div>
 
-    <div style="text-align: center; margin-top: 4rem;">
-      <a href="/contact" class="btn btn--primary" style="font-size: 1.3rem; padding: 1.2rem 2.5rem;">
-        Discutons de votre sujet IA
-      </a>
+    <div class="about-cta">
+      <a href="/contact/" class="btn btn--primary">Discutons de votre sujet</a>
     </div>
   </section>
 </MainLayout>
 
 <style>
-  .section {
-    padding: 6rem 0;
+  .about-page {
+    padding: 5rem 0 4rem;
+    max-width: 960px;
+  }
+  .about-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .subtitle {
+    font-size: 1.35rem;
+    color: var(--gray);
+    margin: 0.75rem 0 0;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .about-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+  .about-copy h2 {
+    margin-top: 2rem;
+  }
+  .about-copy h2:first-child {
+    margin-top: 0;
+  }
+  .about-cta {
+    text-align: center;
+    margin-top: 3.5rem;
+  }
+  .about-cta .btn {
+    font-size: 1.2rem;
+    padding: 1.1rem 2.2rem;
+  }
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .about-photo {
+      max-width: 260px;
+      margin: 0 auto;
+    }
+    .about-copy {
+      text-align: left;
+    }
   }
 </style>

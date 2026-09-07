@@ -2,151 +2,159 @@
 // src/pages/ressources.astro
 import MainLayout from '../layouts/MainLayout.astro';
 
-const title = 'Ressources — IA & textes utiles | Ycompris';
+const title = 'Analyses IA & CAC40 : Étude et Veille | Yves Cavarec';
 const description =
-  "Ressources pour la gouvernance de l'IA (AI Act, études) et textes de référence (ESRS, VSME, anti-greenwashing) — Ycompris.";
+  "Ce que disent vraiment les entreprises de l'IA : étude CAC40, série Journal du Net, veille stratégique — Yves Cavarec / Ycompris.";
 const canonical = 'https://ycompris.com/ressources/';
 ---
 
 <MainLayout title={title} description={description} canonical={canonical}>
   <section class="hero">
-    <div class="hero-image" style="background-image: url('/images/header-ia-esg-2026.jpg');"></div>
+    <div class="hero-image" style="background-image: url(/images/technologie.jpg);"></div>
     <div class="hero-content container">
-      <h1>Ressources</h1>
-      <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-        D'abord ce qui sert à <strong>garder la main</strong> sur l'IA. Ensuite une bibliothèque de textes officiels
-        (reporting, anti-greenwashing) — utile en contexte, pas comme catalogue d'offre.
-      </p>
-      <div style="text-align: center; margin: 2rem 0 3rem;">
-        <a href="/methode" class="btn btn--primary" style="font-size: 1.2rem; padding: 1rem 2rem;">
-          Voir la méthode
-        </a>
-      </div>
+      <h1>Analyses et Veille&nbsp;: Ce que disent vraiment les entreprises de l'IA</h1>
     </div>
   </section>
 
-  <section class="ressources-content container" style="max-width: 900px; padding-bottom: 4rem;">
-    <h2>Gouvernance IA</h2>
-    <ul style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
-      <li style="margin-bottom: 1.2rem;">
-        <strong>Garder la main — Diriger à l'ère de l'IA</strong> (Librinova, 2026)<br />
-        <a href="https://glm.ycompris.com/garder-la-main" target="_blank" rel="noopener noreferrer"
-          >Fiche livre (glm.ycompris.com)</a
-        >
-        ·
-        <a href="https://www.librinova.com/librairie/yves-cavarec/garder-la-main" target="_blank" rel="noopener noreferrer"
-          >Librinova</a
-        >
-      </li>
-      <li style="margin-bottom: 1.2rem;">
-        <strong>Étude — L'IA dans les DEU du CAC&nbsp;40</strong><br />
-        <a href="https://glm.ycompris.com/deu-cac40-2025" target="_blank" rel="noopener noreferrer"
-          >Lire l'étude</a
-        >
-      </li>
-      <li style="margin-bottom: 1.2rem;">
-        <strong>Règlement européen sur l'IA</strong> — Règlement (UE) 2024/1689<br />
-        <a
-          href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32024R1689"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Texte (EUR-Lex)</a
-        >
-      </li>
-      <li style="margin-bottom: 1.2rem;">
-        <strong>A.RI.ALL</strong> — détection de risques d'allégations<br />
-        <a href="https://ariall.ycompris.com" target="_blank" rel="noopener noreferrer">ariall.ycompris.com</a>
-      </li>
-      <li style="margin-bottom: 1.2rem;">
-        <strong>Page cadre</strong> — gouvernance / social / environnement sous prisme IA<br />
-        <a href="/ia-esg">/ia-esg</a>
-      </li>
-    </ul>
-
-    <h2>Textes de référence (arrière-plan réglementaire)</h2>
-    <p style="color: var(--gray);">
-      Conservés pour la clarté et le SEO. Ils ne définissent plus l'offre principale d'Ycompris.
-    </p>
-
-    <h3>Reporting de durabilité</h3>
-    <ul style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
-      <li style="margin-bottom: 1rem;">
-        <strong>Normes ESRS</strong><br />
-        <a
-          href="https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:02023R2772-20231222"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Texte consolidé (EUR-Lex)</a
-        >
-      </li>
-      <li style="margin-bottom: 1rem;">
-        <strong>VSME</strong> — standard volontaire PME<br />
-        <a
-          href="https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202501710"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Texte officiel</a
-        >
-        · <a href="/vsme-guide">Guide Ycompris</a>
-        · <a href="/rapport-vsme-2025">Exemple rapport 2025</a>
-      </li>
-    </ul>
-
-    <h3>Taxonomie verte UE</h3>
+  <section class="section container analyses-content">
+    <h2>Étude Exclusive&nbsp;: L'IA dans les rapports annuels du CAC40</h2>
     <p>
-      <a href="https://ec.europa.eu/sustainable-finance-taxonomy" target="_blank" rel="noopener noreferrer"
-        >EU Taxonomy Compass</a
+      Ycompris a analysé comment les plus grandes entreprises françaises intègrent (ou occultent)
+      l'intelligence artificielle dans leur communication financière. Une synthèse de ce travail a
+      été publiée dans Les Échos Investir.
+    </p>
+    <p>
+      Découvrez les tendances&nbsp;: Qui communique vraiment&nbsp;? S'agit-il de greenwashing numérique ou de réelle
+      transformation&nbsp;?
+    </p>
+    <p>
+      L'étude complète (méthode, chiffres, livrables) est disponible sur le site Garder la main.
+    </p>
+    <p>
+      <a
+        href="https://glm.ycompris.com/deu-cac40-2025"
+        class="btn btn--primary"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Lire l'étude CAC40 sur glm.ycompris.com (nouvel onglet)"
       >
-      — outil officiel Commission.<br />
-      Règlement (UE) 2020/852 :
-      <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=celex%3A32020R0852" target="_blank" rel="noopener noreferrer"
-        >EUR-Lex</a
-      >.
+        Lire l'étude CAC&nbsp;40
+      </a>
     </p>
 
-    <h3>SFDR</h3>
+    <h2>Série de l'été – Journal du Net (11 épisodes)</h2>
     <p>
-      Règlement (UE) 2019/2088 —
-      <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32019R2088" target="_blank" rel="noopener noreferrer"
-        >texte consolidé</a
-      >.
-      RTS 2022/1288 —
-      <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R1288" target="_blank" rel="noopener noreferrer"
-        >EUR-Lex</a
-      >.
+      Une plongée approfondie dans les transformations du travail. Retrouvez ma série d'articles où l'on décortique
+      l'impact de l'IA sur les métiers, le management et la stratégie d'entreprise.
     </p>
-
-    <h3>Anticorruption</h3>
     <p>
-      Loi Sapin II (n° 2016-1691) — recommandations AFA :
-      <a
-        href="https://www.agence-francaise-anticorruption.gouv.fr/files/files/Recommandations%20AFA.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        >PDF</a
-      >.
+      Les liens épisode par épisode évoluent&nbsp;; pour retrouver la série ou en recevoir le détail,
+      <a href="/contact/">écrivez-moi</a>
+      ou consultez le
+      <a href="https://www.journaldunet.com/" target="_blank" rel="noopener noreferrer">Journal du Net</a>.
     </p>
 
-    <h3>Anti-greenwashing / allégations</h3>
+    <h2>Veille Stratégique</h2>
     <p>
-      Directive (UE) 2024/825 (« empowering consumers for the green transition ») —
-      <a
-        href="https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202400825"
-        target="_blank"
-        rel="noopener noreferrer"
-        >JOUE</a
-      >.
-      En droit français, le Code de la consommation (pratiques commerciales trompeuses) reste le levier le plus
-      mobilisé ; utile aussi pour l'<strong>IA-washing</strong>.
+      Je publie régulièrement des analyses croisant gouvernance, excellence opérationnelle et technologie. Une ressource
+      indispensable pour les dirigeants qui veulent comprendre les enjeux sans le jargon des technophiles.
+    </p>
+    <p>
+      <a href="/livre/">Le livre Garder la main</a>
+      ·
+      <a href="/contact/">Me contacter</a>
     </p>
 
-    <p style="margin-top: 2rem; font-style: italic; color: var(--gray);">
-      Ressources à titre informatif — pas un conseil juridique personnalisé.
-      <a href="/contact">Contact</a> pour un contexte précis.
-    </p>
-
-    <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--gray); text-align: center;">
-      Mise à jour septembre 2026 — Ycompris (Brest, Bretagne).
-    </p>
+    <details class="ref-texts">
+      <summary>Textes de référence</summary>
+      <p class="ref-note">
+        Conservés pour la clarté et le SEO. Ils ne définissent plus l'offre principale d'Ycompris.
+      </p>
+      <ul>
+        <li>
+          <strong>Règlement européen sur l'IA</strong> — Règlement (UE) 2024/1689 —
+          <a
+            href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32024R1689"
+            target="_blank"
+            rel="noopener noreferrer"
+            >EUR-Lex</a
+          >
+        </li>
+        <li>
+          <strong>Normes ESRS</strong> —
+          <a
+            href="https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:02023R2772-20231222"
+            target="_blank"
+            rel="noopener noreferrer"
+            >texte consolidé</a
+          >
+        </li>
+        <li>
+          <strong>VSME</strong> —
+          <a
+            href="https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202501710"
+            target="_blank"
+            rel="noopener noreferrer"
+            >texte officiel</a
+          >
+          · <a href="/vsme-guide">Guide Ycompris</a>
+        </li>
+        <li>
+          <strong>Taxonomie verte UE</strong> —
+          <a href="https://ec.europa.eu/sustainable-finance-taxonomy" target="_blank" rel="noopener noreferrer"
+            >EU Taxonomy Compass</a
+          >
+        </li>
+        <li>
+          <strong>SFDR</strong> — Règlement (UE) 2019/2088 —
+          <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32019R2088" target="_blank" rel="noopener noreferrer"
+            >EUR-Lex</a
+          >
+        </li>
+      </ul>
+      <p class="ref-disclaimer">
+        Ressources à titre informatif — pas un conseil juridique personnalisé.
+      </p>
+    </details>
   </section>
 </MainLayout>
+
+<style>
+  .analyses-content {
+    max-width: 900px;
+    padding-bottom: 4rem;
+  }
+  .analyses-content h2 {
+    margin-top: 2.75rem;
+  }
+  .analyses-content h2:first-child {
+    margin-top: 0;
+  }
+  .ref-texts {
+    margin-top: 3.5rem;
+    padding: 1rem 1.25rem;
+    background: white;
+    border-radius: var(--radius);
+    border: 1px solid #e2e8f0;
+    font-size: 0.92rem;
+    color: var(--gray);
+  }
+  .ref-texts summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .ref-note {
+    margin-top: 0.75rem;
+  }
+  .ref-texts ul {
+    padding-left: 1.1rem;
+  }
+  .ref-texts li {
+    margin-bottom: 0.55rem;
+  }
+  .ref-disclaimer {
+    font-style: italic;
+    margin-bottom: 0;
+  }
+</style>

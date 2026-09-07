@@ -17,3 +17,45 @@
   to = "/merci/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/ia-esg"
+  to = "/ressources/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ia-esg/"
+  to = "/ressources/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ia-esg/*"
+  to = "/ressources/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/methode"
+  to = "/livre/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/methode/"
+  to = "/livre/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faq"
+  to = "/expertise/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faq/"
+  to = "/expertise/"
+  status = 301
+  force = true
