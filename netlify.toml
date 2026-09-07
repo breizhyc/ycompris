@@ -1,8 +1,16 @@
 # netlify.toml
+# Builds de production seulement — plan gratuit : pas de deploy preview / branch deploy.
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+
+# Si la commande ignore sort 0, Netlify saute le build.
+[context.deploy-preview]
+  ignore = "exit 0"
+
+[context.branch-deploy]
+  ignore = "exit 0"
 
 [[redirects]]
   from = "/merci"

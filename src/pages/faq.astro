@@ -1,210 +1,110 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from '../layouts/MainLayout.astro';
 
-const title = "FAQ — ESG, CSRD, gouvernance IA | Ycompris";
-const description = "Réponses aux questions sur la conformité ESG, le reporting CSRD/VSME et la gouvernance de l'IA pour les ETI.";
+const title = 'FAQ — Garder la main, gouvernance IA | Ycompris';
+const description =
+  "Questions fréquentes sur la gouvernance de l'IA, Garder la main, et le contexte réglementaire (CSRD, VSME) en arrière-plan.";
+const canonical = 'https://ycompris.com/faq/';
 ---
 
-<MainLayout title={title} description={description}>
-  <!-- Hero avec filigrane subtil – identique à l'accueil, Méthode et Ressources -->
+<MainLayout title={title} description={description} canonical={canonical}>
   <div class="hero" style="min-height: 450px; position: relative;">
-    <!-- Fond filigrane subtil -->
-<div 
-    class="hero-image" 
-    style="background-image: url('/images/FAQ-ESG-Bretagne.jpg');"
-  ></div>
-  
-  <!-- Image cachée pour SEO + accessibilité (alt text local) -->
-  <img 
-    src="/images/FAQ-ESG-Bretagne.jpg" 
-    alt="Foire aux questions ESG et CSRD – Expertise conformité extra-financière en Bretagne et Finistère | Ycompris" 
-    style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"
-    aria-hidden="true"
-  />    
-    <!-- Contenu texte au premier plan -->
+    <div class="hero-image" style="background-image: url('/images/header-ia-esg-2026.jpg');"></div>
+    <img
+      src="/images/header-ia-esg-2026.jpg"
+      alt="FAQ gouvernance IA — Ycompris"
+      style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"
+      aria-hidden="true"
+    />
     <div class="hero-content container" style="padding-top: 8rem;">
-      <h1>Foire Aux Questions ESG</h1>
+      <h1>FAQ — Garder la main</h1>
     </div>
   </div>
 
+  <section class="faq container" style="padding: 3rem 1.5rem 5rem;">
     <p>
-      Cette FAQ répond aux principales questions des entreprises sur la durabilité, la conformité réglementaire et la prévention du greenwashing.
+      Réponses courtes sur la gouvernance de l'IA et le positionnement Ycompris. Des questions réglementaires
+      (VSME, CSRD…) restent en bas de page — contexte, pas offre principale.
     </p>
 
     <div style="text-align: center; margin: 2rem 0;">
-      <a href="/ressources" class="btn btn--primary" style="font-size: 1.2rem; padding: 1rem 2rem;">
-        Voir les textes officiels ici
-      </a>
-    </div>
-    
-    <!-- ================= IA & Géopolitique dans l'ESG ================= -->
-    <h2>IA & Géopolitique dans l'ESG</h2>
-
-    <h3>Pourquoi l'IA est-elle un enjeu ESG ?</h3>
-    <p>
-      L'adoption de l'IA par l'entreprise bouleverse les compétences et les métiers (S de l'ESG). Au-delà d'un certain seuil, le fonctionnement de l'entreprise peut devenir dépendant de l'IA au point que la gouvernance s'en trouve impactée (G de l'ESG). 
-    </p>
-    <h3>Les risques géopolitiques sont-ils un sujet ESG ?</h3>
-    <p>
-      Oui. Les tensions géopolitiques fragilisent votre chaîne de valeur (semi-conducteurs taïwanais, terres rares chinoises, énergie russe) et impactent directement votre gouvernance (gestion des risques stratégiques) et votre modèle social (relocalisations, sécurisation emplois). Les investisseurs scrutent ces vulnérabilités. 
-    </p>
-    <h3>Dois-je mentionner l'IA dans mon rapport VSME ou CSRD ?</h3>
-    <p>
-      Oui, si l'IA a un impact matériel sur votre entreprise. L'analyse de double matérialité doit identifier vos dépendances technologiques critiques (cloud, algorithmes, données) et leur impact sur votre gouvernance et votre stratégie. Les investisseurs posent ces questions depuis 2025. 
-    </p>
-    <h3>Qu'est-ce que la "souveraineté des données" en gouvernance ESG ?</h3>
-    <p>
-      C'est votre capacité à contrôler où vos données sont stockées et qui y a accès. Si vous dépendez d'AWS, Azure ou Google Cloud, vos données peuvent être soumises au Cloud Act américain. Cette dépendance est un risque de gouvernance (G) à documenter dans votre rapport ESG.
-    </p>
-    <h3>Quelles dépendances géopolitiques dois-je analyser ?</h3>
-    <p>
-      Quand vous identifiez vos dépendances critiques vis-à-vos de tiers, prenez en compte le risque liés aux échanges avec les pays concernés par la chaine de valeur. En Bretagne, les secteurs naval, agroalimentaire et électronique sont particulièrement exposés. Commencez par cartigraphier vos fournisseurs et leurs localisations.
-    </p>
-    <h3>Comment intégrer l'IA dans mon analyse de matérialité ?</h3>
-    <p>
-      Posez-vous trois questions : 1) Quelle est la dépendance de ma chaîne de valeur aux outils IA ? 2) Les risques (pour l'entreprise: processus, données, gouvernance) ou les impacts (sur le monde: l'environnement et la vie des salariés) sont-ils significatifs ? 3) Mes investisseurs, mes clients, mes salariés me questionnent-ils là-dessus ? Si oui à deux questions, l'IA est matérielle pour votre entreprise.
-    </p>
-
-            <!-- Bouton vers IA & ESG – placé à la fin de la page ou après le CTA principal -->
-    <div style="text-align: center; margin: 4rem 0;">
-      <a 
-        href="/ia-esg" 
-        class="btn btn--primary" 
+      <a
+        href="https://glm.ycompris.com/garder-la-main"
+        class="btn btn--primary"
         style="font-size: 1.2rem; padding: 1rem 2rem;"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        En savoir plus sur la relation entre IA et ESG
+        Découvrir le livre
       </a>
     </div>
 
-    <!-- ================= VSME ================= -->
-    <h2>VSME</h2>
+    <h2>Gouvernance IA &amp; Garder la main</h2>
 
-    <h3>Qu’est-ce que la norme VSME ?</h3>
+    <h3>Que veut dire « garder la main » ?</h3>
     <p>
-      La VSME (Voluntary Sustainability Reporting Standard for SMEs) est une norme volontaire de reporting de durabilité destinée aux PME non cotées. Elle a été élaborée par l’EFRAG pour proposer un cadre simple et proportionné
-      couvrant les enjeux environnementaux, sociaux et de gouvernance (ESG).
+      Savoir quelles décisions restent humaines, où l'IA intervient, quels risques (dépendance, données, compétences)
+      vous assumez — et pouvoir l'expliquer clairement.
     </p>
 
-    <h3>La VSME est-elle obligatoire ?</h3>
+    <h3>Proposez-vous un outil clé en main ?</h3>
     <p>
-      Non. La VSME est une norme volontaire. Elle n’impose aucune obligation légale directe, mais elle permet aux PME de structurer leurs données ESG de manière cohérente et réutilisable.
+      C'est la direction. Aujourd'hui : analyses, cadre et accompagnement ciblé. Un produit ou service packagé est en
+      conception.
     </p>
 
-    <h3>Pourquoi la VSME est-elle importante pour les PME ?</h3>
+    <h3>Pourquoi l'IA est-elle un enjeu de gouvernance ?</h3>
     <p>
-      Elle permet de répondre plus facilement aux demandes d’informations des clients, partenaires ou financeurs soumis à la CSRD, sans devoir produire des rapports complexes. Elle réduit fortement la charge administrative par rapport aux standards complets applicables aux grandes entreprises.
+      Au-delà d'un certain seuil, l'entreprise peut dépendre de modèles et de cloud au point d'affecter la prise de
+      décision, la souveraineté des données et le modèle social (compétences, métiers).
     </p>
 
-    <h3>Quel lien existe entre la VSME et la CSRD ?</h3>
+    <h3>Qu'est-ce que la souveraineté des données ici ?</h3>
     <p>
-      La VSME est conçue pour être compatible avec les standards européens ESRS utilisés dans la CSRD. En Bretagne et ailleurs, les ETI et PME peuvent utiliser le rapport VSME, qui est suffisant pour répondre aux questionnaires RSE des grands donneurs d'ordres, des banques et des investisseurs. Les informations produites selon la VSME peuvent en effet être reprises par les grandes entreprises pour leur propre reporting (CSRD, SFDR...).
+      Votre capacité à savoir où sont les données, qui y accède, et sous quel droit. Une dépendance cloud ou modèle peut
+      être un risque de gouvernance à documenter — pas seulement un sujet IT.
     </p>
 
-    <h3>Qu’est-ce que le “value chain cap” et quel est son lien avec la VSME ?</h3>
+    <h3>Comment démarrer concrètement ?</h3>
     <p>
-      Le “value chain cap” limite les informations qu’un ivestisseur ou une grande entreprise peut exiger de ses fournisseurs et partenaires. Pour les PME, ce plafond est aligné sur la VSME : une entreprise appliquant cette norme est censée fournir un niveau d’information proportionné et suffisant.
+      Trois questions : de quoi dépendons-nous ? quelles décisions doivent rester humaines ? que pouvons-nous affirmer
+      avec preuves ? Ensuite : un parcours court (voir la <a href="/methode">méthode</a>).
     </p>
 
-    <h3>La VSME peut-elle être un avantage stratégique ?</h3>
-    <p>
-      Oui. Elle aide à identifier les risques et opportunités ESG, améliore la transparence vis-à-vis des partenaires et facilite l’accès au financement. Elle renforce aussi la crédibilité des PME dans les chaînes de valeur durables.
+    <div style="text-align: center; margin: 3rem 0;">
+      <a href="/ia-esg" class="btn btn--primary" style="font-size: 1.2rem; padding: 1rem 2rem;">
+        IA &amp; environnement régulé
+      </a>
+    </div>
+
+    <h2>Contexte réglementaire (arrière-plan)</h2>
+    <p style="color: var(--gray);">
+      Ces réponses restent utiles si votre contexte mélange IA et reporting. Elles ne définissent plus l'offre Ycompris.
     </p>
 
-    <h3>Comment préparer son rapport VSME ?</h3>
+    <h3>Qu'est-ce que la norme VSME ?</h3>
     <p>
-        Nous avons une page dédiée pour vous aider : 
-        <a href="/vsme-guide" class="faq-link" style="color: var(--primary); font-weight: 600; text-decoration: underline;">
-          Guide pratique VSME – Rapport ESG pour PME & ETI
-        </a>
-    </p>
-
-    <!-- ================= GREENWASHING ================= -->
-    <h2>Greenwashing</h2>
-
-    <h3>Qu’est-ce que le greenwashing ?</h3>
-    <p>
-      Le greenwashing désigne les pratiques de communication donnant une image trompeuse ou exagérée des performances environnementales (et par extension sociales ou de gouvernance) d’une organisation, d’un produit
-      ou d’un service.
-    </p>
-
-    <h3>Pourquoi le greenwashing est-il risqué pour une entreprise ?</h3>
-    <p>
-      Il expose à des sanctions juridiques, à une perte de confiance des clients et à une atteinte durable à la réputation. Les autorités européennes renforcent progressivement le cadre de lutte contre ces pratiques.
-    </p>
-
-    <h3>Comment éviter le greenwashing ?</h3>
-    <p>
-      En s’appuyant sur des données vérifiables, en évitant les allégations vagues, et en documentant les actions réellement mises en œuvre. La structuration des données ESG est un moyen efficace de sécuriser la communication.
-    </p>
-
-    <h3>Les labels suffisent-ils à éviter le greenwashing ?</h3>
-    <p>
-      Non. Les labels peuvent être utiles, mais ils ne remplacent pas une démarche globale de transparence et de mesure des impacts. Une entreprise doit pouvoir justifier ses engagements par des indicateurs concrets.
-    </p>
-
-    <!-- ================= CSRD ================= -->
-    <h2>CSRD</h2>
-
-    <h3>Qu’est-ce que la CSRD ?</h3>
-    <p>
-      La CSRD (Corporate Sustainability Reporting Directive) est une directive européenne imposant aux grandes entreprises de publier des informations détaillées sur leurs impacts environnementaux, sociaux et de gouvernance.
+      Standard volontaire de reporting de durabilité pour PME non cotées (EFRAG), proportionné, utile face aux demandes
+      de donneurs d'ordre ou de banques. Voir aussi le
+      <a href="/vsme-guide">guide VSME</a>.
     </p>
 
     <h3>Les PME sont-elles concernées par la CSRD ?</h3>
     <p>
-      En règle générale, les PME non cotées ne sont pas directement soumises à la CSRD. Elles peuvent toutefois être sollicitées par leurs clients ou partenaires pour fournir certaines données liées à la chaîne de valeur.
+      En général, les PME non cotées ne sont pas directement soumises. Elles peuvent être sollicitées via la chaîne de
+      valeur. La simplification « omnibus » a encore modifié les seuils et le calendrier.
     </p>
 
-    <h3>Qu’est-ce que la double matérialité ?</h3>
+    <h3>Comment éviter le greenwashing (ou l'IA-washing) ?</h3>
     <p>
-      La double matérialité consiste à analyser à la fois les impacts de l’entreprise sur l’environnement et la société, et les risques ou opportunités que ces enjeux représentent pour son activité.
+      Données vérifiables, allégations précises, limites assumées. Structurer ce que vous affirmez avant de le publier.
     </p>
 
-    <h3>Pourquoi la CSRD impacte-t-elle les fournisseurs ?</h3>
-    <p>
-      Parce que les entreprises soumises à la CSRD doivent décrire leur chaîne de valeur. Elles peuvent donc demander certaines informations ESG à leurs partenaires, dans un cadre proportionné.
-    </p>
-
-    <!-- ================= TAXONOMIE ================= -->
-    <h2>Taxonomie européenne</h2>
-
-    <h3>Qu’est-ce que la taxonomie européenne ?</h3>
-    <p>
-      La taxonomie européenne est un système de classification définissant quelles activités économiques peuvent être considérées comme durables sur le plan environnemental.
-    </p>
-
-    <h3>La taxonomie concerne-t-elle directement les PME ?</h3>
-    <p>
-      En principe, elle s’applique surtout aux grandes entreprises et aux acteurs financiers. Les PME peuvent néanmoins être indirectement concernées via leurs relations commerciales ou bancaires.
-    </p>
-
-    <h3>À quoi sert la taxonomie pour une entreprise ?</h3>
-    <p>
-      Elle permet de mesurer l’alignement d’une activité avec les objectifs climatiques et environnementaux européens, et de rendre les informations comparables entre entreprises.
-    </p>
-
-    <!-- ================= AUDIT ================= -->
-    <h2>Audit et conformité</h2>
-
-    <h3>Qu’est-ce qu’un audit ESG ?</h3>
-    <p>
-      Un audit ESG consiste à vérifier la fiabilité et la cohérence des informations environnementales, sociales et de gouvernance publiées par une entreprise.
-    </p>
-
-    <h3>L’audit est-il obligatoire ?</h3>
-    <p>
-      Il est obligatoire pour les entreprises soumises à la CSRD. Pour les autres, il peut être volontaire mais utile pour renforcer la crédibilité des données et des communications.
-    </p>
-
-    <h3>Qui peut réaliser un audit ESG ?</h3>
-    <p>
-      Des organismes tiers indépendants, des cabinets spécialisés ou des commissaires aux comptes selon le cadre réglementaire applicable.
-    </p>
-
-    <h3>À quoi sert un audit pour une PME ?</h3>
-    <p>
-      Il permet de sécuriser les informations transmises aux partenaires, d’identifier des axes d’amélioration et de réduire les risques juridiques liés à la communication environnementale.
-    </p>
+    <div style="text-align: center; margin: 3rem 0 1rem;">
+      <a href="/contact" class="btn btn--primary" style="font-size: 1.2rem; padding: 1rem 2rem;">
+        Poser une autre question
+      </a>
+    </div>
   </section>
 </MainLayout>
 
@@ -212,11 +112,6 @@ const description = "Réponses aux questions sur la conformité ESG, le reportin
   .faq {
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-
-  h1 {
-    margin-bottom: 1.5rem;
   }
 
   h2 {
