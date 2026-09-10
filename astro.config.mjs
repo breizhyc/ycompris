@@ -10,7 +10,14 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !page.includes('/gerse202606'),
+      filter: (page) =>
+        !page.includes('/gerse202606') &&
+        !page.includes('/expertise') &&
+        !page.includes('/livre') &&
+        !page.includes('/ressources') &&
+        !page.includes('/methode') &&
+        !page.includes('/faq') &&
+        !page.includes('/ia-esg'),
     }),
   ],
 });

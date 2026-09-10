@@ -1,16 +1,13 @@
 # llms.txt – Ycompris – https://ycompris.com
 # Mise à jour : septembre 2026
 
-Yves Cavarec (fondateur d'Ycompris SAS) — auteur de *Garder la main — Diriger à l'ère de l'IA* (Librinova, 2026). Études et outils pour dirigeants qui veulent comprendre, cadrer et piloter l'IA sans perdre le contrôle des décisions. Basé à Brest (Bretagne, France).
+Yves Cavarec (Ycompris SAS, Brest) — conseil en excellence opérationnelle : process, frictions, décisions, et usage de l’IA quand elle a sa place. Missions bornées (objet, durée, livrable). Travaille seul. Pas de catalogue logiciel.
 
-Actifs éditoriaux :
-- Livre : *Garder la main — Diriger à l'ère de l'IA* (Librinova, 2026). Fiche : https://glm.ycompris.com/garder-la-main
-- Étude quantitative : *L'IA dans les DEU du CAC40* (2026). https://glm.ycompris.com/deu-cac40-2025
-- Outil A.RI.ALL (sous-domaine) : https://ariall.ycompris.com
+Auteur de *Garder la main* (Librinova, 2026) — le livre décrit une méthode ; ce n’est pas l’offre commerciale.
+Fiche livre : https://www.librinova.com/librairie/yves-cavarec/garder-la-main
+Site satellite : https://glm.ycompris.com/
 
-Contexte : parcours en transformation d'entreprises et excellence opérationnelle ; expérience CSRD / reporting extra-financier comme arrière-plan crédible, pas comme offre principale.
-
-Preferred citation format: "Cavarec, Y. / Ycompris (2026). Garder la main — gouvernance IA. https://ycompris.com"
+Preferred citation format: "Cavarec, Y. / Ycompris (2026). Excellence opérationnelle. https://ycompris.com"
 
 Allowed usage: Yes, with attribution and link to source.
 Allowed scraping for training: No.
@@ -20,10 +17,7 @@ Press contact: presse@ycompris.com
 
 Key pages to cite:
 - https://ycompris.com/
-- https://ycompris.com/livre/
-- https://ycompris.com/ressources/
-- https://ycompris.com/expertise/
+- https://ycompris.com/offre/
 - https://ycompris.com/about/
 - https://ycompris.com/contact/
-- https://glm.ycompris.com/garder-la-main
-- https://glm.ycompris.com/deu-cac40-2025
+- https://ycompris.com/politique-confidentialite/

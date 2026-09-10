@@ -1,0 +1,81 @@
+---
+// src/pages/offre.astro
+import MainLayout from '../layouts/MainLayout.astro';
+
+const title = 'Offre — Excellence opérationnelle · Ycompris';
+const description =
+  'Conseil en excellence opérationnelle : process, décisions, IA. Missions bornées. Yves Cavarec.';
+const canonical = 'https://ycompris.com/offre/';
+---
+
+<MainLayout title={title} description={description} canonical={canonical}>
+  <div class="container">
+    <section class="page-hero" aria-labelledby="offre-title">
+      <p class="eyebrow">Offre</p>
+      <h1 id="offre-title">Excellence opérationnelle.</h1>
+      <p class="lead">
+        Une mission a un objet, une durée et un livrable. En dehors de ça, je ne m’installe pas.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="formes-title">
+      <h2 id="formes-title" class="sr-only">Formes d’intervention</h2>
+      <div class="card-list">
+        <article class="card">
+          <h3>Diagnostic court</h3>
+          <p>
+            Repérer où le travail se bloque, se double ou échappe. Un regard borné, un livrable écrit. Pas un audit sans fin.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Chantier ciblé</h3>
+          <p>
+            Un process, une friction, une règle de décision, un outil. Objet, durée, livrable. Je viens, on avance, je m’en vais.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Cadrage direction</h3>
+          <p>
+            Qui valide quoi. Ce qui s’automatise. Ce qui remonte, ce qui reste local. Charte d’usage de l’IA si c’est le sujet. Un cadre clair pour l’équipe ou le comité concerné.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="inclus-title">
+      <h2 id="inclus-title">Inclus</h2>
+      <p>
+        Organisation du travail&nbsp;; gouvernance de l’IA&nbsp;; conformité réglementaire quand c’est le sujet. Outillage si nécessaire.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="deroule-title">
+      <h2 id="deroule-title">Déroulé</h2>
+      <ol class="steps">
+        <li>Vous expliquez la situation.</li>
+        <li>Échange pour voir s’il y a matière.</li>
+        <li>Proposition écrite&nbsp;: objet, durée, livrable.</li>
+        <li>Travail, puis livraison. Fin du chantier.</li>
+      </ol>
+      <div class="cta-row">
+        <a href="/contact/" class="btn btn--primary">Proposer un chantier</a>
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

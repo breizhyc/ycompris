@@ -19,43 +19,79 @@
   force = true
 
 [[redirects]]
-  from = "/ia-esg"
-  to = "/ressources/"
+  from = "/expertise"
+  to = "/offre/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/ia-esg/"
-  to = "/ressources/"
+  from = "/expertise/"
+  to = "/offre/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/ia-esg/*"
-  to = "/ressources/:splat"
+  from = "/livre"
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/livre/"
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ressources"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ressources/"
+  to = "/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/methode"
-  to = "/livre/"
+  to = "/offre/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/methode/"
-  to = "/livre/"
+  to = "/offre/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/faq"
-  to = "/expertise/"
+  to = "/offre/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/faq/"
-  to = "/expertise/"
+  to = "/offre/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ia-esg"
+  to = "/offre/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ia-esg/"
+  to = "/offre/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ia-esg/*"
+  to = "/offre/"
   status = 301
   force = true

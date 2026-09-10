@@ -13,11 +13,11 @@ interface Props {
 }
 
 const {
-  title = 'Ycompris',
-  description = "Auteur de « Garder la main » (Librinova, 2026). Études et outils pour diriger à l'ère de l'IA — sans perdre le contrôle des décisions.",
+  title = 'Ycompris — Excellence opérationnelle',
+  description = 'Conseil en excellence opérationnelle. Yves Cavarec, Brest. Process, décisions, IA quand elle a sa place. Chantiers bornés.',
   ogType = 'website',
   ogImage = '/images/og-home-2026.jpg',
-  ogImageAlt = 'Yves Cavarec — Garder la main, Diriger à l’ère de l’IA',
+  ogImageAlt = 'Ycompris — Excellence opérationnelle, Yves Cavarec, Brest',
   canonical,
   noindex = false,
 } = Astro.props;
@@ -26,6 +26,7 @@ const SITE_BASE = Astro.site ?? new URL('https://ycompris.com');
 const currentURL = new URL(Astro.url?.pathname ?? '/', SITE_BASE).href;
 const canonicalURL = canonical ?? currentURL;
 const ogImageURL = new URL(ogImage, SITE_BASE).href;
+const pathname = Astro.url?.pathname ?? '/';
 ---
 
 <!doctype html>
@@ -41,11 +42,15 @@ const ogImageURL = new URL(ogImage, SITE_BASE).href;
   <link rel="icon" href="/favicon.ico" />
   <link rel="sitemap" href="/sitemap-index.xml" />
 
-  <!-- Font preloads -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
   <link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
 
-  <!-- Open Graph -->
   <meta property="og:type" content={ogType} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -55,20 +60,18 @@ const ogImageURL = new URL(ogImage, SITE_BASE).href;
   <meta property="og:site_name" content="Ycompris" />
   <meta property="og:locale" content="fr_FR" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImageURL} />
 
-  <!-- Schema JSON-LD de base (Organization) -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Ycompris",
     "url": "https://ycompris.com",
     "logo": "https://ycompris.com/images/Ycompris.jpg",
-    "description": "Études et outils pour dirigeants sur la gouvernance de l'IA, dans la lignée de Garder la main (Yves Cavarec). Basé à Brest, Bretagne.",
+    "description": "Conseil en excellence opérationnelle. Process, décisions, IA quand elle a sa place. Basé à Brest.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Brest",
@@ -87,275 +90,384 @@ const ogImageURL = new URL(ogImage, SITE_BASE).href;
     "areaServed": ["Bretagne", "France"]
   })} />
 
-  <!-- Slot réservé pour JSON-LD additionnel par page (Person, Book, Article, BreadcrumbList, etc.) -->
   <slot name="head-extra" />
 
   <style is:global>
+    @font-face {
+      font-family: 'Atkinson';
+      src: url('/fonts/atkinson-regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Atkinson';
+      src: url('/fonts/atkinson-bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
     :root {
-      --primary: #0B3D5C;
-      --primary-dark: #072A40;
-      --accent: #2E6B8A;
-      --text: #1A1A1A;
-      --light: #F5F8FB;
-      --gray: #5B6B7A;
-      --navy: #0A1628;
-      --radius: 8px;
+      --paper: #F6F1E8;
+      --ink: #1C1A16;
+      --accent: #2C4A3E;
+      --accent-soft: #3d6354;
+      --muted: #5c574e;
+      --line: #d9d0c3;
+      --card: #fffcf7;
+      --radius: 6px;
+      --font-serif: 'Source Serif 4', 'Georgia', 'Times New Roman', serif;
+      --font-sans: 'Atkinson', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--light);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: var(--font-sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 1.05rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    a:hover {
+      color: var(--accent-soft);
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 720px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
 
-    /* Nouveau wrapper pour le contenu principal : centre + padding gauche/droite */
     .content-wrapper {
-      max-width: 900px;               /* Largeur confortable, pas trop large */
-      margin: 0 auto;                 /* Centre horizontalement */
-      padding: 2rem 1.5rem 4rem;      /* Espace haut/bas + gauche/droite */
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
     }
 
     @media (max-width: 768px) {
       .content-wrapper {
-        padding: 1.5rem 1rem 3rem;    /* Moins d'espace sur mobile */
+        padding: 1.75rem 1.15rem 3rem;
       }
     }
 
     h1, h2, h3 {
-      color: var(--primary);
-      line-height: 1.3;
-    }
-
-    /* Header */
-    header {
-      background: var(--primary);
-      color: white;
-      padding: 1.5rem 0;
-      text-align: center;
-      position: relative;
-      z-index: 1000;
-    }
-
-    .header-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
-    }
-
-    .logo img {
-      max-height: 60px;
-      width: auto;
-      display: block;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.2s;
-    }
-
-    nav a:hover {
-      opacity: 0.85;
-      text-decoration: underline;
-    }
-
-    /* Picto lien externe inline, aligné au texte */
-    .ext-icon {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      margin-left: 3px;
-      vertical-align: baseline;
-      fill: currentColor;
-      opacity: 0.75;
-    }
-
-    /* Boutons */
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 1.6rem;
-      border-radius: var(--radius);
+      font-family: var(--font-serif);
+      color: var(--ink);
+      line-height: 1.25;
       font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
+      letter-spacing: -0.01em;
     }
 
-    .btn--primary {
-      background: white;
-      color: var(--primary);
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 2.45rem);
+      margin: 0 0 1.25rem;
     }
 
-    .btn--primary:hover {
-      background: var(--primary-dark);
-      color: white;
-      transform: translateY(-1px);
+    h2 {
+      font-size: clamp(1.35rem, 2.8vw, 1.7rem);
+      margin: 2.75rem 0 1rem;
     }
 
-    /* Hero global avec filigrane subtil */
-    .hero {
-      position: relative;
-      background: linear-gradient(135deg, #E8F0F5 0%, #DCE8F0 100%);
-      padding: 0 0 4rem; /* colle au header */
-      text-align: center;
-      min-height: 300px;
+    h3 {
+      font-size: 1.15rem;
+      margin: 1.75rem 0 0.6rem;
     }
 
-    .hero-image {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.15;
-      z-index: 1;
+    p {
+      margin: 0 0 1.1rem;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 6rem 0 4rem;
+    .eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 0.85rem;
     }
 
     .lead {
-      font-size: 1.3rem;
-      max-width: 800px;
-      margin: 1.5rem auto 0;
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 38rem;
     }
 
-    /* Sections et cartes */
+    /* Header */
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .wordmark:hover {
+      color: var(--accent);
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem 1.35rem;
+      flex-wrap: wrap;
+    }
+
+    .site-nav a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.2rem 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .site-nav a:hover {
+      color: var(--accent);
+    }
+
+    .site-nav a[aria-current="page"] {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.35rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+      border: 1.5px solid transparent;
+      font-family: var(--font-sans);
+    }
+
+    .btn--primary {
+      background: var(--accent);
+      color: var(--paper);
+    }
+
+    .btn--primary:hover {
+      background: var(--accent-soft);
+      color: var(--paper);
+    }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .btn--ghost:hover {
+      background: var(--accent);
+      color: var(--paper);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem 1.1rem;
+      margin: 1.75rem 0 0;
+    }
+
+    /* Page sections */
+    .page-hero {
+      padding: 3.25rem 0 1.5rem;
+    }
+
     .section {
-      padding: 6rem 0;
+      padding: 0.5rem 0 1rem;
     }
 
-    .cards {
+    .card-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8rem;
+      gap: 1.25rem;
+      margin: 1.5rem 0 0;
     }
 
     .card {
-      background: white;
-      padding: 2rem;
+      background: var(--card);
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.15rem;
-      border-top: 4px solid var(--primary);
-      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 1.35rem 1.4rem;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    .card h3 {
+      margin-top: 0;
     }
 
-    /* Bannière cookies */
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .steps {
+      list-style: none;
+      padding: 0;
+      margin: 1.25rem 0 0;
+      counter-reset: step;
+    }
+
+    .steps li {
+      position: relative;
+      padding: 0.85rem 0 0.85rem 2.75rem;
+      border-bottom: 1px solid var(--line);
+      counter-increment: step;
+    }
+
+    .steps li:last-child {
+      border-bottom: none;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 1.85rem;
+      height: 1.85rem;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--paper);
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+    }
+
+    .closing {
+      margin-top: 3rem;
+      padding: 1.75rem 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+    }
+
+    .closing h2 {
+      margin-top: 0;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--line);
+      margin-top: 3rem;
+      padding: 2rem 1.5rem 2.5rem;
+      background: var(--paper);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .footer-meta {
+      margin: 0;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.15rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-nav a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
     .cm-wrapper .cm-btn {
-      background-color: var(--primary) !important;
-      color: white !important;
+      background-color: var(--accent) !important;
+      color: var(--paper) !important;
       border-radius: var(--radius) !important;
     }
 
     .cm-wrapper .cm-btn:hover {
-      background-color: var(--primary-dark) !important;
+      background-color: var(--accent-soft) !important;
     }
 
-    /* FAQ */
-    .faq-hero img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
-    }
-
-    .faq-item {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      border-left: 5px solid var(--primary);
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .faq-question {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .faq-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--primary);
-      color: white;
-      font-size: 1.8rem;
-      font-weight: bold;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .section {
-        padding: 4rem 0;
+    @media (max-width: 640px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .hero {
-        padding: 0 0 3rem;
+      .site-nav {
+        gap: 0.35rem 1rem;
       }
 
-      .hero-content {
-        padding: 4rem 0 2rem;
-      }
-
-      nav a {
-        margin: 0 0.8rem;
-        font-size: 0.95rem;
-      }
-
-      .header-content {
-        gap: 1.5rem;
+      .page-hero {
+        padding-top: 2.25rem;
       }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <div class="container header-content">
-      <a href="/" class="logo" aria-label="Accueil Ycompris">
-        <img
-          src="/images/Ycompris.jpg"
-          alt="Logo Ycompris – Garder la main, gouvernance IA"
-        />
-      </a>
-
-      <nav aria-label="Navigation principale">
-        <a href="/">Accueil</a>
-        <a href="/livre/">Livre</a>
-        <a href="/ressources/">Analyses</a>
-        <a href="/expertise/">Cabinet</a>
-        <a href="/about/">À propos</a>
-        <a href="/contact/" class="btn btn--primary">Contact</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="wordmark" aria-label="Accueil Ycompris">Ycompris</a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="/" aria-current={pathname === '/' ? 'page' : undefined}>Accueil</a>
+        <a href="/offre/" aria-current={pathname.startsWith('/offre') ? 'page' : undefined}>Offre</a>
+        <a href="/about/" aria-current={pathname.startsWith('/about') ? 'page' : undefined}>À propos</a>
+        <a href="/contact/" aria-current={pathname.startsWith('/contact') ? 'page' : undefined}>Contact</a>
       </nav>
     </div>
   </header>
@@ -364,35 +476,21 @@ const ogImageURL = new URL(ogImage, SITE_BASE).href;
     <slot />
   </main>
 
-  <footer style="background: var(--primary); color: white; text-align: center; padding: 2rem 1rem;">
-    <div class="container">
-      <p>Ycompris – Garder la main · gouvernance IA</p>
-      <p style="margin-top: 0.3rem; font-size: 0.9rem; opacity: 0.85;">
-        Siège social : Brest (Finistère) — Bretagne, France &nbsp;·&nbsp;
-        <a href="mailto:contact@ycompris.com" style="color: white;">contact@ycompris.com</a>
-      </p>
-
-      <p style="margin-top: 1rem;">
-        <a href="/mentions-legales" style="color: white; margin: 0 1rem; text-decoration: none;">Mentions légales</a> |
-        <a href="/politique-confidentialite" style="color: white; margin: 0 1rem; text-decoration: none;">Politique de confidentialité</a> |
-        <a href="/contact/" style="color: white; margin: 0 1rem; text-decoration: none;">Contact</a>
-      </p>
-      <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">
-        <a href="https://hoodspot.fr/conseil-affaires-et-gestion/ycompris-98428010700025/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="color: white;">
-          Fiche Hoodspot Ycompris
-        </a>
-      </p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-meta">Ycompris · SAS · Brest</p>
+      <ul class="footer-nav">
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/politique-confidentialite/">Confidentialité</a></li>
+        <li><a href="/mentions-legales/">Mentions légales</a></li>
+        <li>
+          <a href="https://glm.ycompris.com/" target="_blank" rel="noopener noreferrer">
+            Garder la main
+          </a>
+        </li>
+      </ul>
     </div>
   </footer>
-
-  <style>
-    .footer-nav a:hover {
-      text-decoration: underline;
-    }
-  </style>
 
   <CookieConsent />
 </body>
