@@ -2,99 +2,30 @@
 // src/pages/index.astro
 import MainLayout from '../layouts/MainLayout.astro';
 
-const title = 'IA en Entreprise : Garder la main | Ycompris';
+const title = 'Ycompris — Excellence opérationnelle';
 const description =
-  'Gouvernance IA et méthode Cœur Tête Main pour garder le contrôle. Cadre éthique, risques, action concrète — Yves Cavarec.';
+  'Conseil en excellence opérationnelle. Yves Cavarec, Brest. Process, décisions, IA quand elle a sa place. Chantiers bornés.';
 
 const personLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Yves Cavarec',
-  jobTitle: "Fondateur d'Ycompris, auteur",
+  jobTitle: 'Conseil en excellence opérationnelle',
   url: 'https://ycompris.com/',
   sameAs: [
-    'https://glm.ycompris.com/',
-    'https://www.librinova.com/librairie/yves-cavarec/garder-la-main',
     'https://www.linkedin.com/in/cavarec',
+    'https://www.librinova.com/librairie/yves-cavarec/garder-la-main',
   ],
   worksFor: {
     '@type': 'Organization',
     name: 'Ycompris SAS',
   },
-};
-
-const bookLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Book',
-  name: "Garder la main — Diriger à l'ère de l'IA",
-  author: {
-    '@type': 'Person',
-    name: 'Yves Cavarec',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Brest',
+    addressRegion: 'Bretagne',
+    addressCountry: 'FR',
   },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Librinova',
-  },
-  datePublished: '2026',
-  inLanguage: 'fr',
-  url: 'https://glm.ycompris.com/garder-la-main',
-  image: 'https://ycompris.com/images/garder-la-main.jpg',
-};
-
-const howToLd = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: "Garder la main sur l'intelligence artificielle en entreprise",
-  description:
-    "Méthode Cœur, Tête, Main : sens et cadre humain, maîtrise des risques, action concrète pour piloter l'IA sans perdre le contrôle.",
-  step: [
-    {
-      '@type': 'HowToStep',
-      name: 'Le Cœur : le sens avant la technique',
-      text: "Fixer le cadre éthique et opérationnel pour la pérennité de l'organisation : l'IA reste une extension de la volonté de l'entreprise, pas un pilote automatique invisible.",
-    },
-    {
-      '@type': 'HowToStep',
-      name: 'La Tête : la logique de la maîtrise des risques',
-      text: "Anticiper dépendances, données hors périmètre et facture non choisie ; décider d'une stratégie à petite échelle avant que les mauvaises habitudes ne s'ancrent.",
-    },
-    {
-      '@type': 'HowToStep',
-      name: 'La Main : méthodologie et action concrète',
-      text: "Partir d'un processus visible (ex. support) et poser : qui décide ? quelles données sortent ? comment mesure-t-on le gain ?",
-    },
-  ],
-};
-
-const faqLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: "Que veut dire « garder la main » sur l'IA en entreprise\u00a0?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Savoir quelles décisions restent humaines, où l'IA intervient, quels risques (dépendance, données, compétences) vous assumez — et pouvoir l'expliquer clairement.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Par où commencer concrètement\u00a0?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Par un processus tangible et visible, comme le service support. Poser d'emblée trois piliers\u00a0: qui décide\u00a0? quelles données sont autorisées à sortir\u00a0? comment mesure-t-on le gain réel\u00a0?",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous un outil clé en main\u00a0?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "C'est la direction. Aujourd'hui\u00a0: analyses, cadre et accompagnement ciblé. Un produit ou service packagé est en conception.",
-      },
-    },
-  ],
 };
 ---
 
@@ -103,414 +34,80 @@ const faqLd = {
   description={description}
   ogType="website"
   ogImage="/images/og-home-2026.jpg"
-  ogImageAlt="Garder la main — Diriger à l'ère de l'IA, par Yves Cavarec"
+  ogImageAlt="Ycompris — Excellence opérationnelle, Yves Cavarec, Brest"
   canonical="https://ycompris.com/"
 >
   <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(personLd)} />
-  <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(bookLd)} />
-  <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(howToLd)} />
-  <script slot="head-extra" type="application/ld+json" set:html={JSON.stringify(faqLd)} />
 
-  <!-- 1. Hero navy + filigrane -->
-  <section class="hero">
-    <div class="hero-image" style="background-image: url('/images/ia.jpg');" aria-hidden="true"></div>
-    <div class="hero-veil" aria-hidden="true"></div>
-    <div class="hero-content container">
-      <h1 class="hero-title">
-        Intelligence Artificielle en entreprise&nbsp;: comment garder la main sur votre transformation&nbsp;?
-      </h1>
-      <p class="home-intro">
-        L'intelligence artificielle ne relève plus de la simple veille technologique&nbsp;: elle est déjà entrée dans vos
-        services, du support client à la gestion des e-mails, souvent de manière informelle. Au-delà de l'outil technique,
-        l'enjeu crucial est de garder la main sur votre organisation. Il ne s'agit pas de subir cette mutation, mais de
-        définir un cadre humain et stratégique solide. Sans une gouvernance proactive, vous risquez de voir vos processus
-        échapper à votre contrôle et vos données s'évaporer.
+  <div class="container">
+    <section class="page-hero" aria-labelledby="home-title">
+      <p class="eyebrow">Conseil · Brest</p>
+      <h1 id="home-title">Remettre de l’ordre dans ce qui tourne déjà.</h1>
+      <p class="lead">
+        J’interviens sur l’excellence opérationnelle&nbsp;: process, frictions, décisions, et l’usage de l’IA quand elle y a sa place. Pas de grande transformation. Un cadre clair, un chantier borné.
       </p>
-      <div class="hero-ctas">
-        <a href="/contact/" class="btn btn--primary">Me contacter</a>
-        <a
-          href="https://glm.ycompris.com/garder-la-main"
-          class="btn btn--primary"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Lire Garder la main (ouvre glm.ycompris.com dans un nouvel onglet)"
-        >
-          Le livre Garder la main
-          <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"
-            ><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"></path></svg
-          >
-        </a>
+      <div class="cta-row">
+        <a href="/offre/" class="btn btn--primary">L’offre</a>
+        <a href="/about/" class="btn btn--ghost">Qui je suis</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 2. Méthode Cœur, Tête, Main -->
-  <section class="section home-pillars" aria-labelledby="methode-title">
-    <div class="container pillars-wrap">
-      <h2 id="methode-title">La méthode Cœur, Tête, Main</h2>
+    <section class="section" aria-labelledby="quoi-title">
+      <h2 id="quoi-title">Ce que je fais</h2>
 
-      <article class="home-pillar">
-        <h3>1. Le Cœur&nbsp;: Le sens avant la technique</h3>
-        <p>
-          Ce qui vous préoccupe aujourd'hui, ce n'est pas la complexité technique des algorithmes, mais la pérennité de
-          votre organisation. L'intelligence artificielle s'invite dans le quotidien de vos équipes (SAV, support) et
-          modifie la nature du travail. Pour conserver le sens de votre action, vous devez rester celui qui fixe le cadre
-          éthique et opérationnel. L'objectif est de garantir que l'outil reste une extension de la volonté de
-          l'entreprise, et non un pilote automatique invisible. Garder la main, c'est affirmer que l'humain reste le
-          décideur final face à la machine.
-        </p>
-      </article>
+      <div class="card-list">
+        <article class="card">
+          <h3>Process et frictions</h3>
+          <p>
+            Repérer où le travail se bloque, se double ou échappe. Remettre un fonctionnement lisible, à l’échelle de l’équipe concernée.
+          </p>
+        </article>
 
-      <article class="home-pillar">
-        <h3>2. La Tête&nbsp;: La logique de la maîtrise des risques</h3>
-        <p>
-          Raisonner froidement, c'est comprendre que les prix actuels de l'IA sont des prix de lancement, voués à
-          augmenter. Plus dangereux encore, les dépendances se nouent souvent plus vite que les contrats ne sont signés.
-          Une entreprise qui laisse l'IA se déployer sans méthode se réveille un matin avec des processus qu'elle ne
-          maîtrise plus, des données qui ont quitté le périmètre sécurisé, et une facture qu'elle n'a pas choisie. Il est
-          économiquement et stratégiquement plus rationnel de décider d'une stratégie à petite échelle maintenant, plutôt
-          que de devoir casser et reconstruire des usages devenus des mauvaises habitudes.
-        </p>
-      </article>
+        <article class="card">
+          <h3>Décisions et responsabilités</h3>
+          <p>
+            Qui valide quoi. Ce qui remonte, ce qui reste local. Moins de réunions floues, plus de règles d’arrêt.
+          </p>
+        </article>
 
-      <article class="home-pillar">
-        <h3>3. La Main&nbsp;: Méthodologie et action concrète</h3>
-        <p>
-          L'action commence par un processus tangible et visible, comme le service support. La méthode consiste à poser
-          d'emblée les trois piliers de la réussite&nbsp;:
-        </p>
-        <ol class="home-pillars-list">
-          <li>Qui décide&nbsp;?</li>
-          <li>Quelles données sont autorisées à sortir&nbsp;?</li>
-          <li>Comment mesure-t-on le gain réel&nbsp;?</li>
-        </ol>
-        <p>
-          Cette phase opérationnelle peut prendre la forme d'une conférence de cadrage avec le comité de direction ou
-          d'un chantier piloté sur quelques semaines. Pour ne pas réinventer la roue, le livre
-          <em>Garder la main</em> fournit la méthodologie théorique, tandis que l'agence Ycompris vous accompagne pour
-          l'appliquer concrètement au sein de votre structure.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <!-- 3. Expertise reconnue -->
-  <section class="section expertise-band" aria-labelledby="expertise-title">
-    <div class="container pillars-wrap" style="text-align: center;">
-      <h2 id="expertise-title">Une expertise reconnue</h2>
-      <p class="expertise-text">
-        Livre <em>Garder la main</em>, série de chroniques, et étude sur le traitement de l'IA dans les DEU du
-        CAC&nbsp;40 — analyses publiées pour croiser méthode et preuves publiques, sans liste de clients inventés.
-      </p>
-      <div class="expertise-links">
-        <a
-          href="https://glm.ycompris.com/deu-cac40-2025"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Lire l'étude CAC40 sur glm.ycompris.com (nouvel onglet)"
-        >
-          Étude CAC&nbsp;40
-          <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"
-            ><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"></path></svg
-          >
-        </a>
-        <a href="/ressources/">Analyses</a>
+        <article class="card">
+          <h3>IA, là où c’est utile</h3>
+          <p>
+            Charte d’usage, données qui peuvent sortir, mesure d’un gain réel. L’outil suit le process, pas l’inverse.
+          </p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 4. FEB band -->
-  <section class="feb-band" aria-labelledby="feb-title">
-    <div class="container pillars-wrap" style="text-align: center;">
-      <h2 id="feb-title">Vous êtes au FEB à St Malo&nbsp;?</h2>
+    <section class="section" aria-labelledby="comment-title">
+      <h2 id="comment-title">Comment on travaille</h2>
       <p>
-        Je serai présent le mercredi pour échanger sur vos défis de gouvernance. Venons-en aux faits&nbsp;: discutons de
-        votre situation.
+        Un échange pour voir s’il y a matière. Puis un périmètre écrit&nbsp;: objet, durée, livrable. J’interviens seul. Je ne vends pas de logiciel. Je ne construis pas une dépendance.
       </p>
-      <a href="/contact/" class="btn btn--primary feb-btn">Réserver un échange de 15&nbsp;min</a>
-    </div>
-  </section>
-
-  <!-- 5. Book strip compact -->
-  <section class="section book-strip" aria-labelledby="book-strip-title">
-    <div class="container">
-      <div class="book-strip__grid">
-        <div class="book-strip__cover">
-          <img
-            src="/images/garder-la-main.jpg"
-            alt="Couverture du livre Garder la main – Diriger à l'ère de l'IA, par Yves Cavarec"
-            width="180"
-            height="278"
-            loading="lazy"
-          />
-        </div>
-        <div class="book-strip__text">
-          <h2 id="book-strip-title">Garder la main — Diriger à l'ère de l'IA</h2>
-          <p class="book-strip__meta"><em>Librinova, 2026</em></p>
-          <p>La méthodologie derrière le cadrage&nbsp;: gouvernance, dépendances, décisions qui restent humaines.</p>
-          <a
-            href="https://www.librinova.com/librairie/yves-cavarec/garder-la-main"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Acheter ou précommander sur Librinova (nouvel onglet)"
-            class="book-strip__link"
-          >
-            Acheter / précommander sur Librinova
-            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 10 10"
-              ><path d="M2 2h4v1H3v5h5V5h1v4H2V2zm5 0h1v3h-1V3.7L4.7 7 4 6.3 7.3 3H6V2h1z"></path></svg
-            >
-          </a>
-        </div>
+      <div class="card-list">
+        <article class="card">
+          <h3>Cœur</h3>
+          <p>Ce qui doit rester décidé par vous.</p>
+        </article>
+        <article class="card">
+          <h3>Tête</h3>
+          <p>Risques, coûts, habitudes à ne pas laisser s’installer.</p>
+        </article>
+        <article class="card">
+          <h3>Main</h3>
+          <p>Un process visible, avec un début et une fin.</p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 6. CTA final contact -->
-  <section class="section final-cta" aria-labelledby="cta-title">
-    <div class="container">
-      <h2 id="cta-title">Un sujet IA à cadrer&nbsp;?</h2>
-      <p>Écrivons-nous.</p>
-      <a href="/contact/" class="btn btn--primary final-cta__btn">Me contacter</a>
-    </div>
-  </section>
+    <section class="closing" aria-labelledby="open-title">
+      <h2 id="open-title">Si un chantier est ouvert</h2>
+      <p>
+        Décrivez la situation en quelques lignes. On verra si je peux être utile.
+      </p>
+      <div class="cta-row">
+        <a href="/contact/" class="btn btn--primary">Écrire</a>
+      </div>
+    </section>
+  </div>
 </MainLayout>
-
-<style>
-  :root {
-    --primary: #0b3d5c;
-    --primary-dark: #072a40;
-    --accent: #2e6b8a;
-    --text: #1a1a1a;
-    --light: #f5f8fb;
-    --gray: #5b6b7a;
-    --navy: #0a1628;
-  }
-
-  .hero {
-    position: relative;
-    background: var(--navy) !important;
-    overflow: hidden;
-    text-align: center;
-    min-height: 320px;
-    padding: 0 0 3rem;
-  }
-  .hero-image {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: 0;
-    pointer-events: none;
-  }
-  .hero-veil {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background: linear-gradient(
-      180deg,
-      rgba(10, 22, 40, 0.35) 0%,
-      rgba(10, 22, 40, 0.5) 100%
-    );
-  }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 5rem 0 2.5rem;
-  }
-  .hero-title {
-    color: #f1f5f9 !important;
-    font-size: clamp(1.85rem, 4.5vw, 2.75rem);
-    margin: 0 auto 1.5rem;
-    max-width: 920px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  }
-  .home-intro {
-    font-size: 1.15rem;
-    max-width: 820px;
-    margin: 0 auto 2.5rem;
-    text-align: left;
-    line-height: 1.75;
-    color: #cbd5e1 !important;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-  }
-  .hero-ctas {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .hero-ctas .btn {
-    font-size: 1.15rem;
-  }
-
-  .home-pillars {
-    background: white;
-    padding: 4.5rem 0;
-  }
-  .pillars-wrap {
-    max-width: 900px;
-  }
-  .home-pillars h2 {
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    text-align: center;
-    margin: 0 0 2.5rem;
-    color: var(--primary);
-  }
-  .home-pillar {
-    margin-bottom: 2.75rem;
-    padding-bottom: 2.25rem;
-    border-bottom: 1px solid #e2e8f0;
-  }
-  .home-pillar:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-  .home-pillar h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin: 0 0 1rem;
-  }
-  .home-pillar p {
-    font-size: 1.08rem;
-    color: var(--text);
-    margin: 0 0 1rem;
-  }
-  .home-pillars-list {
-    margin: 0 0 1.2rem;
-    padding-left: 1.35rem;
-    font-size: 1.08rem;
-  }
-  .home-pillars-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  .expertise-band {
-    background: var(--light);
-    padding: 4rem 0;
-  }
-  .expertise-band h2 {
-    color: var(--primary);
-    margin: 0 0 1.25rem;
-  }
-  .expertise-text {
-    font-size: 1.12rem;
-    color: var(--gray);
-    max-width: 760px;
-    margin: 0 auto 1.75rem;
-  }
-  .expertise-links {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .expertise-links a {
-    color: var(--primary);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .expertise-links a:hover {
-    text-decoration: underline;
-  }
-
-  .feb-band {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    color: white;
-    padding: 3.5rem 1.5rem;
-    text-align: center;
-  }
-  .feb-band h2 {
-    color: white !important;
-    margin: 0 0 1rem;
-    font-size: clamp(1.45rem, 3vw, 1.95rem);
-  }
-  .feb-band p {
-    font-size: 1.12rem;
-    max-width: 720px;
-    margin: 0 auto 1.75rem;
-    opacity: 0.95;
-  }
-  .feb-btn {
-    background: white !important;
-    color: var(--primary) !important;
-    font-size: 1.1rem;
-  }
-  .feb-btn:hover {
-    background: var(--light) !important;
-  }
-
-  .book-strip {
-    background: white;
-    padding: 3rem 0;
-  }
-  .book-strip__grid {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 1.75rem;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .book-strip__cover img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    display: block;
-  }
-  .book-strip h2 {
-    margin: 0 0 0.35rem;
-    font-size: 1.35rem;
-    color: var(--primary);
-  }
-  .book-strip__meta {
-    color: var(--gray);
-    margin: 0 0 0.75rem;
-    font-size: 0.95rem;
-  }
-  .book-strip__link {
-    color: var(--primary);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .book-strip__link:hover {
-    text-decoration: underline;
-  }
-
-  .final-cta {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
-    text-align: center;
-    padding: 5rem 0;
-  }
-  .final-cta h2 {
-    font-size: 2.2rem;
-    margin: 0 0 1rem;
-    color: white !important;
-  }
-  .final-cta p {
-    font-size: 1.25rem;
-    margin: 0 auto 2rem;
-    max-width: 600px;
-  }
-  .final-cta__btn {
-    background: white !important;
-    color: var(--primary) !important;
-    font-size: 1.2rem;
-  }
-
-  @media (max-width: 640px) {
-    .book-strip__grid {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-    .book-strip__cover {
-      max-width: 140px;
-      margin: 0 auto;
-    }
-  }
-</style>

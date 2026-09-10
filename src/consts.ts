@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = 'Ycompris';
 export const SITE_DESCRIPTION =
-	'Yves Cavarec — auteur de Garder la main. Études et outils pour diriger à l’ère de l’IA, sans perdre le contrôle des décisions.';
+	'Conseil en excellence opérationnelle. Yves Cavarec, Brest. Process, décisions, IA quand elle a sa place. Chantiers bornés.';

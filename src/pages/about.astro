@@ -1,120 +1,75 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 
-const title = 'Yves Cavarec : Expert Gouvernance & Auteur';
+const title = 'Yves Cavarec — Ycompris';
 const description =
-  "Yves Cavarec, fondateur d'Ycompris : l'architecte de cadre. Gouvernance, communication financière, méthode Cœur Tête Main pour garder la main sur l'IA.";
+  'Yves Cavarec, conseil en excellence opérationnelle. Basé à Brest.';
 const canonical = 'https://ycompris.com/about/';
 ---
 
 <MainLayout title={title} description={description} canonical={canonical}>
-  <section class="section container about-page">
-    <header class="about-hero">
-      <h1>Yves Cavarec</h1>
-      <p class="subtitle">L'architecte de cadre.</p>
-    </header>
+  <div class="container about-page">
+    <section class="page-hero" aria-labelledby="about-title">
+      <p class="eyebrow">Yves Cavarec</p>
+      <h1 id="about-title">Un métier, pas un personnage.</h1>
+      <p class="lead">
+        J’aide des organisations à mieux faire ce qu’elles font déjà. J’habite en Finistère. J’ai 55&nbsp;ans.
+      </p>
+    </section>
 
-    <div class="about-grid">
-      <div class="about-photo">
-        <img
-          src="/images/Yves-Cavarec-CSRD-VSME-Bretagne.png"
-          alt="Yves Cavarec, fondateur Ycompris, auteur de Garder la main"
-          width="320"
-          height="427"
-          loading="eager"
-        />
+    <figure class="about-photo">
+      <img
+        src="/images/Yves-Cavarec-CSRD-VSME-Bretagne.png"
+        alt="Yves Cavarec, conseil en excellence opérationnelle, Brest"
+        width="320"
+        height="427"
+        loading="eager"
+      />
+    </figure>
+
+    <section class="section" aria-labelledby="parcours-title">
+      <h2 id="parcours-title">Parcours</h2>
+      <p>
+        J’accompagne des entreprises depuis 1997, d’abord sur des projets de transformation, puis au croisement du pilotage, de la finance et de l’information extra-financière — y compris chez Deloitte. Formation AFNOR, évaluation technique Cofrac&nbsp;: je connais le côté audit et le côté terrain. Ce CV sert quand il éclaire un chantier. Il n’a pas à occuper toute la page.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="pas-title">
+      <h2 id="pas-title">Ce que je ne suis pas</h2>
+      <p>
+        Ni développeur à vendre, ni gourou de l’IA, ni cabinet qui promet une nouvelle entreprise. Je suis un intervenant&nbsp;: je viens, on cadre, on avance, je m’en vais.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="methode-title">
+      <h2 id="methode-title">Méthode</h2>
+      <p>
+        Sens, logique, action. Décrit dans <em>Garder la main</em> (Librinova, 2026) —
+        <a href="https://www.librinova.com/librairie/yves-cavarec/garder-la-main">https://www.librinova.com/librairie/yves-cavarec/garder-la-main</a>
+        — le livre n’est pas l’offre. Ycompris SAS, Brest&nbsp;: je travaille seul.
+      </p>
+      <div class="cta-row">
+        <a href="/offre/" class="btn btn--primary">Voir l’offre</a>
       </div>
-
-      <div class="about-copy">
-        <h2>Le parcours</h2>
-        <p>
-          Je ne suis pas un développeur. Je ne suis pas un guru technologique vendant de la promesse. Je suis un
-          spécialiste de la gouvernance et de la communication financière. Mon parcours, c'est celui de l'analyse&nbsp;:
-          décortiquer les rapports annuels du CAC40, comprendre comment les grandes entreprises racontent (ou cachent)
-          leurs transformations, et aider les dirigeants à y voir clair.
-        </p>
-
-        <h2>La vision</h2>
-        <p>
-          Quand l'intelligence artificielle a débarqué, j'ai vu le même scénario se répéter&nbsp;: l'outil prend le pas
-          sur le sens. Les entreprises s'équipent avant de réfléchir. J'ai écrit <em>Garder la main</em> et publié mes
-          analyses dans Les Échos ou le JDN pour une raison simple&nbsp;: remettre l'humain au centre de l'équation.
-        </p>
-
-        <h2>La méthode</h2>
-        <p>
-          Chez Ycompris, je n'apporte pas de «&nbsp;baguette magique&nbsp;». J'apporte une boussole. Que ce soit pour
-          structurer votre communication extra-financière ou pour définir une gouvernance de l'IA qui ne coûtera pas ses
-          yeux à votre entreprise, mon approche est identique&nbsp;: Cœur (le sens), Tête (la logique), Main (l'action).
-        </p>
-
-        <h2>En ce moment</h2>
-        <p>
-          Je prépare l'avenir de l'entreprise en testant, en écrivant et en échangeant avec les dirigeants pour
-          co-construire les outils de demain. Car la meilleure technologie reste celle que l'on maîtrise de bout en
-          bout.
-        </p>
-      </div>
-    </div>
-
-    <div class="about-cta">
-      <a href="/contact/" class="btn btn--primary">Discutons de votre sujet</a>
-    </div>
-  </section>
+    </section>
+  </div>
 </MainLayout>
 
 <style>
   .about-page {
-    padding: 5rem 0 4rem;
-    max-width: 960px;
+    padding-bottom: 2rem;
   }
-  .about-hero {
-    text-align: center;
-    margin-bottom: 3rem;
+
+  .about-photo {
+    margin: 0 0 2rem;
+    max-width: 280px;
   }
-  .subtitle {
-    font-size: 1.35rem;
-    color: var(--gray);
-    margin: 0.75rem 0 0;
-  }
-  .about-grid {
-    display: grid;
-    grid-template-columns: minmax(200px, 300px) 1fr;
-    gap: 2.5rem;
-    align-items: start;
-  }
+
   .about-photo img {
+    display: block;
     width: 100%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    display: block;
-  }
-  .about-copy h2 {
-    margin-top: 2rem;
-  }
-  .about-copy h2:first-child {
-    margin-top: 0;
-  }
-  .about-cta {
-    text-align: center;
-    margin-top: 3.5rem;
-  }
-  .about-cta .btn {
-    font-size: 1.2rem;
-    padding: 1.1rem 2.2rem;
-  }
-  @media (max-width: 768px) {
-    .about-grid {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-    .about-photo {
-      max-width: 260px;
-      margin: 0 auto;
-    }
-    .about-copy {
-      text-align: left;
-    }
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
   }
 </style>
